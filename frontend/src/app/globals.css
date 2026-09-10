@@ -13,6 +13,7 @@
   --font-poppins: var(--font-poppins);
   --font-dm: var(--font-dm-sans);
   --font-display: var(--font-cinzel);
+  --font-cormorant: var(--font-cormorant);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -124,6 +125,14 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
+}
+
+.font-editorial {
+  font-family: var(--font-cormorant), "Playfair Display", "Didot", "Bodoni MT", Georgia, serif;
+}
+
+.font-philosophy {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
 }
 
 

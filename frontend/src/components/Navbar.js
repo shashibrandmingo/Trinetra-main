@@ -3,20 +3,44 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { ArrowRight, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('Home');
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '#about' },
-    { name: 'Practice Areas', href: '#practice-areas' },
-    { name: 'Insights', href: '#insights' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About', href: '/about' },
+    { name: 'Practice Areas', href: '/practice-areas' },
+    { name: 'Insights', href: '/#insights' },
+    { name: 'Contact', href: '/#contact' },
   ];
+
+  // Sync active navigation item with current URL pathname on initial load and route changes
+  useEffect(() => {
+    if (!pathname) return;
+
+    if (pathname === '/about' || pathname.startsWith('/about')) {
+      setActiveItem('About');
+    } else if (pathname === '/practice-areas' || pathname.startsWith('/practice-areas')) {
+      setActiveItem('Practice Areas');
+    } else if (pathname === '/') {
+      const hash = typeof window !== 'undefined' ? window.location.hash : '';
+      if (hash === '#practice-areas') {
+        setActiveItem('Practice Areas');
+      } else if (hash === '#insights') {
+        setActiveItem('Insights');
+      } else if (hash === '#contact') {
+        setActiveItem('Contact');
+      } else {
+        setActiveItem('Home');
+      }
+    }
+  }, [pathname]);
 
   // Elevation shadow on scroll
   useEffect(() => {
@@ -82,7 +106,9 @@ export default function Navbar() {
             {/* Center: Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-8 xl:gap-10">
               {navItems.map((item) => {
-                const isActive = activeItem === item.name;
+                const isActive = (pathname === '/about' || pathname?.startsWith('/about'))
+                  ? item.name === 'About'
+                  : activeItem === item.name;
                 return (
                   <Link
                     key={item.name}
@@ -147,7 +173,9 @@ export default function Navbar() {
         >
           <div className="max-w-7xl mx-auto px-5 flex flex-col space-y-2">
             {navItems.map((item) => {
-              const isActive = activeItem === item.name;
+              const isActive = (pathname === '/about' || pathname?.startsWith('/about'))
+                ? item.name === 'About'
+                : activeItem === item.name;
               return (
                 <Link
                   key={item.name}

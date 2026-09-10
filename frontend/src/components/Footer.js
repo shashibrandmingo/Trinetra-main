@@ -128,7 +128,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#practice-areas" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
+                <Link href="/practice-areas" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
                   Practice Areas
                 </Link>
               </li>

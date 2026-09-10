@@ -199,9 +199,9 @@ export default function TestimonialsSection() {
       id="testimonials"
       className="w-full bg-[#FAF8F5] border-b border-[#E8E1D5] overflow-hidden select-none"
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-12 sm:pt-14 lg:pt-16 pb-8 sm:pb-10">
-        {/* Top-Right Motto Bar (Desktop Only: perfectly balances the wide grid, hidden on mobile) */}
-        <div className="hidden lg:flex justify-end mb-6 sm:mb-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-15 sm:pt-17 lg:pt-18 pb-8 sm:pb-10">
+        {/* Top-Right Motto Bar */}
+        <div className="flex justify-end mb-6 sm:mb-8">
           <div className="flex items-center gap-2.5 sm:gap-3 text-left">
             <span className="h-9 sm:h-11 w-[1.5px] bg-[#B88E44]" />
             <div className="flex flex-col text-[9px] sm:text-[10px] font-bold tracking-[0.24em] uppercase font-dm leading-[1.35]">
@@ -218,15 +218,15 @@ export default function TestimonialsSection() {
           <div className="lg:col-span-4 xl:col-span-4 flex flex-col justify-between">
             <div>
               {/* Eyebrow */}
-              <div className="flex items-center gap-2.5 sm:gap-3 mb-3 pt-1 sm:pt-0">
+              <div className="flex items-center gap-2.5 sm:gap-3 mb-3 pt-1.5 sm:pt-0">
                 <span className="h-[1.5px] w-6 sm:w-8 bg-[#B88E44] rounded-full" />
                 <span className="text-[10px] sm:text-xs font-bold tracking-[0.22em] text-[#8C6D37] uppercase font-dm">
                   CLIENT TESTIMONIALS
                 </span>
               </div>
 
-              {/* Main Headline - Exactly 30px on mobile, 2 lines */}
-              <h2 className="font-heading font-extrabold text-[30px] sm:text-3xl lg:text-[40px] xl:text-[44px] text-[#1A1817] leading-[1.14] tracking-tight">
+              {/* Main Headline - Exactly 2 lines with robust mobile scaling */}
+              <h2 className="font-heading font-extrabold text-[23px] min-[360px]:text-[24px] min-[390px]:text-[26px] min-[420px]:text-[27px] sm:text-3xl lg:text-[40px] xl:text-[44px] text-[#1A1817] leading-[1.15] tracking-tight">
                 <span className="block whitespace-nowrap">TRUSTED BY THOSE</span>
                 <span className="block gold-gradient-shine mt-0.5 sm:mt-1">
                   WE REPRESENT.
@@ -307,7 +307,7 @@ export default function TestimonialsSection() {
                     className="w-full md:w-[calc(50%-8px)] shrink-0 bg-white rounded-2xl border border-[#E8E1D5] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow duration-300 p-3 sm:p-3.5 flex flex-col sm:flex-row gap-3 sm:gap-3.5 items-stretch select-none h-full min-h-[250px] sm:min-h-[265px]"
                   >
                     {/* Client Portrait & Practice Tag */}
-                    <div className="relative w-full sm:w-[42%] shrink-0 aspect-[16/10] sm:aspect-[4/5] h-48 min-[380px]:h-52 sm:h-auto sm:min-h-[235px] rounded-xl overflow-hidden bg-[#1F1413] pointer-events-none">
+                    <div className="relative w-full sm:w-[42%] shrink-0 aspect-[4/5] min-h-[210px] sm:min-h-[235px] rounded-xl overflow-hidden bg-[#1F1413] pointer-events-none">
                       <Image
                         src={card.image}
                         alt={card.author}
@@ -319,11 +319,11 @@ export default function TestimonialsSection() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none" />
 
                       {/* Practice Tag inside Image */}
-                      <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3 pointer-events-none text-left">
-                        <span className="block text-[9px] sm:text-[9.5px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase font-dm leading-tight drop-shadow">
+                      <div className="absolute bottom-3 left-3 right-3 pointer-events-none text-left">
+                        <span className="block text-[9.5px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase font-dm leading-tight drop-shadow">
                           {card.practiceLine1}
                         </span>
-                        <span className="block text-[9px] sm:text-[9.5px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase font-dm leading-tight drop-shadow">
+                        <span className="block text-[9.5px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase font-dm leading-tight drop-shadow">
                           {card.practiceLine2}
                         </span>
                       </div>
@@ -333,36 +333,36 @@ export default function TestimonialsSection() {
                     <div className="flex-1 flex flex-col justify-between py-0.5 sm:py-1 text-left select-none pointer-events-none">
                       <div>
                         {/* Double Quote Icon & Horizontal Line */}
-                        <div className="flex items-center gap-2 mb-1.5 sm:mb-2.5">
+                        <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
                           <svg
-                            className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 text-[#96712E] shrink-0 fill-current"
+                            className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#96712E] shrink-0 fill-current"
                             viewBox="0 0 24 24"
                           >
                             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                           </svg>
-                          <span className="h-[1.5px] w-8 sm:w-14 bg-[#B88E44]" />
+                          <span className="h-[1.5px] w-10 sm:w-14 bg-[#B88E44]" />
                         </div>
 
                         {/* Quote Paragraph with stabilized min-height */}
-                        <div className="min-h-[58px] sm:min-h-[82px] flex items-start">
-                          <p className="font-heading font-medium text-xs sm:text-[12.5px] text-[#2B2724] leading-[1.5]">
+                        <div className="min-h-[72px] sm:min-h-[82px] flex items-start">
+                          <p className="font-heading font-medium text-xs sm:text-[12.5px] text-[#2B2724] leading-[1.55]">
                             {card.quote}
                           </p>
                         </div>
                       </div>
 
                       {/* Bottom Author Section */}
-                      <div className="pt-1.5 mt-1.5 sm:pt-2 sm:mt-3">
+                      <div className="pt-2 mt-2.5 sm:mt-3">
                         {/* Small horizontal rule above author name */}
-                        <div className="w-6 sm:w-7 h-[1.5px] bg-[#B88E44] mb-1.5 sm:mb-2.5" />
+                        <div className="w-7 h-[1.5px] bg-[#B88E44] mb-2 sm:mb-2.5" />
 
                         <h4 className="font-heading font-bold text-xs sm:text-[12.5px] tracking-[0.07em] text-[#1A1817] uppercase">
                           {card.author}
                         </h4>
-                        <p className="font-dm text-[10.5px] sm:text-[11px] text-[#78716A] mt-0.5 leading-tight">
+                        <p className="font-dm text-[11px] text-[#78716A] mt-0.5 leading-tight">
                           {card.titleLine1}
                         </p>
-                        <p className="font-dm text-[10.5px] sm:text-[11px] text-[#78716A] leading-tight">
+                        <p className="font-dm text-[11px] text-[#78716A] leading-tight">
                           {card.titleLine2}
                         </p>
                       </div>
@@ -410,25 +410,11 @@ export default function TestimonialsSection() {
                 </span>
               </div>
             </div>
-
-            {/* Mobile Bottom Motto Seal Box */}
-            <div className="lg:hidden mt-5 p-3.5 rounded-xl bg-white/75 border border-[#E4DACB] flex items-center gap-3.5 shadow-2xs">
-              <div className="border-l-2 border-[#B88E44] pl-2.5 text-[10px] font-bold tracking-[0.22em] uppercase font-dm leading-[1.25] flex flex-col justify-center">
-                <span className="text-[#8C6D37]">PEOPLE</span>
-                <span className="text-[#9E9080]">PERSPECTIVE</span>
-                <span className="text-[#B5A898]">PROGRESS</span>
-              </div>
-              <div className="w-px h-8 bg-[#E8E0D2]" />
-              <div className="text-[10.5px] font-medium tracking-[0.16em] uppercase font-dm leading-snug flex-1">
-                <div className="font-bold text-[#2B2724]">AUTHENTIC ADVOCACY.</div>
-                <div className="text-[#8C6D37] font-semibold mt-0.5">LASTING COURT IMPACT.</div>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Bottom Section Verification Line (Hidden in Phone Mode) */}
-        <div className="hidden sm:flex mt-10 sm:mt-12 pt-4 border-t border-[#E8E1D5] items-center justify-between text-[10px] sm:text-[11px] font-dm tracking-[0.2em] text-[#8C847B] uppercase">
+        {/* Bottom Section Verification Line */}
+        <div className="mt-10 sm:mt-12 pt-4 border-t border-[#E8E1D5] flex items-center justify-between text-[10px] sm:text-[11px] font-dm tracking-[0.2em] text-[#8C847B] uppercase">
           <span>TRINETRA LAW CHAMBERS</span>
           <span>LAW FOR A BRIGHTER TOMORROW</span>
         </div>

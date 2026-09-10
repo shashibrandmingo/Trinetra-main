@@ -1,4 +1,4 @@
-import { Cinzel, Poppins, DM_Sans } from "next/font/google";
+import { Cinzel, Poppins, DM_Sans, Cormorant_Garamond } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -21,6 +21,12 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata = {
   title: "Trinetra — Law Chambers",
   description: "Trinetra Law Chambers - Premier Legal Practice, Corporate Advisory, and Litigation Services.",
@@ -30,8 +36,16 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${poppins.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${cinzel.variable} ${poppins.variable} ${dmSans.variable} ${cormorant.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-[#FAF8F5] text-[#2D2926]">
         <Navbar />
         <main className="flex-1">{children}</main>
