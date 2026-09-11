@@ -30,6 +30,16 @@ const cormorant = Cormorant_Garamond({
 export const metadata = {
   title: "Trinetra — Law Chambers",
   description: "Trinetra Law Chambers - Premier Legal Practice, Corporate Advisory, and Litigation Services.",
+  icons: {
+    icon: [
+      { url: '/Trinetra-Law-Chamber-logo.jpg', sizes: 'any' },
+      { url: '/Trinetra-Law-Chamber-logo.jpg', type: 'image/jpeg' },
+    ],
+    shortcut: ['/Trinetra-Law-Chamber-logo.jpg'],
+    apple: [
+      { url: '/Trinetra-Law-Chamber-logo.jpg' },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -39,6 +49,9 @@ export default function RootLayout({ children }) {
       className={`${cinzel.variable} ${poppins.variable} ${dmSans.variable} ${cormorant.variable} h-full antialiased`}
     >
       <head>
+        <link rel="icon" href="/Trinetra-Law-Chamber-logo.jpg" type="image/jpeg" />
+        <link rel="shortcut icon" href="/Trinetra-Law-Chamber-logo.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/Trinetra-Law-Chamber-logo.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

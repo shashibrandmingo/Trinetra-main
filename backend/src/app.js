@@ -11,25 +11,45 @@ const app = express();
 // Security HTTP headers
 app.use(helmet());
 
-// CORS configuration strictly loaded from environment variable CLIENT_URL
-const allowedOrigins = (process.env.CLIENT_URL || '')
+// CORS configuration supporting production domains, Vercel previews, and environment variables
+const defaultAllowed = [
+  'https://www.monikaanand.com',
+  'https://monikaanand.com',
+  'http://localhost:3000',
+  'http://localhost:5173',
+];
+
+const envAllowed = (process.env.CLIENT_URL || '')
   .split(',')
   .map((url) => url.trim().replace(/\/+$/, ''))
   .filter(Boolean);
 
+const allowedOrigins = Array.from(new Set([...defaultAllowed, ...envAllowed]));
+
+const isOriginAllowed = (origin) => {
+  if (!origin) return true;
+  const clean = origin.replace(/\/+$/, '').toLowerCase();
+  return (
+    allowedOrigins.some((allowed) => allowed.toLowerCase() === clean) ||
+    clean.endsWith('.vercel.app') ||
+    clean.includes('monikaanand.com') ||
+    clean.includes('localhost')
+  );
+};
+
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps, curl, postman)
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (isOriginAllowed(origin)) {
         callback(null, true);
       } else {
-        callback(new Error('Blocked by CORS policy'));
+        console.warn(`[CORS Blocked]: Origin '${origin}' is not permitted.`);
+        callback(new Error(`Blocked by CORS policy: Origin ${origin} not allowed`));
       }
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
   })
 );
 
