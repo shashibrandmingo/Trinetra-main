@@ -59,7 +59,7 @@ export default function OurApproachSection() {
                 </div>
 
                 {/* Main Headline */}
-                <h2 className="font-heading text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
+                <h2 className="font-heading text-[30px] sm:text-4xl lg:text-[46px] xl:text-[50px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
                   <span className="block">A Clearer Path</span>
                   <span className="block mt-0.5 sm:mt-1">
                     to <span className="gold-gradient-shine">Stronger Outcomes.</span>
@@ -73,8 +73,8 @@ export default function OurApproachSection() {
                 </p>
               </div>
 
-              {/* Right Mini Tagline (PEOPLE | LAW | A FAIRER TOMORROW) */}
-              <div className="flex items-start gap-3.5 sm:self-start pt-1">
+              {/* Right Mini Tagline (PEOPLE | LAW | A FAIRER TOMORROW - Desktop & Tablet only) */}
+              <div className="hidden sm:flex items-start gap-3.5 sm:self-start pt-1">
                 <div className="w-[1.5px] h-12 bg-[#9E6728] rounded-full self-stretch" />
                 <div className="flex flex-col gap-0.5 text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm leading-tight">
                   <span>PEOPLE</span>
@@ -87,42 +87,42 @@ export default function OurApproachSection() {
 
             </div>
 
-            {/* 4 Arched Pill Cards Row (Responsive Grid with Connector Arrows) */}
-            <div className="mt-8 sm:mt-10 lg:mt-12">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4 lg:gap-3 xl:gap-4 relative items-stretch">
+            {/* 4 Arched Pill Cards Row (2x2 Grid on Mobile, 4 Cols on Desktop) */}
+            <div className="mt-6 sm:mt-10 lg:mt-12">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 xs:gap-3.5 sm:gap-4 lg:gap-3 xl:gap-4 relative items-stretch">
                 
                 {approachSteps.map((item, idx) => (
                   <div key={item.step} className="relative flex items-center">
                     
                     {/* Arched Pill Card */}
-                    <div className="group relative w-full bg-[#FAF8F5] border border-[#EADBCC] rounded-t-[70px] sm:rounded-t-[80px] rounded-b-xl sm:rounded-b-2xl p-3 sm:p-3.5 xl:p-4 flex flex-col items-center text-center transition-all duration-300 hover:bg-white hover:border-[#9E6728]/50 hover:shadow-md hover:-translate-y-1">
+                    <div className="group relative w-full bg-[#FAF8F5] border border-[#EADBCC] rounded-t-[48px] xs:rounded-t-[56px] sm:rounded-t-[80px] rounded-b-xl sm:rounded-b-2xl p-2.5 xs:p-3 sm:p-3.5 xl:p-4 flex flex-col items-center text-center transition-all duration-300 hover:bg-white hover:border-[#9E6728]/50 hover:shadow-md hover:-translate-y-1">
                       
                       {/* Step Number in Serif */}
-                      <span className="font-serif text-2xl sm:text-3xl lg:text-[32px] text-[#9E6728] font-normal pt-3 sm:pt-4 select-none">
+                      <span className="font-serif text-xl xs:text-2xl sm:text-3xl lg:text-[32px] text-[#9E6728] font-normal pt-1.5 xs:pt-2 sm:pt-4 select-none">
                         {item.step}
                       </span>
 
                       {/* Step Title */}
-                      <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.22em] text-[#1A1817] uppercase font-dm mt-1 mb-3">
+                      <span className="text-[9px] xs:text-[10px] sm:text-[11px] font-bold tracking-[0.18em] sm:tracking-[0.22em] text-[#1A1817] uppercase font-dm mt-0.5 mb-2 sm:mb-3">
                         {item.title}
                       </span>
 
                       {/* Circular Thumbnail Frame */}
-                      <div className="relative w-24 h-24 sm:w-26 sm:h-26 lg:w-28 lg:h-28 xl:w-30 xl:h-30 rounded-full overflow-hidden border border-[#D9CEBF] bg-[#EAE4D9] shadow-sm my-1 group-hover:scale-105 transition-transform duration-300">
+                      <div className="relative w-16 h-16 xs:w-18 xs:h-18 sm:w-26 sm:h-26 lg:w-28 lg:h-28 xl:w-30 xl:h-30 rounded-full overflow-hidden border border-[#D9CEBF] bg-[#EAE4D9] shadow-sm my-1 group-hover:scale-105 transition-transform duration-300">
                         <Image
                           src={item.image}
                           alt={item.alt}
                           fill
-                          sizes="(max-width: 640px) 100px, (max-width: 1024px) 120px, 130px"
+                          sizes="(max-width: 640px) 75px, (max-width: 1024px) 120px, 130px"
                           className="object-cover object-center"
                         />
                       </div>
 
                       {/* Small Ochre Divider Accent */}
-                      <span className="w-6 h-[1.5px] bg-[#9E6728] my-3" />
+                      <span className="w-4 sm:w-6 h-[1.5px] bg-[#9E6728] my-2 sm:my-3" />
 
                       {/* Step Description */}
-                      <p className="text-[11.5px] sm:text-xs text-[#5C544D] font-dm leading-relaxed max-w-[190px] pb-3 sm:pb-4">
+                      <p className="text-[10px] xs:text-[11px] sm:text-xs text-[#5C544D] font-dm leading-snug sm:leading-relaxed max-w-[170px] pb-2 sm:pb-4">
                         {item.description}
                       </p>
 
@@ -141,8 +141,8 @@ export default function OurApproachSection() {
               </div>
             </div>
 
-            {/* Bottom Brand Stamp */}
-            <div className="mt-8 sm:mt-10 pt-4 border-t border-[#E8E1D5]/60 flex items-center justify-between">
+            {/* Bottom Brand Stamp (Desktop only) */}
+            <div className="hidden sm:flex mt-8 sm:mt-10 pt-4 border-t border-[#E8E1D5]/60 items-center justify-between">
               <span className="text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.24em] text-[#78716A] uppercase font-dm">
                 TRINETRA LAW CHAMBERS
               </span>

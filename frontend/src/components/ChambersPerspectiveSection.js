@@ -9,7 +9,7 @@ export default function ChambersPerspectiveSection() {
       <div className="w-full flex flex-col lg:flex-row min-h-[480px] lg:min-h-[540px] xl:min-h-[580px]">
 
         {/* ─── Left Column (Editorial Perspective) ─────────────────── */}
-        <div className="w-full lg:w-[57%] xl:w-[58%] flex flex-col justify-between px-6 sm:px-10 md:px-14 lg:pl-12 lg:pr-8 xl:pl-20 xl:pr-14 py-8 lg:py-10 relative z-10">
+        <div className="w-full lg:w-[57%] xl:w-[58%] flex flex-col justify-between px-4 xs:px-6 sm:px-10 md:px-14 lg:pl-12 lg:pr-8 xl:pl-20 xl:pr-14 py-8 lg:py-10 relative z-10">
 
           {/* Top Eyebrow */}
           <div className="flex items-center gap-3 mb-4 lg:mb-5">
@@ -22,7 +22,7 @@ export default function ChambersPerspectiveSection() {
           {/* Core Body */}
           <div className="my-auto py-1">
             {/* Left micro-stack */}
-            <div className="flex flex-col gap-[3px] text-[8.5px] sm:text-[9px] font-semibold tracking-[0.22em] text-[#8C827A] uppercase font-dm leading-tight mb-3.5 select-none">
+            <div className="hidden sm:flex flex-col gap-[3px] text-[8.5px] sm:text-[9px] font-semibold tracking-[0.22em] text-[#8C827A] uppercase font-dm leading-tight mb-3.5 select-none">
               <span>DIFFERENT</span>
               <span>MATTERS.</span>
               <span>A DEEPER</span>
@@ -30,12 +30,12 @@ export default function ChambersPerspectiveSection() {
             </div>
 
             {/* Large Poppins Headline */}
-            <h2 className="font-heading text-[26px] sm:text-[34px] lg:text-[38px] xl:text-[42px] font-bold leading-[1.16] text-[#1A1817] tracking-tight mb-5">
-              Not every matter<br />
-              requires the same strategy.<br />
-              <span className="gold-gradient-shine">
-                Every matter deserves<br />
-                the right one.
+            <h2 className="font-heading text-[30px] sm:text-[34px] lg:text-[38px] xl:text-[42px] font-bold leading-[1.18] text-[#1A1817] tracking-tight mb-5">
+              <span className="block">Not every matter requires</span>
+              <span className="block">the same strategy.</span>
+              <span className="gold-gradient-shine block mt-1">
+                <span className="block">Every matter deserves</span>
+                <span className="block">the right one.</span>
               </span>
             </h2>
 

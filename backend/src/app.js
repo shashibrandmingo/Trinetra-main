@@ -11,12 +11,11 @@ const app = express();
 // Security HTTP headers
 app.use(helmet());
 
-// CORS configuration
-const allowedOrigins = [
-  process.env.CLIENT_URL || 'http://localhost:3000',
-  'http://localhost:3000',
-  'http://127.0.0.1:3000',
-];
+// CORS configuration strictly loaded from environment variable CLIENT_URL
+const allowedOrigins = (process.env.CLIENT_URL || '')
+  .split(',')
+  .map((url) => url.trim().replace(/\/+$/, ''))
+  .filter(Boolean);
 
 app.use(
   cors({

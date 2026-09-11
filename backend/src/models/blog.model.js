@@ -27,18 +27,18 @@ const blogSchema = new mongoose.Schema(
     banner: {
       url: {
         type: String,
-        required: [true, 'Banner image URL is required'],
+        default: '/court-supreme-facade.jpg',
       },
       publicId: {
         type: String,
-        required: [true, 'Banner image Cloudinary public ID is required'],
+        default: 'preset-banner',
       },
     },
     category: {
       type: String,
       required: [true, 'Category is required'],
       trim: true,
-      default: 'General',
+      default: 'Constitutional Law',
       index: true,
     },
     tags: {
@@ -47,7 +47,7 @@ const blogSchema = new mongoose.Schema(
     },
     author: {
       type: String,
-      default: 'Admin',
+      default: 'Advocate Shashi Shekhar',
       trim: true,
     },
     status: {
@@ -66,11 +66,10 @@ const blogSchema = new mongoose.Schema(
   }
 );
 
-// Pre-save hook to generate unique slug from title
+// Pre-save hook to generate unique slug from title if not already provided
 blogSchema.pre('save', function (next) {
-  if (this.isModified('title') || !this.slug) {
+  if (!this.slug && this.title) {
     const baseSlug = slugify(this.title, { lower: true, strict: true });
-    // Append short timestamp suffix if needed to guarantee uniqueness
     this.slug = `${baseSlug}-${Date.now().toString().slice(-4)}`;
   }
   next();

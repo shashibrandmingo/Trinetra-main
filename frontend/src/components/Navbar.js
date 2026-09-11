@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X, ChevronRight, Phone } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -13,11 +13,11 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Practice Areas', href: '/practice-areas' },
-    { name: 'Insights', href: '/#insights' },
-    { name: 'Contact', href: '/#contact' },
+    { num: '01', name: 'Home', href: '/', subtitle: 'Chambers Overview' },
+    { num: '02', name: 'About', href: '/about', subtitle: 'The Firm & Heritage' },
+    { num: '03', name: 'Practice Areas', href: '/practice-areas', subtitle: 'Courts & Jurisdictions' },
+    { num: '04', name: 'Insights', href: '/blogs', subtitle: 'Precedents & Commentary' },
+    { num: '05', name: 'Contact', href: '/contact', subtitle: 'Reach The Chambers' },
   ];
 
   // Sync active navigation item with current URL pathname on initial load and route changes
@@ -28,6 +28,10 @@ export default function Navbar() {
       setActiveItem('About');
     } else if (pathname === '/practice-areas' || pathname.startsWith('/practice-areas')) {
       setActiveItem('Practice Areas');
+    } else if (pathname === '/blogs' || pathname.startsWith('/blogs')) {
+      setActiveItem('Insights');
+    } else if (pathname === '/contact' || pathname.startsWith('/contact')) {
+      setActiveItem('Contact');
     } else if (pathname === '/') {
       const hash = typeof window !== 'undefined' ? window.location.hash : '';
       if (hash === '#practice-areas') {
@@ -138,7 +142,7 @@ export default function Navbar() {
             {/* Right: Desktop Consultation Button */}
             <div className="hidden lg:flex items-center">
               <Link
-                href="#consultation"
+                href="/contact"
                 className="group inline-flex items-center gap-2.5 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#4A1118] focus:ring-offset-2 focus:ring-offset-[#FAF8F5]"
               >
                 <span>CONSULTATION</span>
@@ -146,68 +150,175 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Menu Toggle Button */}
+            {/* Mobile Menu Toggle Button with Smooth Icon Morphing */}
             <div className="flex lg:hidden items-center">
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2.5 rounded-lg text-[#4A1118] hover:bg-[#F2ECE1] transition-colors focus:outline-none focus:ring-2 focus:ring-[#4A1118]/40"
+                className="relative w-10 h-10 rounded-xl border border-[#D5CBC0] bg-[#F7F3EC] hover:bg-[#EFE8DC] active:scale-95 flex items-center justify-center text-[#4A1118] transition-all duration-200 focus:outline-none shadow-2xs"
                 aria-expanded={isMobileMenuOpen}
                 aria-label="Toggle navigation menu"
               >
-                {isMobileMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
+                <div className="relative w-5 h-5 flex items-center justify-center">
+                  <Menu
+                    className={`w-5 h-5 stroke-[2.2] absolute transition-all duration-300 ease-out ${
+                      isMobileMenuOpen
+                        ? 'opacity-0 rotate-90 scale-50'
+                        : 'opacity-100 rotate-0 scale-100'
+                    }`}
+                  />
+                  <X
+                    className={`w-5 h-5 stroke-[2.2] absolute transition-all duration-300 ease-out ${
+                      isMobileMenuOpen
+                        ? 'opacity-100 rotate-0 scale-100'
+                        : 'opacity-0 -rotate-90 scale-50'
+                    }`}
+                  />
+                </div>
               </button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Dropdown Drawer */}
+        {/* Soft Background Backdrop Overlay */}
         <div
-          className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden border-t border-[#E8E1D5] bg-[#FAF8F5] ${
-            isMobileMenuOpen ? 'max-h-[480px] opacity-100 py-4' : 'max-h-0 opacity-0 py-0'
+          onClick={() => setIsMobileMenuOpen(false)}
+          className={`lg:hidden fixed inset-0 top-[65px] sm:top-[81px] bg-black/35 backdrop-blur-[2px] transition-opacity duration-300 z-40 ${
+            isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
+          aria-hidden="true"
+        />
+
+        {/* Mobile Dropdown Drawer (Silky 60fps Grid-Template-Rows Height Transition) */}
+        <div
+          className={`lg:hidden relative z-50 grid transition-[grid-template-rows,opacity] duration-350 ease-[cubic-bezier(0.16,1,0.3,1)] bg-[#FAF8F5] shadow-2xl ${
+            isMobileMenuOpen
+              ? 'grid-rows-[1fr] opacity-100 border-t border-[#E8E1D5]'
+              : 'grid-rows-[0fr] opacity-0 pointer-events-none'
           }`}
         >
-          <div className="max-w-7xl mx-auto px-5 flex flex-col space-y-2">
-            {navItems.map((item) => {
-              const isActive = (pathname === '/about' || pathname?.startsWith('/about'))
-                ? item.name === 'About'
-                : activeItem === item.name;
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => {
-                    setActiveItem(item.name);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={`flex items-center justify-between px-4 py-3 rounded-md text-base transition-colors ${
-                    isActive
-                      ? 'bg-[#F2EAE0] text-[#4A1118] font-semibold'
-                      : 'text-[#4A443E] hover:bg-[#F5EFE7] hover:text-[#4A1118]'
-                  }`}
-                >
-                  <span>{item.name}</span>
-                  {isActive && (
-                    <span className="w-2 h-2 rounded-full bg-[#4A1118]" />
-                  )}
-                </Link>
-              );
-            })}
+          <div className="overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 py-3.5 pb-5 flex flex-col space-y-1.5">
+              {navItems.map((item, idx) => {
+                const isActive = (pathname === '/about' || pathname?.startsWith('/about'))
+                  ? item.name === 'About'
+                  : (pathname === '/practice-areas' || pathname?.startsWith('/practice-areas'))
+                  ? item.name === 'Practice Areas'
+                  : (pathname === '/blogs' || pathname?.startsWith('/blogs'))
+                  ? item.name === 'Insights'
+                  : (pathname === '/contact' || pathname?.startsWith('/contact'))
+                  ? item.name === 'Contact'
+                  : activeItem === item.name;
 
-            {/* Mobile Action Button */}
-            <div className="pt-3 pb-1">
-              <Link
-                href="#consultation"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-widest uppercase rounded shadow-sm transition-colors"
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => {
+                      setActiveItem(item.name);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    style={{
+                      transitionDelay: isMobileMenuOpen ? `${idx * 40}ms` : '0ms',
+                    }}
+                    className={`group flex items-center justify-between px-3.5 py-2.5 rounded-xl transition-all duration-300 ease-out transform ${
+                      isMobileMenuOpen
+                        ? 'translate-y-0 opacity-100'
+                        : '-translate-y-3 opacity-0'
+                    } ${
+                      isActive
+                        ? 'bg-gradient-to-r from-[#F2EAE0] via-[#F6F0E7] to-[#FAF8F5] border-l-[3px] border-[#4A1118] shadow-2xs'
+                        : 'hover:bg-white/80 border-l-[3px] border-transparent'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3.5">
+                      {/* Index Number */}
+                      <span className={`font-serif text-[11px] font-semibold tracking-wider ${
+                        isActive ? 'text-[#9E6728]' : 'text-[#A89E92] group-hover:text-[#9E6728]'
+                      }`}>
+                        {item.num}
+                      </span>
+
+                      {/* Title + Subtitle */}
+                      <div className="flex flex-col">
+                        <span className={`font-heading text-[15px] font-semibold tracking-tight transition-colors ${
+                          isActive
+                            ? 'text-[#4A1118]'
+                            : 'text-[#2D2824] group-hover:text-[#4A1118]'
+                        }`}>
+                          {item.name}
+                        </span>
+                        <span className="text-[10.5px] font-dm text-[#8C827A] -mt-0.5">
+                          {item.subtitle}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Right Accent Arrow / Active Indicator */}
+                    <div className="flex items-center gap-1.5">
+                      {isActive ? (
+                        <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#4A1118] font-dm bg-[#FAF8F5] px-2 py-0.5 rounded-md border border-[#E8E1D5]">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#4A1118] animate-pulse" />
+                          Active
+                        </span>
+                      ) : (
+                        <ChevronRight className="w-4 h-4 text-[#C9BEB2] group-hover:text-[#9E6728] group-hover:translate-x-0.5 transition-all" />
+                      )}
+                    </div>
+                  </Link>
+                );
+              })}
+
+              {/* Divider with subtle stagger */}
+              <div 
+                style={{ transitionDelay: isMobileMenuOpen ? '220ms' : '0ms' }}
+                className={`pt-2 pb-1 transition-all duration-300 transform ${
+                  isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
+                }`}
               >
-                <span>CONSULTATION</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <div className="w-full h-[1px] bg-[#E8E1D5]/80" />
+              </div>
+
+              {/* Mobile Action Button with subtle stagger */}
+              <div
+                style={{ transitionDelay: isMobileMenuOpen ? '260ms' : '0ms' }}
+                className={`transition-all duration-300 transform ${
+                  isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
+                }`}
+              >
+                <Link
+                  href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-full group flex items-center justify-between px-5 py-3.5 bg-gradient-to-r from-[#4A1118] to-[#380C12] hover:from-[#380C12] hover:to-[#2A090E] text-white text-xs font-bold tracking-[0.18em] uppercase rounded-xl shadow-md shadow-[#4A1118]/15 border border-[#9E6728]/40 transition-all duration-200 active:scale-[0.99]"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
+                    <span>SCHEDULE CONSULTATION</span>
+                  </div>
+                  <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#4A1118] transition-colors">
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </Link>
+              </div>
+
+              {/* Chamber Direct Call Quick Link */}
+              <div
+                style={{ transitionDelay: isMobileMenuOpen ? '300ms' : '0ms' }}
+                className={`pt-2 flex items-center justify-between px-2 text-[10.5px] font-dm text-[#78716A] transition-all duration-300 transform ${
+                  isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
+                }`}
+              >
+                <a
+                  href="tel:+911141512345"
+                  className="flex items-center gap-1.5 hover:text-[#4A1118] transition-colors"
+                >
+                  <Phone className="w-3 h-3 text-[#9E6728]" />
+                  <span className="font-medium">+91 11 4151 2345</span>
+                </a>
+                <span className="text-[10px] tracking-wider uppercase text-[#A89E92] font-semibold">
+                  New Delhi Chambers
+                </span>
+              </div>
             </div>
           </div>
         </div>

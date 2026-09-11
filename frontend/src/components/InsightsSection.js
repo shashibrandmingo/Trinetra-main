@@ -244,7 +244,7 @@ export default function InsightsSection() {
             </p>
 
             <Link
-              href="#blogs"
+              href="/blogs"
               className="hidden sm:inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded-sm transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 shrink-0 self-start sm:self-auto"
             >
               <span>EXPLORE ALL BLOGS</span>
@@ -381,7 +381,7 @@ export default function InsightsSection() {
         {/* Mobile CTA Button: Positioned BELOW cards and controls */}
         <div className="mt-6 flex sm:hidden">
           <Link
-            href="#blogs"
+            href="/blogs"
             className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded-sm transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20"
           >
             <span>EXPLORE ALL BLOGS</span>

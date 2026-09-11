@@ -39,7 +39,7 @@ export default function AboutChambersValuesSection() {
       <div className="absolute top-0 inset-x-0 h-8 pointer-events-none bg-gradient-to-b from-black/[0.04] to-transparent z-30" />
 
       {/* Main Container */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-8 sm:pt-10 lg:pt-12 pb-8 sm:pb-10">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-12 xs:pt-14 sm:pt-16 lg:pt-12 pb-8 sm:pb-10">
         
         {/* Main 4-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-stretch">
@@ -55,11 +55,10 @@ export default function AboutChambersValuesSection() {
                 </span>
               </div>
 
-              {/* Main Headline (Poppins font, strict 2-tone styling) */}
-              <h2 className="font-heading text-4xl sm:text-5xl lg:text-[48px] xl:text-[54px] font-bold tracking-tight text-[#1A1817] leading-[1.06]">
-                <span className="block">More</span>
-                <span className="block">Than a</span>
-                <span className="block gold-gradient-shine mt-1">Practice.</span>
+              {/* Main Headline (Strictly 2 lines) */}
+              <h2 className="font-heading text-4xl sm:text-5xl lg:text-[48px] xl:text-[54px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
+                <span className="block">More Than a</span>
+                <span className="block gold-gradient-shine mt-1 sm:mt-1.5">Practice.</span>
               </h2>
 
               {/* Gold Accent Dash */}
@@ -75,8 +74,8 @@ export default function AboutChambersValuesSection() {
               </p>
             </div>
 
-            {/* Bottom Left: Four Pillars Text */}
-            <div className="mt-6 lg:mt-8 pt-2 flex flex-col gap-0.5 text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.26em] text-[#78716A] uppercase font-dm leading-tight">
+            {/* Bottom Left: Four Pillars Text (Desktop only) */}
+            <div className="hidden lg:flex mt-6 lg:mt-8 pt-2 flex-col gap-0.5 text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.26em] text-[#78716A] uppercase font-dm leading-tight">
               <span>JUSTICE</span>
               <span>CONSTITUTION</span>
               <span>DEMOCRACY</span>
@@ -102,10 +101,9 @@ export default function AboutChambersValuesSection() {
                     <span className="w-8 sm:w-10 h-[1.5px] bg-[#B88E44]" />
                   </div>
 
-                  {/* Title (Dark Wine Red / Burgundy) */}
-                  <h3 className="font-heading text-2xl sm:text-[25px] xl:text-[27px] font-bold text-[#4A1118] tracking-tight leading-tight">
-                    <span className="block">{item.titleLine1}</span>
-                    <span className="block">{item.titleLine2}</span>
+                  {/* Title (Single line: Constitutional Depth / Strategic Advocacy / Personal Counsel) */}
+                  <h3 className="font-heading text-xl sm:text-[22px] lg:text-[24px] xl:text-[26px] font-bold text-[#4A1118] tracking-tight leading-tight">
+                    <span>{item.titleLine1} {item.titleLine2}</span>
                   </h3>
 
                   {/* Subtitle / Description */}

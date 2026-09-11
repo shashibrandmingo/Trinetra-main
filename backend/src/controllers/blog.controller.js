@@ -5,39 +5,60 @@ import { asyncHandler } from '../utils/asyncHandler.js';
 import { uploadOnCloudinary, deleteFromCloudinary } from '../utils/cloudinary.util.js';
 
 /**
- * @desc    Create a new blog post with banner image upload
+ * @desc    Create a new blog post (supports Cloudinary banner upload OR direct banner URL)
  * @route   POST /api/v1/blogs
  * @access  Public / Admin
  */
 export const createBlog = asyncHandler(async (req, res) => {
-  const { title, excerpt, content, category, tags, author, status } = req.body;
+  const { title, slug, excerpt, content, category, tags, author, status, bannerUrl } = req.body;
 
   if (!title || !content) {
     throw new ApiError(400, 'Title and content are required');
   }
 
-  if (!req.file) {
-    throw new ApiError(400, 'Banner image is required for creating a blog');
-  }
+  let banner = {
+    url: bannerUrl || '/court-supreme-facade.jpg',
+    publicId: 'local-preset',
+  };
 
-  // Upload banner buffer to Cloudinary in 'trinetra/blogs' folder
-  const uploadResult = await uploadOnCloudinary(req.file.buffer, 'trinetra/blogs');
+  // If a file was uploaded via multer, stream upload to Cloudinary with safe fallback
+  if (req.file) {
+    try {
+      const uploadResult = await uploadOnCloudinary(req.file.buffer, 'trinetra/blogs');
+      if (uploadResult?.secure_url) {
+        banner = {
+          url: uploadResult.secure_url,
+          publicId: uploadResult.public_id,
+        };
+      }
+    } catch (uploadErr) {
+      console.warn('⚠️ [Cloudinary Upload Warning]:', uploadErr.message);
+      if (bannerUrl) {
+        banner.url = bannerUrl;
+      }
+    }
+  } else if (bannerUrl) {
+    banner.url = bannerUrl;
+  }
 
   const parsedTags = typeof tags === 'string' ? tags.split(',').map((t) => t.trim()) : tags || [];
 
-  const blog = await Blog.create({
+  const blogData = {
     title,
     excerpt: excerpt || title.slice(0, 150),
     content,
-    category: category || 'General',
+    category: category || 'Constitutional Law',
     tags: parsedTags,
-    author: author || 'Admin',
+    author: author || 'Advocate Shashi Shekhar',
     status: status || 'published',
-    banner: {
-      url: uploadResult.secure_url,
-      publicId: uploadResult.public_id,
-    },
-  });
+    banner,
+  };
+
+  if (slug) {
+    blogData.slug = slug;
+  }
+
+  const blog = await Blog.create(blogData);
 
   return res.status(201).json(new ApiResponse(201, blog, 'Blog created successfully'));
 });
@@ -55,7 +76,7 @@ export const getAllBlogs = asyncHandler(async (req, res) => {
   const { category, status, search } = req.query;
 
   const filter = {};
-  if (category) filter.category = category;
+  if (category && category !== 'All Perspectives') filter.category = category;
   if (status) filter.status = status;
   if (search) {
     filter.$or = [
@@ -102,21 +123,59 @@ export const getBlogByIdOrSlug = asyncHandler(async (req, res) => {
 });
 
 /**
- * @desc    Update a blog post (supports replacing banner image)
+ * @desc    Update a blog post (supports ID or slug, banner image replacement or bannerUrl update, and upsert)
  * @route   PUT /api/v1/blogs/:id
  * @access  Public / Admin
  */
 export const updateBlog = asyncHandler(async (req, res) => {
   const { id } = req.params;
-  const { title, excerpt, content, category, tags, author, status } = req.body;
+  const { title, slug, excerpt, content, category, tags, author, status, bannerUrl } = req.body;
 
-  const blog = await Blog.findById(id);
+  // Support finding by MongoDB ObjectId OR by slug
+  const query = id.match(/^[0-9a-fA-F]{24}$/) ? { _id: id } : { slug: id };
+  let blog = await Blog.findOne(query);
+
+  // If not found in DB (e.g. was one of initial client-side blogs), gracefully upsert/create into DB
   if (!blog) {
+    if (title && content) {
+      const parsedTags = typeof tags === 'string' ? tags.split(',').map((t) => t.trim()) : tags || [];
+      let banner = {
+        url: bannerUrl || '/court-supreme-facade.jpg',
+        publicId: 'local-preset',
+      };
+
+      if (req.file) {
+        try {
+          const uploadResult = await uploadOnCloudinary(req.file.buffer, 'trinetra/blogs');
+          if (uploadResult?.secure_url) {
+            banner = { url: uploadResult.secure_url, publicId: uploadResult.public_id };
+          }
+        } catch (uploadErr) {
+          console.warn('⚠️ [Cloudinary Upload Warning]:', uploadErr.message);
+        }
+      }
+
+      blog = await Blog.create({
+        title,
+        slug: slug || id,
+        excerpt: excerpt || title.slice(0, 150),
+        content,
+        category: category || 'Constitutional Law',
+        tags: parsedTags,
+        author: author || 'Advocate Shashi Shekhar',
+        status: status || 'published',
+        banner,
+      });
+
+      return res.status(200).json(new ApiResponse(200, blog, 'Blog created and saved successfully'));
+    }
+
     throw new ApiError(404, 'Blog post not found');
   }
 
   // Update text fields if provided
   if (title) blog.title = title;
+  if (slug) blog.slug = slug;
   if (excerpt !== undefined) blog.excerpt = excerpt;
   if (content) blog.content = content;
   if (category) blog.category = category;
@@ -127,20 +186,39 @@ export const updateBlog = asyncHandler(async (req, res) => {
     blog.tags = typeof tags === 'string' ? tags.split(',').map((t) => t.trim()) : tags;
   }
 
-  // If a new banner is uploaded, upload to Cloudinary and clean up old banner
+  // If direct banner URL string provided without file
+  if (bannerUrl && !req.file) {
+    blog.banner = {
+      url: bannerUrl,
+      publicId: blog.banner?.publicId || 'url-preset',
+    };
+  }
+
+  // If a new banner file is uploaded, stream upload to Cloudinary
   if (req.file) {
     const oldPublicId = blog.banner?.publicId;
-    const uploadResult = await uploadOnCloudinary(req.file.buffer, 'trinetra/blogs');
+    try {
+      const uploadResult = await uploadOnCloudinary(req.file.buffer, 'trinetra/blogs');
+      if (uploadResult?.secure_url) {
+        blog.banner = {
+          url: uploadResult.secure_url,
+          publicId: uploadResult.public_id,
+        };
 
-    blog.banner = {
-      url: uploadResult.secure_url,
-      publicId: uploadResult.public_id,
-    };
-
-    if (oldPublicId) {
-      deleteFromCloudinary(oldPublicId).catch((err) =>
-        console.error(`Failed to delete previous blog banner: ${err.message}`)
-      );
+        if (oldPublicId && !['local-preset', 'preset-banner', 'court-supreme-facade'].includes(oldPublicId)) {
+          deleteFromCloudinary(oldPublicId).catch((err) =>
+            console.error(`Failed to delete previous blog banner: ${err.message}`)
+          );
+        }
+      }
+    } catch (uploadErr) {
+      console.warn('⚠️ [Cloudinary Upload Warning on update]:', uploadErr.message);
+      if (bannerUrl) {
+        blog.banner = {
+          url: bannerUrl,
+          publicId: blog.banner?.publicId || 'url-preset',
+        };
+      }
     }
   }
 
@@ -150,21 +228,23 @@ export const updateBlog = asyncHandler(async (req, res) => {
 });
 
 /**
- * @desc    Delete a blog post and its Cloudinary banner asset
+ * @desc    Delete a blog post (supports ObjectId or slug) and its Cloudinary asset
  * @route   DELETE /api/v1/blogs/:id
  * @access  Public / Admin
  */
 export const deleteBlog = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
-  const blog = await Blog.findById(id);
+  const query = id.match(/^[0-9a-fA-F]{24}$/) ? { _id: id } : { slug: id };
+  const blog = await Blog.findOne(query);
+
   if (!blog) {
-    throw new ApiError(404, 'Blog post not found');
+    return res.status(200).json(new ApiResponse(200, null, 'Blog already deleted or not found'));
   }
 
-  // Delete banner asset from Cloudinary
-  if (blog.banner?.publicId) {
-    await deleteFromCloudinary(blog.banner.publicId);
+  // Delete banner asset from Cloudinary if not a local preset
+  if (blog.banner?.publicId && !['local-preset', 'preset-banner', 'court-supreme-facade'].includes(blog.banner.publicId)) {
+    await deleteFromCloudinary(blog.banner.publicId).catch(() => {});
   }
 
   await blog.deleteOne();

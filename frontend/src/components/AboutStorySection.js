@@ -58,17 +58,17 @@ export default function AboutStorySection() {
       </div>
 
       {/* Main Container */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-5 sm:pt-6 lg:pt-8 pb-4 sm:pb-5">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-10 xs:pt-12 sm:pt-14 lg:pt-8 pb-5 sm:pb-6">
         
         {/* Top Header Eyebrow Row */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-3 sm:pb-4 border-b border-[#E8E1D5]">
-          <div className="flex items-center gap-3">
-            <span className="w-8 sm:w-10 h-[1.5px] bg-[#B88E44]" />
-            <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.24em] text-[#78716A] uppercase font-dm">
+        <div className="flex items-center justify-between gap-2 pb-2.5 sm:pb-4 border-b border-[#E8E1D5] text-[8px] xs:text-[9.5px] sm:text-[10.5px]">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <span className="w-6 sm:w-10 h-[1.5px] bg-[#B88E44]" />
+            <span className="font-semibold tracking-[0.16em] sm:tracking-[0.24em] text-[#78716A] uppercase font-dm">
               OUR STORY
             </span>
           </div>
-          <div className="text-[9.5px] sm:text-[10.5px] font-medium tracking-[0.24em] text-[#8C847B] uppercase font-dm">
+          <div className="font-medium tracking-[0.12em] xs:tracking-[0.16em] sm:tracking-[0.24em] text-[#8C847B] uppercase font-dm truncate text-right">
             PEOPLE &nbsp;|&nbsp; PERSPECTIVE &nbsp;|&nbsp; PROGRESS
           </div>
         </div>
@@ -80,9 +80,9 @@ export default function AboutStorySection() {
           <div className="lg:col-span-4 xl:col-span-4 flex flex-col justify-between">
             <div>
               {/* Main Headline */}
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
-                <span className="block">Where</span>
-                <span className="block gold-gradient-shine mt-0.5">It Began.</span>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-[42px] xl:text-[46px] font-bold tracking-tight text-[#1A1817] leading-tight">
+                <span>Where </span>
+                <span className="gold-gradient-shine">It Began.</span>
               </h2>
 
               {/* Story Paragraphs */}
@@ -155,9 +155,9 @@ export default function AboutStorySection() {
         </div>
 
         {/* ================= BOTTOM ROW: Four Pillars & 'A STRONGER TOMORROW' ================= */}
-        <div className="mt-6 sm:mt-7 pt-3 border-t border-[#E8E1D5] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        <div className="mt-5 sm:mt-7 pt-2.5 sm:pt-3 border-t border-[#E8E1D5] flex items-center justify-between gap-2 text-[7.5px] xs:text-[8.5px] sm:text-[9.5px]">
           {/* Left Four Pillars (Horizontal line with gold dot separators) */}
-          <div className="flex items-center gap-3 sm:gap-4 text-[8px] sm:text-[9px] font-semibold tracking-[0.24em] text-[#78716A] uppercase font-dm leading-none">
+          <div className="flex items-center gap-1.5 xs:gap-2.5 sm:gap-4 font-semibold tracking-[0.1em] xs:tracking-[0.16em] sm:tracking-[0.24em] text-[#78716A] uppercase font-dm leading-none">
             <span>JUSTICE</span>
             <span className="w-1 h-1 rounded-full bg-[#B88E44]" />
             <span>CONSTITUTION</span>
@@ -168,7 +168,7 @@ export default function AboutStorySection() {
           </div>
 
           {/* Right Bottom Tag */}
-          <div className="text-[9px] sm:text-[10px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm">
+          <div className="font-semibold tracking-[0.12em] xs:tracking-[0.16em] sm:tracking-[0.22em] text-[#78716A] uppercase font-dm shrink-0 text-right">
             A STRONGER TOMORROW
           </div>
         </div>

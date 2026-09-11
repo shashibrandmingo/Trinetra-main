@@ -123,7 +123,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#legacy" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
+                <Link href="/about" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
                   About Us
                 </Link>
               </li>
@@ -138,7 +138,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
+                <Link href="/contact" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
                   Contact Us
                 </Link>
               </li>
@@ -154,13 +154,13 @@ export default function Footer() {
 
             <ul className="flex flex-col gap-2.5 text-xs sm:text-[13px] font-dm text-[#CBBDB1]">
               <li>
-                <Link href="#insights" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
-                  Blogs
+                <Link href="/blogs" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
+                  Blogs & Commentary
                 </Link>
               </li>
               <li>
-                <Link href="#insights" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
-                  Legal Insights
+                <Link href="/blogs" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
+                  Legal Insights (SEO)
                 </Link>
               </li>
               <li>
@@ -232,7 +232,12 @@ export default function Footer() {
             &copy; 2024 Trinetra Law Chambers. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-4 text-[#A38D89]">
+          <div className="flex items-center gap-4 text-[#A38D89] flex-wrap">
+            <Link href="/admin/login" className="hover:text-[#D4AF37] transition-colors flex items-center gap-1 font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+              <span>Chambers Admin</span>
+            </Link>
+            <span className="text-[#5A1C23]">|</span>
             <Link href="#privacy" className="hover:text-[#FAF8F5] transition-colors">
               Privacy Policy
             </Link>

@@ -50,7 +50,7 @@ export default function PracticeAreasListSection() {
   };
 
   return (
-    <section className="w-full bg-[#FAF8F5] text-[#2D2926] py-8 sm:py-10 lg:py-12 border-b border-[#E8E1D5]">
+    <section className="w-full bg-[#FAF8F5] text-[#2D2926] pt-12 xs:pt-14 sm:pt-12 lg:pt-14 pb-8 sm:pb-10 lg:pb-12 border-b border-[#E8E1D5]">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         
         {/* ================= SECTION HEADER ================= */}
@@ -76,7 +76,7 @@ export default function PracticeAreasListSection() {
           </div>
 
           {/* Right: Vertical Line + Motto Stack */}
-          <div className="flex items-center gap-3.5 lg:pb-1">
+          <div className="hidden sm:flex items-center gap-3.5 lg:pb-1">
             <div className="w-[1.5px] h-11 bg-[#D1C8BC] rounded-full" />
             <div className="flex flex-col gap-1 text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm leading-snug">
               <span>DIFFERENT MATTERS.</span>
@@ -107,16 +107,16 @@ export default function PracticeAreasListSection() {
                   <span className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#9E6728]" />
                 )}
 
-                <div className={`px-4 sm:px-6 lg:px-7 ${isExpanded ? 'py-4 sm:py-4.5' : 'py-3 sm:py-3.5'}`}>
+                <div className={`px-3 xs:px-4 sm:px-6 lg:px-7 ${isExpanded ? 'py-3.5 sm:py-4.5' : 'py-2.5 sm:py-3.5'}`}>
                   
                   {/* Top Row: Number, Divider, Title, Arrow Button */}
-                  <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center justify-between gap-2.5 sm:gap-4">
                     
                     {/* Left: Number + Vertical Line + Title */}
-                    <div className="flex items-center gap-4 sm:gap-6 lg:gap-7 flex-grow">
+                    <div className="flex items-center gap-2.5 xs:gap-3.5 sm:gap-6 lg:gap-7 min-w-0 flex-grow">
                       {/* Serif Number */}
                       <span
-                        className={`font-serif text-2xl sm:text-3xl lg:text-[36px] select-none transition-colors duration-200 min-w-[40px] ${
+                        className={`font-serif text-lg xs:text-xl sm:text-3xl lg:text-[36px] select-none transition-colors duration-200 shrink-0 min-w-[24px] xs:min-w-[28px] sm:min-w-[40px] ${
                           isExpanded
                             ? 'text-[#9E6728] font-normal'
                             : 'text-[#A89D8F] group-hover:text-[#9E6728]'
@@ -127,15 +127,15 @@ export default function PracticeAreasListSection() {
 
                       {/* Thin Vertical Divider */}
                       <span
-                        className={`w-[1px] h-6 sm:h-7 self-center transition-colors duration-200 ${
+                        className={`w-[1px] h-4 xs:h-5 sm:h-7 self-center shrink-0 transition-colors duration-200 ${
                           isExpanded ? 'bg-[#D6C7B2]' : 'bg-[#E3D9CC]'
                         }`}
                       />
 
-                      {/* Title - Fixed spacing & clean font styling */}
-                      <div className="flex flex-col">
+                      {/* Title - Compact on mobile to avoid awkward line wrapping */}
+                      <div className="flex flex-col min-w-0 flex-grow">
                         <h3
-                          className={`font-heading text-lg sm:text-xl lg:text-[21px] font-bold tracking-[0.01em] transition-colors duration-200 ${
+                          className={`font-heading text-[13px] xs:text-[14px] sm:text-xl lg:text-[21px] font-bold tracking-[0.01em] transition-colors duration-200 leading-snug sm:leading-tight ${
                             isExpanded
                               ? 'text-[#1A1817]'
                               : 'text-[#2D2926] group-hover:text-[#1A1817]'
@@ -149,7 +149,7 @@ export default function PracticeAreasListSection() {
                     {/* Right: Circular Arrow Action Button */}
                     <div className="flex-shrink-0">
                       <div
-                        className={`w-7.5 h-7.5 sm:w-8.5 sm:h-8.5 lg:w-9 lg:h-9 rounded-full flex items-center justify-center transition-all duration-200 ${
+                        className={`w-7 h-7 sm:w-8.5 sm:h-8.5 lg:w-9 lg:h-9 rounded-full flex items-center justify-center transition-all duration-200 ${
                           isExpanded
                             ? 'bg-[#8C5E28] text-white shadow-sm'
                             : 'border border-[#D5CAB9] text-[#7A6F62] group-hover:border-[#8C5E28] group-hover:text-[#8C5E28] group-hover:bg-[#FAF8F5]'
@@ -167,9 +167,9 @@ export default function PracticeAreasListSection() {
 
                   {/* Expanded Body: Description + Horizontal Divider + Keywords Tags */}
                   {isExpanded && (
-                    <div className="mt-2 sm:mt-2.5 pl-0 sm:pl-[58px] lg:pl-[68px] pr-0 sm:pr-10 animate-stagger-1">
+                    <div className="mt-2.5 sm:mt-2.5 pl-0 sm:pl-[58px] lg:pl-[68px] pr-0 sm:pr-10 animate-stagger-1">
                       {/* Description */}
-                      <p className="text-xs sm:text-[13px] text-[#5C544D] font-dm leading-relaxed max-w-3xl">
+                      <p className="text-[11.5px] xs:text-xs sm:text-[13px] text-[#5C544D] font-dm leading-relaxed max-w-3xl">
                         {item.description}
                       </p>
 
@@ -177,14 +177,14 @@ export default function PracticeAreasListSection() {
                       <div className="w-full h-[1px] bg-[#E0D3C0] my-2 sm:my-2.5" />
 
                       {/* Keywords / Sub-practice tags */}
-                      <div className="flex flex-wrap items-center gap-y-1 text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.2em] text-[#78716A] uppercase font-dm">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-y-1 text-[8px] xs:text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.16em] sm:tracking-[0.2em] text-[#78716A] uppercase font-dm">
                         {item.tags.map((tag, tIdx) => (
                           <div key={tIdx} className="inline-flex items-center">
-                            <span className="hover:text-[#9E6728] transition-colors">
+                            <span className="hover:text-[#9E6728] transition-colors bg-[#EDE4D6]/50 sm:bg-transparent px-1.5 py-0.5 sm:p-0 rounded-xs">
                               {tag}
                             </span>
                             {tIdx < item.tags.length - 1 && (
-                              <span className="mx-2.5 sm:mx-3 text-[#C8BCAF] font-light select-none">
+                              <span className="mx-1.5 sm:mx-3 text-[#C8BCAF] font-light select-none hidden sm:inline">
                                 |
                               </span>
                             )}

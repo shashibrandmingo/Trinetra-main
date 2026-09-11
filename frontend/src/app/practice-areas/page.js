@@ -1,5 +1,6 @@
 import PracticeAreasHeroSection from '@/components/PracticeAreasHeroSection';
 import PracticeAreasListSection from '@/components/PracticeAreasListSection';
+import FeaturedPracticeSection from '@/components/FeaturedPracticeSection';
 import PracticeDepthSection from '@/components/PracticeDepthSection';
 import OurApproachSection from '@/components/OurApproachSection';
 import PracticeJurisdictionsSection from '@/components/PracticeJurisdictionsSection';
@@ -19,6 +20,9 @@ export default function PracticeAreasPage() {
 
       {/* Areas of Practice - Accordion List Section */}
       <PracticeAreasListSection />
+
+      {/* Featured Practice Showcase Section */}
+      <FeaturedPracticeSection />
 
       {/* Practice Across Jurisdictions - Courts Timeline Section */}
       <PracticeJurisdictionsSection />

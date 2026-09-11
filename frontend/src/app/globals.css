@@ -55,6 +55,15 @@ body {
   }
 }
 
+@keyframes autoProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 @keyframes staggerUp {
   0% {
     opacity: 0;
@@ -125,6 +134,10 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
+  padding-bottom: 0.28em;
+  margin-bottom: -0.28em;
+  padding-top: 0.04em;
+  margin-top: -0.04em;
 }
 
 .font-editorial {

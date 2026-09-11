@@ -98,7 +98,7 @@ export default function PracticeDepthSection() {
                 SELECTED AREAS OF COUNSEL
               </span>
             </div>
-            <h2 className="font-heading text-[28px] sm:text-[38px] lg:text-[46px] xl:text-[52px] font-bold text-[#1A1817] leading-tight tracking-tight mb-3">
+            <h2 className="font-heading text-[30px] sm:text-[38px] lg:text-[46px] xl:text-[52px] font-bold text-[#1A1817] leading-tight tracking-tight mb-3">
               Depth where it <span className="gold-gradient-shine">matters.</span>
             </h2>
             <p className="text-[12px] sm:text-[13px] text-[#6B635B] font-dm leading-relaxed max-w-md">
@@ -106,8 +106,8 @@ export default function PracticeDepthSection() {
             </p>
           </div>
 
-          {/* Right motto */}
-          <div className="flex items-start gap-3 flex-shrink-0 pt-1">
+          {/* Right motto (Desktop & Tablet only) */}
+          <div className="hidden sm:flex items-start gap-3 flex-shrink-0 pt-1">
             <div className="w-[1px] h-12 bg-[#D1C8BC] rounded-full" />
             <div className="flex flex-col gap-[3px] text-[8.5px] sm:text-[9px] font-semibold tracking-[0.2em] text-[#78716A] uppercase font-dm leading-none">
               <span>PEOPLE</span>

@@ -42,7 +42,7 @@ export default function ContactCtaSection() {
 
                   <div className="mt-5 sm:mt-6">
                     <Link
-                      href="#consultation"
+                      href="/contact"
                       className="inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded-sm transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 active:scale-[0.98]"
                     >
                       <span>GET IN TOUCH</span>

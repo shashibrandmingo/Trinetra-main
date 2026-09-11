@@ -63,7 +63,7 @@ export default function PracticeJurisdictionsSection() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
+            <h2 className="font-heading text-[30px] sm:text-4xl lg:text-[46px] xl:text-[50px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
               <span className="block">Across Courts</span>
               <span className="block gold-gradient-shine mt-0.5 sm:mt-1">&amp; Forums.</span>
             </h2>
@@ -78,8 +78,8 @@ export default function PracticeJurisdictionsSection() {
             </p>
           </div>
 
-          {/* Right: Motto with Vertical Divider */}
-          <div className="flex items-start gap-3.5 lg:pb-1 flex-shrink-0">
+          {/* Right: Motto with Vertical Divider (Desktop & Tablet only) */}
+          <div className="hidden sm:flex items-start gap-3.5 lg:pb-1 flex-shrink-0">
             <div className="w-[1.5px] h-12 bg-[#D1C8BC] rounded-full self-stretch" />
             <div className="flex flex-col gap-0.5 text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm leading-tight">
               <span>DIFFERENT</span>

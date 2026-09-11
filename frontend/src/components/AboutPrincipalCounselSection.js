@@ -93,7 +93,7 @@ export default function AboutPrincipalCounselSection() {
   return (
     <section className="relative z-30 w-full bg-[#FAF8F5] text-[#2D2926] border-t border-[#E8E1D5]">
       {/* Main Container */}
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 lg:py-14">
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-12 xs:pt-14 sm:pt-16 lg:py-14 pb-8 sm:pb-12">
         
         {/* Main Grid: Left & Center Visual Composition (Col 1-9) + Right Column (Col 10-12) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-10 items-stretch">
@@ -111,12 +111,10 @@ export default function AboutPrincipalCounselSection() {
                 </span>
               </div>
 
-              {/* Main Headline */}
-              <h2 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight text-[#1A1817] leading-[1.06]">
-                <span className="block">Law</span>
-                <span className="block">in Service</span>
-                <span className="block gold-gradient-shine mt-1">of a Larger</span>
-                <span className="block gold-gradient-shine">Purpose.</span>
+              {/* Main Headline (Strictly 2 lines) */}
+              <h2 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#1A1817] leading-[1.1] sm:leading-[1.08]">
+                <span className="block">Law in Service</span>
+                <span className="block gold-gradient-shine mt-1">of a Larger Purpose.</span>
               </h2>
 
               {/* Overview Paragraph */}
@@ -173,12 +171,10 @@ export default function AboutPrincipalCounselSection() {
                   </span>
                 </div>
 
-                {/* Main Headline */}
-                <h2 className="font-heading text-3xl lg:text-[38px] xl:text-[46px] 2xl:text-[52px] font-bold tracking-tight text-[#1A1817] leading-[1.04]">
-                  <span className="block">Law</span>
-                  <span className="block">in Service</span>
-                  <span className="block gold-gradient-shine mt-0.5 xl:mt-1">of a Larger</span>
-                  <span className="block gold-gradient-shine">Purpose.</span>
+                {/* Main Headline (Strictly 2 lines) */}
+                <h2 className="font-heading text-3xl lg:text-[38px] xl:text-[46px] 2xl:text-[52px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
+                  <span className="block">Law in Service</span>
+                  <span className="block gold-gradient-shine mt-0.5 xl:mt-1">of a Larger Purpose.</span>
                 </h2>
 
                 {/* Overview Paragraph */}
@@ -270,32 +266,35 @@ export default function AboutPrincipalCounselSection() {
               })}
             </div>
 
-            {/* Middle: Authentic Handwritten Sticky Note Card */}
-            <div className="my-8 sm:my-10 xl:my-12 flex justify-start">
-              <img
-                src="/counsel-note-card.png"
-                alt="Same law. A fairer tomorrow handwritten note"
-                className="w-full max-w-[220px] sm:max-w-[250px] xl:max-w-[270px] h-auto object-contain drop-shadow-md select-none -rotate-1 hover:rotate-0 transition-transform duration-300"
-              />
+            {/* Middle & Lower: Authentic Handwritten Note Card & 2x2 Key Areas of Work */}
+            <div className="my-5 sm:my-8 lg:my-10 pt-5 sm:pt-6 border-t border-[#E8E1D5] lg:border-t-0 flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-start justify-between gap-5 sm:gap-6 lg:gap-8">
+              {/* Authentic Handwritten Sticky Note Card (Smaller, cute & compact) */}
+              <div className="w-full max-w-[175px] xs:max-w-[190px] sm:max-w-[210px] xl:max-w-[240px] flex justify-center sm:justify-start">
+                <img
+                  src="/counsel-note-card.png"
+                  alt="Same law. A fairer tomorrow handwritten note"
+                  className="w-full h-auto object-contain drop-shadow-md select-none -rotate-1 hover:rotate-0 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Key Areas of Work - Strictly 2x2 Grid on Mobile */}
+              <div className="w-full flex-1">
+                <h5 className="text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#78716A] uppercase font-dm mb-2.5 sm:mb-3.5 text-left">
+                  KEY AREAS OF WORK
+                </h5>
+                <ul className="grid grid-cols-2 lg:grid-cols-1 gap-x-3 gap-y-2 sm:gap-3 text-[10.5px] xs:text-[11.5px] sm:text-[12.5px] xl:text-[13px] text-[#4A433D] font-dm font-normal leading-tight">
+                  {keyPracticeAreas.map((area, idx) => (
+                    <li key={idx} className="flex items-start gap-1.5 sm:gap-2 justify-start">
+                      <span className="text-[#B88E44] font-bold text-xs sm:text-sm leading-none select-none pt-0.5">|</span>
+                      <span className="font-medium">{area}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            {/* Lower: Key Areas of Work */}
-            <div className="mb-8 sm:mb-10 xl:mb-12">
-              <h5 className="text-[10px] sm:text-[10.5px] font-semibold tracking-[0.24em] text-[#78716A] uppercase font-dm mb-3.5 sm:mb-4">
-                KEY AREAS OF WORK
-              </h5>
-              <ul className="space-y-3 sm:space-y-3.5 text-xs sm:text-[13px] xl:text-[13.5px] text-[#4A433D] font-dm font-normal">
-                {keyPracticeAreas.map((area, idx) => (
-                  <li key={idx} className="flex items-center gap-2.5">
-                    <span className="text-[#B88E44] font-bold text-sm leading-none select-none">|</span>
-                    <span>{area}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Bottom: Chambers Branding */}
-            <div className="mt-auto pt-5 sm:pt-6 border-t border-[#B88E44]/35">
+            {/* Bottom: Chambers Branding (Desktop only, hidden on mobile) */}
+            <div className="hidden lg:block mt-auto pt-5 sm:pt-6 border-t border-[#B88E44]/35">
               <div className="text-[10.5px] sm:text-[11px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm">
                 TRINETRA LAW CHAMBERS
               </div>

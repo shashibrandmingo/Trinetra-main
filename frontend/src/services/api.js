@@ -1,10 +1,10 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1';
+import { API_BASE_URL, API_ENDPOINTS, buildApiUrl } from '@/config/api.config';
 
 /**
  * Common request wrapper for API calls
  */
-async function request(endpoint, options = {}) {
-  const url = `${API_BASE_URL}${endpoint}`;
+async function request(endpoint, options = {}, queryParams = {}) {
+  const url = buildApiUrl(endpoint, queryParams);
   const headers = {
     ...options.headers,
   };
@@ -29,48 +29,78 @@ async function request(endpoint, options = {}) {
   return data;
 }
 
-// Blog Service API
+// ================= BLOG SERVICE API =================
 export const blogService = {
-  getAll: (params = {}) => {
-    const searchParams = new URLSearchParams(params).toString();
-    return request(`/blogs${searchParams ? `?${searchParams}` : ''}`);
-  },
-  getBySlugOrId: (idOrSlug) => request(`/blogs/${idOrSlug}`),
+  getAll: (params = {}) => request(API_ENDPOINTS.BLOGS, {}, params),
+  getBySlugOrId: (idOrSlug) => request(API_ENDPOINTS.BLOG_BY_SLUG_OR_ID(idOrSlug)),
   create: (formData) =>
-    request('/blogs', {
+    request(API_ENDPOINTS.BLOGS, {
       method: 'POST',
       body: formData, // FormData instance with banner image file
     }),
   update: (id, formData) =>
-    request(`/blogs/${id}`, {
+    request(API_ENDPOINTS.BLOG_BY_SLUG_OR_ID(id), {
       method: 'PUT',
       body: formData,
     }),
   delete: (id) =>
-    request(`/blogs/${id}`, {
+    request(API_ENDPOINTS.BLOG_BY_SLUG_OR_ID(id), {
       method: 'DELETE',
     }),
 };
 
-// Gallery Service API
+// ================= GALLERY SERVICE API =================
 export const galleryService = {
-  getAll: (params = {}) => {
-    const searchParams = new URLSearchParams(params).toString();
-    return request(`/gallery${searchParams ? `?${searchParams}` : ''}`);
-  },
-  getById: (id) => request(`/gallery/${id}`),
+  getAll: (params = {}) => request(API_ENDPOINTS.GALLERY, {}, params),
+  getById: (id) => request(API_ENDPOINTS.GALLERY_BY_ID(id)),
   upload: (formData) =>
-    request('/gallery', {
+    request(API_ENDPOINTS.GALLERY, {
       method: 'POST',
       body: formData, // FormData instance with image file
     }),
   delete: (id) =>
-    request(`/gallery/${id}`, {
+    request(API_ENDPOINTS.GALLERY_BY_ID(id), {
       method: 'DELETE',
     }),
 };
 
-// Health Service API
-export const healthService = {
-  check: () => request('/health'),
+// ================= INQUIRY SERVICE API (Contact Submissions) =================
+export const inquiryService = {
+  create: (data) =>
+    request(API_ENDPOINTS.INQUIRIES, {
+      method: 'POST',
+      body: data,
+    }),
+  getAll: (params = {}) => request(API_ENDPOINTS.INQUIRIES, {}, params),
+  updateStatus: (id, status, notes) =>
+    request(API_ENDPOINTS.INQUIRY_BY_ID(id), {
+      method: 'PATCH',
+      body: { status, notes },
+    }),
+  delete: (id) =>
+    request(API_ENDPOINTS.INQUIRY_BY_ID(id), {
+      method: 'DELETE',
+    }),
 };
+
+// ================= ADMIN AUTH SERVICE =================
+export const authService = {
+  login: (credentials) =>
+    request(API_ENDPOINTS.AUTH_LOGIN, {
+      method: 'POST',
+      body: credentials,
+    }),
+  verify: (token) =>
+    request(API_ENDPOINTS.AUTH_VERIFY, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }),
+};
+
+// ================= HEALTH SERVICE API =================
+export const healthService = {
+  check: () => request(API_ENDPOINTS.HEALTH),
+};
+
+export { API_BASE_URL, API_ENDPOINTS };
