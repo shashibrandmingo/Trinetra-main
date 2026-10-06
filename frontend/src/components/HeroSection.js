@@ -14,11 +14,11 @@ function AdvocatePortraitCard() {
       <div className="relative p-1.5 sm:p-2 bg-[#FAF8F5] border border-[#2B2724] shadow-xl rounded-sm">
         <div className="relative aspect-[4/4.1] w-full overflow-hidden bg-[#241716]">
           <Image
-            src="/senior-counsel.jpg"
-            alt="Senior Counsel / Advocate - Trinetra Law Chambers"
+            src="/counsel-portrait.jpg"
+            alt="Advocate Monika Anand — Lead Counsel at Trinetra Law Chambers, Supreme Court of India & High Courts"
             fill
             sizes="(max-width: 1024px) 100vw, 400px"
-            className="object-cover object-[center_12%] hover:scale-[1.02] transition-transform duration-500"
+            className="object-cover object-top hover:scale-[1.02] transition-transform duration-500"
             priority
           />
 
@@ -35,9 +35,9 @@ function AdvocatePortraitCard() {
       <div className="mt-2.5 sm:mt-3 flex items-center justify-between px-1">
         <div>
           <p className="text-xs sm:text-[13.5px] font-semibold text-[#1F1C1A] tracking-tight">
-            Senior Counsel / Advocate
+            Monika Anand
           </p>
-          <p className="text-[11px] sm:text-xs text-[#78716A]">New Delhi</p>
+          <p className="text-[11px] sm:text-xs text-[#78716A]">LITIGATION COUNSEL &bull;LL.B&bull; LL.M. &bull; Ph.D. IN LAW</p>
         </div>
         {/* Gold Accent Line */}
         <span className="h-[2px] w-8 bg-[#B88E44] rounded-full" />
@@ -71,7 +71,7 @@ export default function HeroSection() {
             ADVOCACY FOR A STRONGER TOMORROW
           </span>
           <div className="flex items-center gap-2 text-[9.5px] sm:text-[11.5px] font-medium tracking-[0.18em] sm:tracking-[0.24em] text-[#8C847B] sm:text-[#78716A] uppercase font-dm">
-            <span>LAW</span>
+            <span>ADVOCACY</span>
             <span className="text-[#B88E44]/70 font-normal">|</span>
             <span>STRATEGY</span>
             <span className="text-[#B88E44]/70 font-normal">|</span>
@@ -93,16 +93,16 @@ export default function HeroSection() {
 
             {/* Main Headline (Poppins font strictly on two natural lines) */}
             <h1 className="font-heading tracking-tight text-[#1A1817] leading-[1.08] text-3xl sm:text-5xl lg:text-[50px] xl:text-[58px] font-extrabold">
-              <span className="block">Clarity in Law.</span>
+              <span className="block">Experience in Law.</span>
               <span className="block mt-1 sm:whitespace-nowrap">
-                <span className="gold-gradient-shine">Confidence in Court.</span>
+                <span className="gold-gradient-shine">Commitment to Your Cause.</span>
               </span>
             </h1>
 
             {/* Description Subtitle (DM Sans font) */}
             <p className="mt-3.5 sm:mt-4 text-[#504A44] text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl font-dm">
-              A litigation-focused law chamber representing clients in complex constitutional,
-              corporate and criminal matters before the Supreme Court of India and High Courts.
+              A litigation-focused legal practice led by Monika Anand, with 9+ years of experience across criminal, civil, matrimonial, service, tax and other complex legal matters, with extensive experience before the Supreme Court of India and High Courts.
+
             </p>
 
             {/* MOBILE ONLY: Portrait image placed above the action buttons */}
@@ -124,7 +124,7 @@ export default function HeroSection() {
                 href="#consultation"
                 className="inline-flex items-center justify-center px-3 sm:px-7 py-3 sm:py-3.5 bg-transparent hover:bg-[#4A1118]/5 text-[#4A1118] text-[11px] sm:text-sm font-semibold tracking-wide border border-[#4A1118] rounded-sm transition-all duration-200 active:scale-[0.98] text-center"
               >
-                <span>Request a Consultation</span>
+                <span>DISCUSS YOUR MATTER</span>
               </Link>
             </div>
 
@@ -135,15 +135,16 @@ export default function HeroSection() {
                 <span className="text-[#B88E44]">•</span>
                 <span>HIGH COURTS</span>
                 <span className="text-[#B88E44]">•</span>
-                <span>NEW DELHI</span>
+                <span>DELHI</span>
+                <span className="text-[#B88E44]">•</span>
+                <span>NOIDA</span>
               </div>
 
               {/* Vertical Motto Pillar */}
               <div className="text-[9.5px] font-medium tracking-[0.24em] text-[#8C847B] uppercase leading-tight font-serif hidden md:block">
-                <div>JUSTICE</div>
-                <div>CONSTITUTION</div>
-                <div>DEMOCRACY</div>
-                <div>ALWAYS</div>
+                <div>YOUR CONCERNS.</div>
+                <div>YOUR RIGHTS.</div>
+                <div>YOUR REPRESENTATION.</div>
               </div>
             </div>
           </div>

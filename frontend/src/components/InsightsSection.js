@@ -58,7 +58,7 @@ const articles = [
     title: 'Statutory Mastery in High-Stakes Litigation',
     description:
       'The imperative of courtroom scholarship in protecting institutional rights.',
-    image: '/senior-counsel.jpg',
+    image: '/court-supreme-facade.jpg',
   },
 ];
 

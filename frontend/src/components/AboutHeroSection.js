@@ -124,7 +124,7 @@ export default function AboutHeroSection() {
                 {/* 18+ Years of Practice Box */}
                 <div className="w-1/2 lg:w-full bg-[#FAF8F5] p-3.5 sm:p-4 lg:p-4 flex flex-col justify-end min-h-[145px] sm:min-h-[160px] lg:h-[185px] border-l lg:border-l-0 border-[#E8E1D5]">
                   <div className="font-heading text-3xl sm:text-4xl lg:text-[44px] text-[#6B635B] font-light leading-none">
-                    18+
+                    9+
                   </div>
                   <div className="mt-1 text-[8px] sm:text-[9.5px] font-semibold tracking-[0.2em] sm:tracking-[0.22em] text-[#78716A] uppercase font-dm leading-tight">
                     <div>YEARS OF</div>

@@ -25,7 +25,7 @@ const practiceAreas = [
     forum: 'CENTRAL ADMINISTRATIVE TRIBUNAL & HIGH COURTS',
     description:
       'Disciplinary proceedings, seniority disputes, pension entitlements, and constitutional service safeguards for civil servants and armed forces personnel.',
-    image: '/chamber-legacy.jpg',
+    image: '/court-tribunals.jpg',
     tags: ['CAT Litigation', 'Civil Services', 'Promotion Disputes'],
     motto: 'EQUITABLE DISPENSATION OF MERIT & RANK',
     tabBg: 'bg-[#EAE4D9]',
@@ -51,7 +51,7 @@ const practiceAreas = [
     forum: 'SPECIAL COURTS & HIGH COURTS',
     description:
       'White-collar defense, PMLA investigations, CBI & ED prosecutions, anticipatory bails, and trials involving complex statutory financial crimes.',
-    image: '/senior-counsel.jpg',
+    image: '/pratice-court.png',
     tags: ['PMLA Defense', 'CBI Prosecutions', 'Special Leave Petitions'],
     motto: 'STATUTORY PROTECTION OF LIBERTY & JUSTICE',
     tabBg: 'bg-[#C2B29A]',

@@ -13,26 +13,26 @@ export default function LegacySection() {
           {/* Stat 1: 18+ Years */}
           <div className="p-3.5 sm:p-4 lg:px-6 xl:px-8 lg:py-4.5 flex flex-col justify-center border-r border-b lg:border-b-0 border-[#E8E1D5]">
             <span className="font-heading font-extrabold text-xl sm:text-2xl lg:text-[28px] text-[#1A1817] tracking-tight leading-none">
-              18+
+              9+
             </span>
             <span className="text-[9px] sm:text-[10px] lg:text-[10.5px] font-bold tracking-[0.16em] text-[#2B2724] uppercase mt-1">
-              YEARS OF PRACTICE
+              YEARS
             </span>
             <p className="text-[10px] sm:text-[11px] text-[#6B635B] font-dm mt-0.5 leading-snug line-clamp-2">
-              Trusted legal counsel across complex matters
+              Litigation Experience
             </p>
           </div>
 
           {/* Stat 2: 500+ Matters */}
           <div className="p-3.5 sm:p-4 lg:px-6 xl:px-8 lg:py-4.5 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#E8E1D5]">
             <span className="font-heading font-extrabold text-xl sm:text-2xl lg:text-[28px] text-[#1A1817] tracking-tight leading-none">
-              500+
+              250+
             </span>
             <span className="text-[9px] sm:text-[10px] lg:text-[10.5px] font-bold tracking-[0.16em] text-[#2B2724] uppercase mt-1">
-              MATTERS DECREED
+              MATTERS
             </span>
             <p className="text-[10px] sm:text-[11px] text-[#6B635B] font-dm mt-0.5 leading-snug line-clamp-2">
-              Representing individuals, businesses and institutions
+              Across varied legal proceedings
             </p>
           </div>
 
@@ -43,7 +43,7 @@ export default function LegacySection() {
             </div>
             <div className="flex flex-col min-w-0">
               <h3 className="font-heading font-bold text-[11.5px] sm:text-[13px] xl:text-[14px] text-[#1A1817] leading-tight">
-                Supreme Court &amp; High Courts
+                Supreme Court &amp; 5 Years of High Courts
               </h3>
               <p className="text-[9.5px] sm:text-[11px] text-[#6B635B] font-dm mt-0.5 leading-snug line-clamp-2">
                 Regularly appearing before the highest courts in India
@@ -58,10 +58,10 @@ export default function LegacySection() {
             </div>
             <div className="flex flex-col min-w-0">
               <h3 className="font-heading font-bold text-[11.5px] sm:text-[13px] xl:text-[14px] text-[#1A1817] leading-tight">
-                Strategic Litigation
+                 &bull;LL.M &bull;Ph.D
               </h3>
               <p className="text-[9.5px] sm:text-[11px] text-[#6B635B] font-dm mt-0.5 leading-snug line-clamp-2">
-                Principled. Analytical. Results-driven.
+                Advanced academic foundation in Law.
               </p>
             </div>
           </div>
@@ -80,9 +80,9 @@ export default function LegacySection() {
           </div>
 
           <h2 className="font-heading font-extrabold text-[25px] min-[380px]:text-[27px] sm:text-3xl lg:text-[40px] xl:text-[44px] text-[#1A1817] leading-[1.14] tracking-tight">
-            <span className="block">Formidable Trial Advocacy.</span>
+            <span className="block">Experience in Litigation.</span>
             <span className="block gold-gradient-shine mt-0.5 sm:mt-1">
-              Constitutional Rigor.
+              Commitment to Every Matter.
             </span>
           </h2>
         </div>
@@ -97,33 +97,22 @@ export default function LegacySection() {
             <div className="relative z-10 p-1.5 sm:p-2 bg-[#FAF8F5] border border-[#2B2724] shadow-xl rounded-sm overflow-hidden">
               <div className="relative aspect-[4/4] w-full bg-[#1F1413] overflow-hidden">
                 <Image
-                  src="/chamber-legacy.jpg"
-                  alt="Trinetra Law Chambers Legal Desk & Volumes"
+                  src="/chamber-team.jpg"
+                  alt="Trinetra Law Chambers — Legal Team led by Adv. Monika Anand"
                   fill
                   sizes="(max-width: 1024px) 100vw, 480px"
-                  className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-center hover:scale-[1.02] transition-transform duration-700"
                 />
 
-                {/* Subtle dark vignette overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 pointer-events-none" />
-
-                {/* Overlaid Vertical Taglines (Top Left) */}
-                <div className="absolute top-3.5 left-3.5 text-left pointer-events-none">
-                  <div className="text-[9.5px] sm:text-[10px] font-bold tracking-[0.26em] text-[#F5EFE6] uppercase leading-relaxed font-dm drop-shadow-md">
-                    <div>LAW</div>
-                    <div>STRATEGY</div>
-                    <div>JUSTICE</div>
-                    <div>IMPACT</div>
-                  </div>
-                  <div className="h-[1.5px] w-5 bg-[#B88E44] mt-1.5 rounded-full" />
-                </div>
+                {/* Subtle soft gradient at very bottom so plaque is readable without obscuring faces */}
+                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
 
                 {/* Overlaid Bottom Plaque / Motto (Bottom Left) */}
-                <div className="absolute bottom-3.5 left-3.5 border-l-2 border-[#B88E44] pl-2.5 pointer-events-none">
-                  <p className="text-[9.5px] sm:text-[10.5px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase leading-tight font-dm drop-shadow-md">
+                <div className="absolute bottom-3 left-3 border-l-2 border-[#B88E44] pl-2.5 pointer-events-none">
+                  <p className="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase leading-tight font-dm drop-shadow-md">
                     BUILT ON PRINCIPLES.
                   </p>
-                  <p className="text-[9.5px] sm:text-[10.5px] font-bold tracking-[0.2em] text-[#C49A45] uppercase leading-tight font-dm drop-shadow-md mt-0.5">
+                  <p className="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#C49A45] uppercase leading-tight font-dm drop-shadow-md mt-0.5">
                     DRIVEN BY PURPOSE.
                   </p>
                 </div>
@@ -154,26 +143,26 @@ export default function LegacySection() {
 
             {/* Narrative Description (DM Sans) */}
             <p className="mt-3.5 sm:mt-4 text-[#554E46] text-xs sm:text-sm lg:text-base leading-relaxed font-dm max-w-2xl">
-              With eighteen years of benchmark practice across the Supreme Court of India, Delhi
-              High Court, and appellate benches nationwide, our chambers combine deep statutory
-              mastery with fearless courtroom presentation.
+              Monika Anand is a Law Graduate, LL.M. and Ph.D. in Law with 9+ years of experience in litigation, with exposure to criminal, constitutional, civil, matrimonial, service, tax and other legal proceedings.
+For the past five years, her practice has included work in and around the Supreme Court of India, with experience in legal research, case preparation, court procedure and higher-court litigation.
+
             </p>
 
             {/* Bar Accreditations Strip (Clean stacked bullets on mobile, horizontal row on desktop) */}
             <div className="mt-5 pt-3.5 border-t border-[#E8E1D5] flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-x-3.5 sm:gap-y-1.5 text-[10px] sm:text-[11px] font-semibold tracking-[0.14em] sm:tracking-[0.16em] text-[#554E46] uppercase font-dm">
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88E44] shrink-0" />
-                <span>SCBA SENIOR ROLL</span>
+                <span>LAW GRADUATE • LL.M. • Ph.D. IN LAW</span>
               </span>
               <span className="text-[#C4B7A5] hidden sm:inline">|</span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88E44] shrink-0" />
-                <span>BAR COUNCIL OF DELHI &amp; INDIA</span>
+                <span>9+ YEARS OF LITIGATION EXPERIENCE</span>
               </span>
               <span className="text-[#C4B7A5] hidden sm:inline">|</span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#B88E44] shrink-0" />
-                <span>BOMBAY HIGH COURT ADMITTED</span>
+                <span> SUPREME COURT OF INDIA & HIGH COURTS</span>
               </span>
             </div>
 
@@ -183,14 +172,14 @@ export default function LegacySection() {
               <div className="bg-white sm:bg-transparent border border-[#E6DDD0] sm:border-0 rounded-xl sm:rounded-none p-3 sm:p-0 shadow-2xs sm:shadow-none flex flex-col justify-between">
                 <div>
                   <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#1A1817] leading-none">
-                    18+
+                    9+
                   </span>
                   <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#2B2724] uppercase mt-1.5 leading-tight">
-                    YEARS OF PRACTICE
+                     YEARS OF EXPERIENCE
                   </span>
                 </div>
                 <span className="block text-[10px] sm:text-[10.5px] text-[#78716A] font-dm mt-1 leading-snug">
-                  Apex Court Litigation
+                  Litigation Experience
                 </span>
               </div>
 
@@ -198,15 +187,14 @@ export default function LegacySection() {
               <div className="bg-white sm:bg-transparent border border-[#E6DDD0] sm:border-0 rounded-xl sm:rounded-none p-3 sm:p-0 shadow-2xs sm:shadow-none flex flex-col justify-between">
                 <div>
                   <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#1A1817] leading-none">
-                    500+
+                    250 - 300
                   </span>
                   <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#2B2724] uppercase mt-1.5 leading-tight">
-                    CASES DECREED
+                     MATTERS HANDLED
                   </span>
                 </div>
                 <span className="block text-[10px] sm:text-[10.5px] text-[#78716A] font-dm mt-1 leading-snug">
-                  Benchmark Judgments
-                </span>
+                    Across Diverse Legal Proceedings</span>
               </div>
 
               {/* Stat 3 */}
@@ -214,18 +202,18 @@ export default function LegacySection() {
                 <div>
                   <div className="flex items-baseline gap-1">
                     <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#1A1817] leading-none">
-                      4
+                      5
                     </span>
                     <span className="font-heading font-bold text-xs sm:text-sm text-[#A67C38]">
-                      APEX
+                       
                     </span>
                   </div>
                   <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#2B2724] uppercase mt-1.5 leading-tight">
-                    BAR REGISTRATIONS
+                     YEARS AROUND THE
                   </span>
                 </div>
                 <span className="block text-[10px] sm:text-[10.5px] text-[#78716A] font-dm mt-1 leading-snug">
-                  Multi-Jurisdiction Roll
+                   SUPREME COURT OF INDIA
                 </span>
               </div>
 
@@ -233,14 +221,14 @@ export default function LegacySection() {
               <div className="bg-white sm:bg-transparent border border-[#E6DDD0] sm:border-0 rounded-xl sm:rounded-none p-3 sm:p-0 shadow-2xs sm:shadow-none flex flex-col justify-between">
                 <div>
                   <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#1A1817] leading-none">
-                    1200+
+                    7+
                   </span>
                   <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#2B2724] uppercase mt-1.5 leading-tight">
-                    CLIENTS REPRESENTED
+                    AREAS OF PRACTICE
                   </span>
                 </div>
                 <span className="block text-[10px] sm:text-[10.5px] text-[#78716A] font-dm mt-1 leading-snug">
-                  Pan-India Footprint
+                   Criminal • Civil • Tax • Service
                 </span>
               </div>
             </div>
@@ -251,7 +239,7 @@ export default function LegacySection() {
                 href="#practice-areas"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-semibold tracking-wider uppercase rounded-sm transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 active:scale-[0.98] w-full sm:w-auto"
               >
-                <span>OUR PRACTICE AREAS</span>
+                <span>DISCUSS YOUR MATTER</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
@@ -259,8 +247,8 @@ export default function LegacySection() {
               <div className="flex items-center gap-2.5 text-right">
                 <span className="h-[1.5px] w-6 bg-[#B88E44] rounded-full hidden sm:block" />
                 <div className="text-[10px] sm:text-[10.5px] font-semibold tracking-[0.2em] text-[#78716A] uppercase font-dm">
-                  <div>DISTINCTION IN LAW</div>
-                  <div className="text-[#A67C38]">INTEGRITY IN COURT</div>
+                  <div>BUILT ON PREPARATION.</div>
+                  <div className="text-[#A67C38]">DRIVEN BY PURPOSE.</div>
                 </div>
               </div>
             </div>

@@ -4,9 +4,34 @@ import ContactProximitySection from '@/components/ContactProximitySection';
 import ContactProtocolSection from '@/components/ContactProtocolSection';
 
 export const metadata = {
-  title: 'Contact Chambers — Trinetra Law Chambers',
+  title: 'Consult Adv. Monika Anand | Trinetra Law Chambers New Delhi | Contact & Registry',
   description:
-    'Initiate confidential counsel with Trinetra Law Chambers. Direct registry and advocate intake for Supreme Court of India, High Courts, and Appellate Tribunals in New Delhi.',
+    'Schedule a confidential legal consultation with Adv. Monika Anand at Trinetra Law Chambers, New Delhi. Direct intake for matters before Supreme Court of India, Delhi High Court, and Appellate Tribunals.',
+  keywords: [
+    'Consult Advocate Monika Anand',
+    'Lawyer Consultation New Delhi',
+    'Supreme Court Advocate Appointment',
+    'Legal Advice Delhi High Court',
+    'Trinetra Law Chambers Contact Number',
+    'Chambers Address New Delhi',
+  ],
+  alternates: {
+    canonical: 'https://trinetralawchambers.com/contact',
+  },
+  openGraph: {
+    title: 'Consult Adv. Monika Anand | Trinetra Law Chambers New Delhi',
+    description:
+      'Direct intake and confidential legal consultation for Supreme Court of India and High Court matters.',
+    url: 'https://trinetralawchambers.com/contact',
+    images: [
+      {
+        url: '/counsel-portrait.jpg',
+        width: 1000,
+        height: 1000,
+        alt: 'Consult Advocate Monika Anand — Trinetra Law Chambers',
+      },
+    ],
+  },
 };
 
 export default function ContactPage() {
