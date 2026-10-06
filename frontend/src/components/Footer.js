@@ -229,7 +229,7 @@ export default function Footer() {
         {/* Bottom Copyright & Legal Links */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-dm text-[#A38D89]">
           <div>
-            &copy; 2024 Trinetra Law Chambers. All rights reserved.
+            &copy; 2026 Trinetra Law Chambers. All rights reserved.
           </div>
 
           <div className="flex items-center gap-4 text-[#A38D89] flex-wrap">
