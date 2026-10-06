@@ -60,9 +60,9 @@ export default function ChamberCreedSection() {
 
               {/* Thinner, refined, elegant quote typography with fluid natural wrap */}
               <blockquote className="font-heading font-light text-[15px] min-[380px]:text-[16px] sm:text-[17px] lg:text-[18px] xl:text-[18.5px] text-[#1A1817] leading-[1.55] sm:leading-[1.48] tracking-tight">
-                In the courtroom,{' '}
-                <span className="font-normal text-[#9E7333]">victories are never accidental.</span>{' '}
-                They are engineered through constitutional depth, relentless preparation, and fearlessness before the bench.”
+                "Every matter deserves,{' '}
+                <span className="font-normal text-[#9E7333]">more than an argument.</span>{' '}
+                It deserves preparation, precision, and a clear understanding of what is at stake.”
               </blockquote>
             </div>
           </div>
@@ -72,10 +72,11 @@ export default function ChamberCreedSection() {
             <span className="h-7 w-[2px] bg-[#B88E44] rounded-full flex-shrink-0" />
             <div className="font-dm">
               <h4 className="text-[10px] sm:text-[11px] font-bold tracking-[0.2em] text-[#2B2724] uppercase">
-                SENIOR ADVOCATE &amp; LEAD COUNSEL
+               MONIKA ANAND &amp; Law Graduate · LL.M. · Ph.D. in Law
               </h4>
               <p className="text-[11px] sm:text-[11.5px] text-[#78716A] mt-0.5 font-medium">
-                Supreme Court of India &amp; High Courts of Delhi / Bombay
+                 Litigation Practice | Supreme Court of India & High Courts
+
               </p>
             </div>
           </div>

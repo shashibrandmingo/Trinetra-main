@@ -8,51 +8,48 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 const practiceAreas = [
   {
     id: '01',
-    title: 'Constitutional & Writ Law',
+    title: 'CRIMINAL & BAIL',
     forum: 'SUPREME COURT OF INDIA',
-    description:
-      'Article 32 & 226 writ petitions, fundamental rights enforcement, public interest litigation (PIL), and landmark constitutional challenges before Apex Benches.',
+    description: 'Representation across criminal proceedings, including bail, arrest, investigation, trial and appellate matters.',
     image: '/practice-constitutional.jpg',
-    tags: ['Article 32 & 226', 'Fundamental Rights', 'Writ Jurisdiction'],
-    motto: 'UPHOLDING CONSTITUTIONAL VALUES SINCE 2008',
+    tags: ['BAIL', 'CRIMINAL PROCEEDINGS', 'APPEALS'],
+    motto: 'DEFENDING LIBERTY & JUSTICE',
     tabBg: 'bg-[#FAF8F5]',
     tabBorder: 'border-[#D9CFBF]',
     tabTextColor: 'text-[#2B2724]',
   },
   {
     id: '02',
-    title: 'Service & Administrative Law',
+    title: 'NDPS MATTERS',
     forum: 'CENTRAL ADMINISTRATIVE TRIBUNAL & HIGH COURTS',
-    description:
-      'Disciplinary proceedings, seniority disputes, pension entitlements, and constitutional service safeguards for civil servants and armed forces personnel.',
+    description:'Matters involving offences under the NDPS Act, including questions of search, seizure, recovery, statutory safeguards, bail and trial.',
     image: '/court-tribunals.jpg',
-    tags: ['CAT Litigation', 'Civil Services', 'Promotion Disputes'],
-    motto: 'EQUITABLE DISPENSATION OF MERIT & RANK',
+    tags: ['NDPS ACT', 'BAIL', 'SEARCH & SEIZURE'],
+    motto: 'DEFENDING LIBERTY & JUSTICE',
     tabBg: 'bg-[#EAE4D9]',
     tabBorder: 'border-[#D2C5B3]',
     tabTextColor: 'text-[#362E27]',
   },
   {
     id: '03',
-    title: 'Commercial & Civil Litigation',
+    title: 'POCSO MATTERS',
     forum: 'COMMERCIAL COURTS & ARBITRAL TRIBUNALS',
-    description:
-      'High-value shareholder deadlocks, breach of contract claims, injunctions, insolvency proceedings, and domestic and cross-border commercial arbitration.',
+    description:'Careful representation in proceedings under the POCSO Act, covering investigation, evidence, bail and trial.',
     image: '/apex-benches.jpg',
-    tags: ['Commercial Injunctions', 'Arbitration & Conciliation', 'IBC Recovery'],
-    motto: 'SECURED ENTERPRISE & FISCAL REMEDIES',
+    tags: ['POCSO', 'BAIL', 'TRIAL'],
+    motto: 'DEFENDING LIBERTY & JUSTICE',
     tabBg: 'bg-[#DDD1BF]',
     tabBorder: 'border-[#C4B49F]',
     tabTextColor: 'text-[#2F2720]',
   },
   {
     id: '04',
-    title: 'Criminal Law',
+    title: 'MATRIMONIAL & FAMILY',
     forum: 'SPECIAL COURTS & HIGH COURTS',
-    description:
-      'White-collar defense, PMLA investigations, CBI & ED prosecutions, anticipatory bails, and trials involving complex statutory financial crimes.',
     image: '/pratice-court.png',
-    tags: ['PMLA Defense', 'CBI Prosecutions', 'Special Leave Petitions'],
+    description:'Legal representation in divorce, maintenance, matrimonial disputes, custody and related family-law proceedings.',
+    image: '/pratice-court.png',
+    tags: ['DIVORCE','MAINTENANCE','CUSTODY'],
     motto: 'STATUTORY PROTECTION OF LIBERTY & JUSTICE',
     tabBg: 'bg-[#C2B29A]',
     tabBorder: 'border-[#A6957E]',
@@ -60,26 +57,24 @@ const practiceAreas = [
   },
   {
     id: '05',
-    title: 'Appellate Practice',
+    title: 'SERVICE & EMPLOYMENT',
     forum: 'APPELLATE TRIBUNALS & SUPREME COURT',
-    description:
-      'Special Leave Petitions (SLP), statutory appeals, revision petitions, and constitutional references challenging lower court decrees across jurisdictions.',
+    description:'Representation in service disputes involving appointment, promotion, disciplinary proceedings, termination, seniority and related employment rights.',
     image: '/hero-bg-image.png',
-    tags: ['Article 136 SLPs', 'Review Petitions', 'Constitutional Benches'],
-    motto: 'DECISIVE BENCHMARK APPELLATE ADVOCACY',
+    tags: ['SERVICE MATTERS', 'DISCIPLINARY', 'EMPLOYMENT'],
+    motto: 'ENSURING FAIR PROCESS IN SERVICE & EMPLOYMENT MATTERS',
     tabBg: 'bg-[#85745E]',
     tabBorder: 'border-[#6F5F4C]',
     tabTextColor: 'text-[#FAF8F5]',
   },
   {
     id: '06',
-    title: 'Legislative & Policy Advisory',
+    title: 'CIVIL, TAX & OTHER MATTERS',
     forum: 'REGULATORY COMMISSIONS & STATUTORY BODIES',
-    description:
-      'Parliamentary bill scrutiny, regulatory compliance frameworks, public policy advocacy, and institutional governance advice for statutory authorities.',
+    description:'Experience across civil disputes, property matters, tax proceedings, writs, appeals, arbitration-related proceedings and matters before courts and tribunals.',
     image: '/practice-constitutional.jpg',
-    tags: ['Statutory Drafting', 'Policy Scrutiny', 'Regulatory Compliance'],
-    motto: 'SHAPING REGULATORY INTEGRITY & COMMERCE',
+    tags: ['CIVIL LITIGATION', 'TAX', 'WRITS'],
+    motto: 'RESOLVING COMPLEX CIVIL AND COMMERCIAL MATTERS',
     tabBg: 'bg-[#3A3026]',
     tabBorder: 'border-[#261E16]',
     tabTextColor: 'text-[#FAF8F5]',
@@ -155,17 +150,16 @@ export default function PracticeAreasSection() {
 
             {/* Main Headline (Poppins) - Identical to Legacy & Bar Admissions */}
             <h2 className="font-heading font-extrabold text-[25px] min-[380px]:text-[27px] sm:text-3xl lg:text-[40px] xl:text-[44px] text-[#1A1817] leading-[1.14] tracking-tight">
-              <span className="block">Examine Our Core</span>
+              <span className="block">Matters That Demand</span>
               <span className="block gold-gradient-shine mt-0.5 sm:mt-1">
-                Jurisprudence.
+                Careful Counsel.
               </span>
             </h2>
 
             {/* Subtitle description */}
             <p className="mt-3.5 sm:mt-4 text-[#554E46] text-xs sm:text-sm lg:text-[14.5px] leading-relaxed font-dm max-w-lg">
-              We are more than just courtroom litigators—our chambers engineer constitutional
-              depth, statutory mastery, and strategic court presentation that puts client
-              protection at the center.
+              Our practice spans criminal, civil, constitutional, matrimonial, service and tax matters, with each case approached through careful study of its facts, applicable law and procedural position.
+
             </p>
 
             {/* Desktop Only: Pill CTA Button, Pagination Controls, and Bottom Motto */}

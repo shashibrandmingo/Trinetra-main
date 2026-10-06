@@ -8,21 +8,21 @@ export default function BarAdmissionsSection() {
   const credentials = [
     {
       icon: Landmark,
-      badge: 'APEX COURT OF INDIA',
-      title: 'Supreme Court Bar Association',
-      roll: 'SCBA/REG/2011/9842',
+      badge: 'LAW GRADUATE',
+      title: 'Bachelor of Laws',
+      roll: '2017',
     },
     {
       icon: Scale,
-      badge: 'STATUTORY BAR COUNCIL',
-      title: 'Bar Council of Delhi & India',
-      roll: 'D/1458/2006 (BCI Enrolled)',
+      badge: ' LL.M',
+      title: ' Master’s in Law',
+      roll: ' Advanced legal study & research',
     },
     {
       icon: Landmark,
-      badge: 'APPELLATE BENCH',
-      title: 'Bombay High Court Bar Association',
-      roll: 'MAH/5892/2012',
+      badge: 'Ph.D. IN LAW',
+      title: 'Doctorate in Law',
+      roll: 'Recently completed',
     },
   ];
 
@@ -37,15 +37,16 @@ export default function BarAdmissionsSection() {
             <div className="flex items-center gap-2.5 sm:gap-3 mb-2">
               <span className="h-[1.5px] w-6 sm:w-8 bg-[#B88E44] rounded-full" />
               <span className="text-[10px] sm:text-xs font-bold tracking-[0.22em] text-[#8C6D37] uppercase font-dm">
-                STATUTORY BAR ADMISSIONS &amp; CREDENTIALS
+                PROFESSIONAL CREDENTIALS 
+ &amp; EXPERIENCE
               </span>
             </div>
 
             {/* Main Headline (Poppins) - Identical to Legacy Section */}
             <h2 className="font-heading font-extrabold text-[25px] min-[380px]:text-[27px] sm:text-3xl lg:text-[40px] xl:text-[44px] text-[#1A1817] leading-[1.14] tracking-tight">
-              <span className="block">Licensed Before</span>
+              <span className="block">Built on Legal Education.</span>
               <span className="block gold-gradient-shine mt-0.5 sm:mt-1">
-                India’s Apex Benches
+                 Strengthened by Practice.
               </span>
             </h2>
 
