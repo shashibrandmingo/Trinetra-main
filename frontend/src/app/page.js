@@ -20,6 +20,9 @@ export const metadata = {
     'Delhi High Court Lawyer',
     'Criminal Lawyer Delhi',
     'Bail Advocate Delhi High Court',
+    'NDPS Act Lawyer Delhi',
+    'POCSO Lawyer Delhi High Court',
+    'Advocate in Noida',
     'Matrimonial Lawyer Delhi',
     'Divorce Advocate Supreme Court',
     'Civil Court Advocate Delhi',
@@ -27,6 +30,7 @@ export const metadata = {
     'Tax Advocate Delhi',
     'Anticipatory Bail Lawyer Delhi',
     'PMLA ED Defense Advocate',
+    'Monika Anand Ph.D. in Law',
     'Trinetra Law Chambers',
   ],
   alternates: {
@@ -35,7 +39,7 @@ export const metadata = {
   openGraph: {
     title: 'Advocate Monika Anand | Trinetra Law Chambers — Supreme Court & High Courts',
     description:
-      'Premier litigation practice in New Delhi led by Adv. Monika Anand. 9+ years defending complex criminal, civil, matrimonial, service, and tax matters before the Supreme Court of India.',
+      'Premier litigation practice in New Delhi led by Adv. Monika Anand (LL.B., LL.M., Ph.D. in Law). 9+ years defending complex criminal, NDPS, POCSO, civil, matrimonial, service, and tax matters before the Supreme Court of India.',
     url: 'https://trinetralawchambers.com',
     images: [
       {
@@ -57,7 +61,7 @@ const homeFaqSchema = {
       name: 'Who is the lead advocate at Trinetra Law Chambers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Trinetra Law Chambers is led by Adv. Monika Anand, an experienced litigator with 9+ years of practice before the Supreme Court of India and High Courts across criminal, civil, matrimonial, service, and tax law.',
+        text: 'Trinetra Law Chambers is led by Adv. Monika Anand, a qualified Law Graduate with an LL.M. and Ph.D. in Law, bringing 9+ years of extensive litigation experience before the Supreme Court of India, Delhi High Court, and NCR district courts.',
       },
     },
     {
@@ -65,23 +69,31 @@ const homeFaqSchema = {
       name: 'Which courts does Adv. Monika Anand practice in?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Adv. Monika Anand regularly represents clients before the Supreme Court of India, the Delhi High Court, Central Administrative Tribunal (CAT), and various district courts and appellate tribunals in New Delhi and across India.',
+        text: 'Adv. Monika Anand regularly represents matters before the Supreme Court of India, the Delhi High Court, the Central Administrative Tribunal (CAT), and District Courts across New Delhi and Noida (Gautam Buddha Nagar).',
       },
     },
     {
       '@type': 'Question',
-      name: 'What legal matters does Trinetra Law Chambers handle?',
+      name: 'Does the chambers handle Criminal, NDPS and POCSO cases?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The chamber handles Criminal Defense (bails, PMLA, CBI trials, quashing), Civil and Property Litigation, Matrimonial and Family Law, Service Disputes before CAT, Direct & Indirect Tax Litigation, and Supreme Court Special Leave Petitions (SLPs).',
+        text: 'Yes. Adv. Monika Anand provides comprehensive representation in Criminal & Bail matters, including specialized defense in NDPS Act matters (search, seizure, recovery, bail) and POCSO Act proceedings (investigation, evidence, statutory bail, and trial).',
       },
     },
     {
       '@type': 'Question',
-      name: 'How can I consult Advocate Monika Anand for legal advice in Delhi?',
+      name: 'What other legal domains are handled by the practice?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You can request a confidential legal consultation through the Trinetra Law Chambers official website contact form or by scheduling an in-person conference in New Delhi.',
+        text: 'The practice covers Matrimonial & Family Law (divorce, custody, maintenance), Service & Employment disputes before CAT, Civil and Property litigation, Direct/Indirect Tax litigation, and Supreme Court Special Leave Petitions (SLP under Article 136).',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How can I schedule a consultation with Adv. Monika Anand in Delhi / Noida?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You can request a direct consultation through the official Trinetra Law Chambers website contact form, or schedule an in-person chamber conference in New Delhi.',
       },
     },
   ],

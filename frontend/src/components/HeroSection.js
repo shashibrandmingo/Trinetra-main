@@ -86,13 +86,16 @@ export default function HeroSection() {
             {/* Eyebrow Label with Gold Accent Line */}
             <div className="flex items-center gap-3 mb-3">
               <span className="text-[11px] sm:text-xs font-bold tracking-[0.22em] text-[#4A1118] uppercase">
-                TRINETRA LAW CHAMBERS
+                TRINETRA LAW CHAMBERS &bull; ADV. MONIKA ANAND
               </span>
               <span className="h-[1.5px] w-12 bg-[#B88E44] rounded-full" />
             </div>
 
             {/* Main Headline (Poppins font strictly on two natural lines) */}
-            <h1 className="font-heading tracking-tight text-[#1A1817] leading-[1.08] text-3xl sm:text-5xl lg:text-[50px] xl:text-[58px] font-extrabold">
+            <h1
+              className="font-heading tracking-tight text-[#1A1817] leading-[1.08] text-3xl sm:text-5xl lg:text-[50px] xl:text-[58px] font-extrabold"
+              aria-label="Advocate Monika Anand — Trinetra Law Chambers, Supreme Court of India and High Courts: Experience in Law, Commitment to Your Cause"
+            >
               <span className="block">Experience in Law.</span>
               <span className="block mt-1 sm:whitespace-nowrap">
                 <span className="gold-gradient-shine">Commitment to Your Cause.</span>

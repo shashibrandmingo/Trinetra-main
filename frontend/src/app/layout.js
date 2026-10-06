@@ -53,15 +53,26 @@ export const metadata = {
     'Advocate near Supreme Court',
     'High Court Litigation Advocates',
     
-    // Criminal Defense
+    // Criminal Defense, NDPS & POCSO
     'Criminal Lawyer in Delhi',
     'Top Criminal Advocate Delhi High Court',
     'Bail and Anticipatory Bail Advocate Delhi',
+    'NDPS Act Lawyer Delhi',
+    'NDPS Bail Advocate Supreme Court',
+    'NDPS Search and Seizure Lawyer',
+    'POCSO Lawyer Delhi High Court',
+    'POCSO Bail Advocate Delhi',
     'PMLA ED CBI Defense Lawyer Delhi',
     'White Collar Crime Advocate Supreme Court',
     'Section 482 CrPC Quashing Advocate',
     'NDPS and Economic Offenses Lawyer Delhi',
     
+    // Noida & NCR Courts
+    'Advocate in Noida',
+    'District Court Noida Lawyer',
+    'Surajpur Court Advocate Noida',
+    'Gautam Buddha Nagar Court Lawyer',
+
     // Civil & Commercial
     'Civil Advocate Delhi High Court',
     'Commercial Litigation Advocates Delhi',
@@ -92,6 +103,8 @@ export const metadata = {
     'Writ Petition Article 32 Supreme Court',
     'Female Advocate Supreme Court of India',
     'Best Lady Lawyer Delhi',
+    'Monika Anand Ph.D. in Law',
+    'Monika Anand LL.M. Advocate',
     'Legal Consultation New Delhi',
   ],
   authors: [{ name: 'Adv. Monika Anand' }, { name: 'Trinetra Law Chambers' }],
@@ -185,16 +198,19 @@ const jsonLdLegalService = {
         { '@type': 'AdministrativeArea', name: 'Delhi High Court' },
         { '@type': 'AdministrativeArea', name: 'New Delhi' },
         { '@type': 'AdministrativeArea', name: 'Delhi NCR' },
+        { '@type': 'AdministrativeArea', name: 'Noida & Gautam Buddha Nagar' },
         { '@type': 'AdministrativeArea', name: 'Central Administrative Tribunal CAT' },
         { '@type': 'Country', name: 'India' },
       ],
       founder: {
         '@type': 'Person',
         name: 'Monika Anand',
-        jobTitle: 'Advocate & Lead Counsel',
+        honorificPrefix: 'Adv.',
+        honorificSuffix: 'LL.B., LL.M., Ph.D. in Law',
+        jobTitle: 'Litigation Counsel & Advocate',
         image: 'https://trinetralawchambers.com/counsel-portrait.jpg',
         description:
-          'Advocate with 9+ years of extensive courtroom experience before the Supreme Court of India, High Courts, and Appellate Tribunals.',
+          'Advocate Monika Anand holds an LL.B., LL.M. and Ph.D. in Law with 9+ years of litigation experience before the Supreme Court of India, High Courts, and Appellate Tribunals.',
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
@@ -204,18 +220,27 @@ const jsonLdLegalService = {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Criminal Law & Defense Litigation',
+              name: 'Criminal Law & Bail Proceedings',
               description:
-                'Anticipatory bail, regular bail, PMLA investigations, CBI/ED trials, Section 482 CrPC petitions.',
+                'Representation across criminal proceedings, including anticipatory bail, regular bail, arrest safeguards, investigation, trial, and higher-court appeals.',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Civil & Commercial Litigation',
+              name: 'NDPS Act Matters',
               description:
-                'Property disputes, contract enforcement, injunctions, commercial arbitration, and recovery suits.',
+                'Offences under the NDPS Act, including questions of search, seizure, recovery, statutory safeguards, bail, and trial defense.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'POCSO Act Matters',
+              description:
+                'Proceedings under the POCSO Act, covering investigation procedure, evidence scrutiny, statutory bail, and trial representation.',
             },
           },
           {
@@ -224,34 +249,25 @@ const jsonLdLegalService = {
               '@type': 'Service',
               name: 'Matrimonial & Family Law',
               description:
-                'Divorce proceedings, child custody, maintenance petitions, mutual consent divorce, 498A defense.',
+                'Divorce proceedings, maintenance, child custody, domestic disputes, 498A defense, and family-law litigation.',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Service & Administrative Law',
+              name: 'Service & Employment Law',
               description:
-                'CAT disputes, disciplinary proceedings, pensions, promotions, armed forces tribunal matters.',
+                'Disciplinary proceedings, seniority disputes, CAT matters, termination, promotions, and employment safeguards for public and private employees.',
             },
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Taxation & Regulatory Advisory',
+              name: 'Civil, Property, Tax & Appellate Litigation',
               description:
-                'Direct tax, GST disputes, appellate tribunal hearings, and statutory compliance.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Constitutional & Supreme Court Appellate Practice',
-              description:
-                'Special Leave Petitions (SLP under Art 136), Writ Petitions (Art 32 & 226), review petitions.',
+                'Property disputes, contracts, injunctions, direct/indirect tax litigation, writ petitions, and Supreme Court Special Leave Petitions (SLP).',
             },
           },
         ],
@@ -261,22 +277,30 @@ const jsonLdLegalService = {
       '@type': 'Person',
       '@id': 'https://trinetralawchambers.com/#attorney',
       name: 'Monika Anand',
-      jobTitle: 'Advocate / Senior Counsel',
+      honorificPrefix: 'Adv.',
+      honorificSuffix: 'LL.B., LL.M., Ph.D. in Law',
+      jobTitle: 'Advocate & Litigation Counsel',
       worksFor: {
         '@id': 'https://trinetralawchambers.com/#organization',
       },
       image: 'https://trinetralawchambers.com/counsel-portrait.jpg',
       description:
-        'Advocate Monika Anand is a seasoned litigator with 9+ years of practice before the Supreme Court of India and High Courts.',
+        'Advocate Monika Anand is a Law Graduate, LL.M. and Ph.D. in Law with 9+ years of litigation experience before the Supreme Court of India, Delhi High Court and District Courts.',
+      hasCredential: [
+        { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'Bachelor of Laws (LL.B.)' },
+        { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'Master of Laws (LL.M.)' },
+        { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'Doctorate in Law (Ph.D.)' },
+      ],
       knowsAbout: [
-        'Criminal Law',
-        'Civil Litigation',
-        'Matrimonial Law',
-        'Service Law',
-        'Taxation Law',
-        'Constitutional Law',
-        'Supreme Court SLP Practice',
-        'High Court Writ Petitions',
+        'Criminal Law & Bail',
+        'NDPS Act Defense',
+        'POCSO Act Proceedings',
+        'Matrimonial & Family Law',
+        'Service & Employment Law (CAT)',
+        'Civil & Property Disputes',
+        'Taxation & Regulatory Law',
+        'Supreme Court SLP Article 136',
+        'High Court Writ Petitions Article 226',
       ],
     },
     {
