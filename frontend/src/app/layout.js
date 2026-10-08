@@ -1,6 +1,8 @@
 import { Cinzel, Poppins, DM_Sans, Cormorant_Garamond } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { EnquiryProvider } from "@/context/EnquiryModalContext";
+import EnquiryModal from "@/components/EnquiryModal";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -28,7 +30,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://trinetralawchambers.com'),
+  metadataBase: new URL('https://monikaanand.com'),
   title: {
     default: 'Trinetra Law Chambers | Adv. Monika Anand | Supreme Court & High Court Advocates New Delhi',
     template: '%s | Trinetra Law Chambers — Adv. Monika Anand',
@@ -117,13 +119,13 @@ export const metadata = {
     telephone: true,
   },
   alternates: {
-    canonical: 'https://trinetralawchambers.com',
+    canonical: 'https://monikaanand.com',
   },
   openGraph: {
     title: 'Trinetra Law Chambers | Adv. Monika Anand | Supreme Court & High Court Advocates',
     description:
       'Litigation-focused legal practice led by Adv. Monika Anand with 9+ years of experience across Criminal, Civil, Matrimonial, Service, Tax, and Constitutional law before the Supreme Court of India and High Courts.',
-    url: 'https://trinetralawchambers.com',
+    url: 'https://monikaanand.com',
     siteName: 'Trinetra Law Chambers',
     images: [
       {
@@ -172,12 +174,12 @@ const jsonLdLegalService = {
   '@graph': [
     {
       '@type': ['LegalService', 'Attorney'],
-      '@id': 'https://trinetralawchambers.com/#organization',
+      '@id': 'https://monikaanand.com/#organization',
       name: 'Trinetra Law Chambers',
       alternateName: 'Adv. Monika Anand Law Chambers',
-      url: 'https://trinetralawchambers.com',
-      logo: 'https://trinetralawchambers.com/Trinetra-Law-Chamber-logo.jpg',
-      image: 'https://trinetralawchambers.com/counsel-portrait.jpg',
+      url: 'https://monikaanand.com',
+      logo: 'https://monikaanand.com/Trinetra-Law-Chamber-logo.jpg',
+      image: 'https://monikaanand.com/counsel-portrait.jpg',
       description:
         'Premier litigation law chambers in New Delhi led by Adv. Monika Anand (9+ years experience) specializing in Criminal Defense, Civil Litigation, Matrimonial Disputes, Service Matters, Tax, and Supreme Court SLP / High Court Writ Petitions.',
       priceRange: '₹₹₹',
@@ -208,7 +210,7 @@ const jsonLdLegalService = {
         honorificPrefix: 'Adv.',
         honorificSuffix: 'LL.B., LL.M., Ph.D. in Law',
         jobTitle: 'Litigation Counsel & Advocate',
-        image: 'https://trinetralawchambers.com/counsel-portrait.jpg',
+        image: 'https://monikaanand.com/counsel-portrait.jpg',
         description:
           'Advocate Monika Anand holds an LL.B., LL.M. and Ph.D. in Law with 9+ years of litigation experience before the Supreme Court of India, High Courts, and Appellate Tribunals.',
       },
@@ -275,15 +277,15 @@ const jsonLdLegalService = {
     },
     {
       '@type': 'Person',
-      '@id': 'https://trinetralawchambers.com/#attorney',
+      '@id': 'https://monikaanand.com/#attorney',
       name: 'Monika Anand',
       honorificPrefix: 'Adv.',
       honorificSuffix: 'LL.B., LL.M., Ph.D. in Law',
       jobTitle: 'Advocate & Litigation Counsel',
       worksFor: {
-        '@id': 'https://trinetralawchambers.com/#organization',
+        '@id': 'https://monikaanand.com/#organization',
       },
-      image: 'https://trinetralawchambers.com/counsel-portrait.jpg',
+      image: 'https://monikaanand.com/counsel-portrait.jpg',
       description:
         'Advocate Monika Anand is a Law Graduate, LL.M. and Ph.D. in Law with 9+ years of litigation experience before the Supreme Court of India, Delhi High Court and District Courts.',
       hasCredential: [
@@ -305,11 +307,11 @@ const jsonLdLegalService = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://trinetralawchambers.com/#website',
-      url: 'https://trinetralawchambers.com',
+      '@id': 'https://monikaanand.com/#website',
+      url: 'https://monikaanand.com',
       name: 'Trinetra Law Chambers',
       publisher: {
-        '@id': 'https://trinetralawchambers.com/#organization',
+        '@id': 'https://monikaanand.com/#organization',
       },
     },
   ],
@@ -332,15 +334,23 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
           rel="stylesheet"
         />
+        <meta name="geo.region" content="IN-DL" />
+        <meta name="geo.placename" content="New Delhi" />
+        <meta name="geo.position" content="28.5684;77.2415" />
+        <meta name="ICBM" content="28.5684, 77.2415" />
+        <meta name="format-detection" content="telephone=yes" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdLegalService) }}
         />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-[#FAF8F5] text-[#2D2926]">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <EnquiryProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <EnquiryModal />
+        </EnquiryProvider>
       </body>
     </html>
   );

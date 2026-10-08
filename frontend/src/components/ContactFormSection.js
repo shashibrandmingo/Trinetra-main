@@ -33,6 +33,7 @@ const forumOptions = [
 ];
 
 import { inquiryService } from '@/services/api';
+import { sendLeadToGoogleSheet } from '@/services/googleSheet';
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -64,17 +65,38 @@ export default function ContactFormSection() {
         urgencyCode = 'priority';
       }
 
-      await inquiryService.create({
+      const contactPayload = {
         fullName: formData.fullName,
         email: formData.email,
         phone: formData.phone,
         practiceArea: `${formData.practiceArea} — [${formData.courtForum}]`,
         urgency: urgencyCode,
         matterSummary: `${formData.organization ? `[Org/Entity: ${formData.organization}]\n` : ''}${formData.matterSummary}`,
-      });
+        source: 'Main Contact Page Form',
+      };
+
+      await inquiryService.create(contactPayload);
+
+      try {
+        sendLeadToGoogleSheet(contactPayload);
+      } catch (sheetErr) {
+        console.warn('Google Sheet dispatch notice:', sheetErr);
+      }
+
       setIsSubmitted(true);
     } catch (err) {
-      console.warn('Backend intake notice (using offline receipt):', err.message);
+      // Backend is offline/not started — lead is already handled by Google Sheet
+      try {
+        sendLeadToGoogleSheet({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          practiceArea: `${formData.practiceArea} — [${formData.courtForum}]`,
+          urgency: 'standard',
+          matterSummary: formData.matterSummary,
+          source: 'Main Contact Page Form (Direct)',
+        });
+      } catch (e) {}
       // Fallback gracefully so client always receives confirmation
       setIsSubmitted(true);
     } finally {
@@ -348,42 +370,93 @@ export default function ContactFormSection() {
                 Serving the Supreme Court of India & Delhi High Court
               </p>
 
-              {/* Address */}
-              <div className="mt-6 pt-5 border-t border-white/10 flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-full bg-white/5 border border-white/10 text-[#C5A059] flex items-center justify-center shrink-0 mt-0.5">
-                  <MapPin className="w-4 h-4" />
+              {/* Addresses - All 3 Chambers Locations */}
+              <div className="mt-6 pt-5 border-t border-white/10 space-y-4">
+                {/* 1. Lajpat Nagar Chambers */}
+                <div className="flex items-start gap-3.5">
+                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 text-[#C5A059] flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[9.5px] font-semibold tracking-[0.2em] text-[#A69C8E] uppercase block font-dm">
+                      SOUTH DELHI CHAMBERS
+                    </span>
+                    <a
+                      href="https://maps.google.com/?q=H-8+Lajpat+Nagar+III+New+Delhi+110024"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs sm:text-[13px] text-[#FAF8F5] hover:text-[#C5A059] transition-colors font-medium leading-relaxed mt-0.5 block"
+                    >
+                      H-8, Lajpat Nagar III, New Delhi – 110024
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-[9.5px] font-semibold tracking-[0.2em] text-[#A69C8E] uppercase block font-dm">
-                    PHYSICAL LOCATION
-                  </span>
-                  <p className="text-xs sm:text-[13px] text-[#FAF8F5] font-medium leading-relaxed mt-0.5">
-                    A-9, Green Park, New Delhi – 110016, India
-                  </p>
-                  <span className="text-[10.5px] text-[#C5A059] font-dm block mt-1">
-                    ~15 mins from Supreme Court of India
-                  </span>
+
+                {/* 2. Noida Office */}
+                <div className="flex items-start gap-3.5">
+                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 text-[#C5A059] flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[9.5px] font-semibold tracking-[0.2em] text-[#A69C8E] uppercase block font-dm">
+                      NOIDA CORPORATE CHAMBERS
+                    </span>
+                    <a
+                      href="https://maps.google.com/?q=8th+Floor+ITHUM+TOWER+B-806+Block+A+Sector+62+Noida+201309"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs sm:text-[13px] text-[#FAF8F5] hover:text-[#C5A059] transition-colors font-medium leading-relaxed mt-0.5 block"
+                    >
+                      8th Floor, ITHUM TOWER, B-806, Block A, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309
+                    </a>
+                  </div>
+                </div>
+
+                {/* 3. Madhu Vihar Office */}
+                <div className="flex items-start gap-3.5">
+                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 text-[#C5A059] flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="text-[9.5px] font-semibold tracking-[0.2em] text-[#A69C8E] uppercase block font-dm">
+                      EAST DELHI CHAMBERS
+                    </span>
+                    <a
+                      href="https://maps.google.com/?q=A-62+Third+floor+Street+no+04+Madhu+vihar+Delhi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs sm:text-[13px] text-[#FAF8F5] hover:text-[#C5A059] transition-colors font-medium leading-relaxed mt-0.5 block"
+                    >
+                      A-62, Third floor Street no. 04 Madhu vihar Delhi
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              {/* Direct Telephone */}
-              <div className="mt-5 flex items-start gap-3.5">
-                <div className="w-9 h-9 rounded-full bg-white/5 border border-white/10 text-[#C5A059] flex items-center justify-center shrink-0 mt-0.5">
+              {/* Direct Telephones */}
+              <div className="mt-5 pt-4 border-t border-white/10 flex items-start gap-3.5">
+                <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 text-[#C5A059] flex items-center justify-center shrink-0 mt-0.5">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
                   <span className="text-[9.5px] font-semibold tracking-[0.2em] text-[#A69C8E] uppercase block font-dm">
-                    REGISTRY & COUNSEL LINE
+                    REGISTRY & COUNSEL LINES
                   </span>
-                  <a
-                    href="tel:+911141512345"
-                    className="text-sm font-bold text-[#FAF8F5] hover:text-[#C5A059] transition-colors mt-0.5 block font-heading"
-                  >
-                    +91 11 4151 2345
-                  </a>
-                  <span className="text-[10.5px] text-[#A69C8E] font-dm block mt-0.5">
-                    Emergency Apex Desk: +91 98100 24890
-                  </span>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mt-1">
+                    <a
+                      href="tel:+919999953430"
+                      className="text-sm font-bold text-[#FAF8F5] hover:text-[#C5A059] transition-colors block font-heading"
+                    >
+                      +91 99999 53430
+                    </a>
+                    <span className="hidden sm:inline text-white/30">•</span>
+                    <a
+                      href="tel:+919990613140"
+                      className="text-sm font-bold text-[#FAF8F5] hover:text-[#C5A059] transition-colors block font-heading"
+                    >
+                      +91 99906 13140
+                    </a>
+                  </div>
                 </div>
               </div>
 

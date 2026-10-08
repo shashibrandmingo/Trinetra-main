@@ -2,6 +2,7 @@ import { Inquiry } from '../models/inquiry.model.js';
 import { ApiError } from '../utils/ApiError.js';
 import { ApiResponse } from '../utils/ApiResponse.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
+import { appendToGoogleSheet } from '../utils/googleSheet.js';
 
 /**
  * @desc    Submit a new legal inquiry / case brief from contact form
@@ -11,18 +12,23 @@ import { asyncHandler } from '../utils/asyncHandler.js';
 export const createInquiry = asyncHandler(async (req, res) => {
   const { fullName, phone, email, practiceArea, urgency, matterSummary } = req.body;
 
-  if (!fullName || !phone || !email || !matterSummary) {
-    throw new ApiError(400, 'Full name, phone, email, and brief matter summary are required.');
+  if (!fullName || !phone || !matterSummary) {
+    throw new ApiError(400, 'Full name, phone, and brief matter summary are required.');
   }
 
   const inquiry = await Inquiry.create({
     fullName,
     phone,
-    email,
+    email: email || '',
     practiceArea: practiceArea || 'General Legal Counsel',
     urgency: urgency || 'standard',
     matterSummary,
     status: 'new',
+  });
+
+  // Asynchronously append to Google Sheet if webhook is configured
+  appendToGoogleSheet(inquiry).catch((err) => {
+    console.error('[GoogleSheet] Background sync error:', err.message);
   });
 
   return res

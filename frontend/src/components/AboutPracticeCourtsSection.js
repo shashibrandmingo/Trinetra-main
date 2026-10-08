@@ -7,7 +7,7 @@ const courtsData = [
   {
     step: '01',
     titleLine1: 'SUPREME COURT',
-    titleLine2: 'OF INDIA',
+    titleLine2: 'OF DELHI',
     image: '/court-supreme-steps.jpg',
     alt: 'Classical courthouse circular marble steps curving towards monumental columns',
     description: 'Matters of national importance and constitutional significance.',
@@ -56,16 +56,16 @@ export default function AboutPracticeCourtsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 xl:gap-10 items-stretch">
           
           {/* ================= LEFT COLUMN: "Where We Stand." Narrative ================= */}
-          <div className="lg:col-span-3.5 xl:col-span-3 flex flex-col justify-between pr-0 lg:pr-4">
+          <div className="lg:col-span-4 xl:col-span-3 flex flex-col justify-between pr-0 lg:pr-2 xl:pr-4">
             <div>
-              {/* Main Headline (Single line on mobile with exactly 30px size) */}
-              <h2 className="font-heading text-[30px] sm:text-4xl lg:text-[46px] xl:text-[54px] font-bold tracking-tight text-[#1A1817] leading-tight whitespace-nowrap">
-                <span>Where </span>
-                <span className="gold-gradient-shine">We Stand.</span>
+              {/* Main Headline */}
+              <h2 className="font-heading text-[28px] xs:text-[32px] sm:text-4xl lg:text-[38px] xl:text-[46px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
+                <span className="block sm:inline lg:block">Where </span>
+                <span className="gold-gradient-shine block sm:inline lg:block mt-0.5 sm:mt-1">We Stand.</span>
               </h2>
 
               {/* Narrative Paragraph */}
-              <p className="mt-3 sm:mt-5 text-[#554E46] text-xs sm:text-[13.5px] leading-relaxed max-w-[340px] font-dm font-normal">
+              <p className="mt-3 sm:mt-5 text-[#554E46] text-xs sm:text-[13.5px] leading-relaxed max-w-xs xl:max-w-sm font-dm font-normal">
                 Our practice spans the highest courts in the country, with a strong presence across constitutional, civil, criminal and commercial matters.
               </p>
             </div>
@@ -80,9 +80,9 @@ export default function AboutPracticeCourtsSection() {
             </div>
           </div>
 
-          {/* ================= RIGHT COLUMN: 4 Arched Court Cards (2x2 on Mobile, 4 Cols on Desktop) ================= */}
-          <div className="lg:col-span-8.5 xl:col-span-9 flex flex-col justify-between mt-2 lg:mt-0">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 xs:gap-3.5 sm:gap-4.5 xl:gap-5">
+          {/* ================= RIGHT COLUMN: 4 Arched Court Cards (2x2 on Mobile/Tablet, 4 Cols on Large Desktop) ================= */}
+          <div className="lg:col-span-8 xl:col-span-9 flex flex-col justify-between mt-4 lg:mt-0">
+            <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-3 xs:gap-3.5 sm:gap-4 xl:gap-4.5">
               {courtsData.map((court, index) => (
                 <div
                   key={index}
@@ -144,7 +144,7 @@ export default function AboutPracticeCourtsSection() {
               <div className="w-full h-[1px] bg-[#B88E44]/50" />
 
               {/* 4 Centered Timeline Nodes aligned under each card */}
-              <div className="grid grid-cols-2 lg:grid-cols-4 w-full -mt-[7px]">
+              <div className="grid grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 w-full -mt-[7px]">
                 {courtsData.map((_, index) => (
                   <div key={index} className="flex justify-center">
                     <div className="w-3.5 h-3.5 rounded-full border border-[#B88E44] bg-[#FAF8F5] flex items-center justify-center shadow-xs">

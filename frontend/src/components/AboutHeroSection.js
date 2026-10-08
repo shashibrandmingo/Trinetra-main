@@ -56,7 +56,7 @@ export default function AboutHeroSection() {
             <div className="mt-4 sm:mt-5 lg:mt-7 flex items-center gap-3">
               <span className="w-8 sm:w-10 h-[1.5px] bg-[#B88E44]" />
               <span className="text-[10px] sm:text-[11.5px] font-semibold tracking-[0.2em] sm:tracking-[0.24em] text-[#78716A] uppercase font-dm">
-                EST. 2008 &nbsp;•&nbsp; NEW DELHI
+                EST. 2017 &nbsp;•&nbsp; NEW DELHI
               </span>
             </div>
           </div>

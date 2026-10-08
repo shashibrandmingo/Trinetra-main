@@ -141,13 +141,14 @@ export default function Navbar() {
 
             {/* Right: Desktop Consultation Button */}
             <div className="hidden lg:flex items-center">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-2.5 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#4A1118] focus:ring-offset-2 focus:ring-offset-[#FAF8F5]"
+              <button
+                type="button"
+                data-open-enquiry="true"
+                className="group inline-flex items-center gap-2.5 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#4A1118] focus:ring-offset-2 focus:ring-offset-[#FAF8F5] cursor-pointer"
               >
                 <span>CONSULTATION</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 text-white" />
-              </Link>
+              </button>
             </div>
 
             {/* Mobile Menu Toggle Button with Smooth Icon Morphing */}
@@ -279,17 +280,17 @@ export default function Navbar() {
                 <div className="w-full h-[1px] bg-[#E8E1D5]/80" />
               </div>
 
-              {/* Mobile Action Button with subtle stagger */}
               <div
                 style={{ transitionDelay: isMobileMenuOpen ? '260ms' : '0ms' }}
                 className={`transition-all duration-300 transform ${
                   isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
                 }`}
               >
-                <Link
-                  href="/contact"
+                <button
+                  type="button"
+                  data-open-enquiry="true"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="w-full group flex items-center justify-between px-5 py-3.5 bg-gradient-to-r from-[#4A1118] to-[#380C12] hover:from-[#380C12] hover:to-[#2A090E] text-white text-xs font-bold tracking-[0.18em] uppercase rounded-xl shadow-md shadow-[#4A1118]/15 border border-[#9E6728]/40 transition-all duration-200 active:scale-[0.99]"
+                  className="w-full group flex items-center justify-between px-5 py-3.5 bg-gradient-to-r from-[#4A1118] to-[#380C12] hover:from-[#380C12] hover:to-[#2A090E] text-white text-xs font-bold tracking-[0.18em] uppercase rounded-xl shadow-md shadow-[#4A1118]/15 border border-[#9E6728]/40 transition-all duration-200 active:scale-[0.99] cursor-pointer"
                 >
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
@@ -298,7 +299,7 @@ export default function Navbar() {
                   <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#4A1118] transition-colors">
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </div>
-                </Link>
+                </button>
               </div>
 
               {/* Chamber Direct Call Quick Link */}
@@ -309,11 +310,11 @@ export default function Navbar() {
                 }`}
               >
                 <a
-                  href="tel:+911141512345"
+                  href="tel:+919999953430"
                   className="flex items-center gap-1.5 hover:text-[#4A1118] transition-colors"
                 >
                   <Phone className="w-3 h-3 text-[#9E6728]" />
-                  <span className="font-medium">+91 11 4151 2345</span>
+                  <span className="font-medium">+91 99999 53430</span>
                 </a>
                 <span className="text-[10px] tracking-wider uppercase text-[#A89E92] font-semibold">
                   New Delhi Chambers

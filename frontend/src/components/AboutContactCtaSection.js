@@ -39,15 +39,17 @@ export default function AboutContactCtaSection() {
 
             {/* Black CTA Button */}
             <div className="mt-6 sm:mt-8">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#1A1817] hover:bg-[#B88E44] text-[#FAF8F5] transition-all duration-300 shadow-md group"
+              <button
+                type="button"
+                data-open-enquiry="true"
+                data-note="Initiated from About Page CTA"
+                className="inline-flex items-center gap-3.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#1A1817] hover:bg-[#B88E44] text-[#FAF8F5] transition-all duration-300 shadow-md group cursor-pointer"
               >
                 <span className="font-dm font-semibold text-[11px] sm:text-[11.5px] tracking-[0.2em] sm:tracking-[0.22em] uppercase">
                   DISCUSS YOUR MATTER
                 </span>
                 <ArrowRight className="w-4 h-4 text-[#B88E44] group-hover:text-white group-hover:translate-x-1 transition-all duration-300" strokeWidth={1.8} />
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -87,7 +89,7 @@ export default function AboutContactCtaSection() {
           
           {/* Item 1: Phone */}
           <a 
-            href="tel:+911141582300" 
+            href="tel:+919999953430" 
             className="group flex items-center gap-3.5 p-2.5 sm:p-0 rounded-xl sm:rounded-none bg-white/70 sm:bg-transparent border border-[#E8E1D5] sm:border-0 cursor-pointer transition-all hover:border-[#B88E44]/60"
           >
             <div className="w-9 h-9 rounded-full bg-[#FAF8F5] border border-[#E8E1D5] flex items-center justify-center text-[#B88E44] shadow-2xs flex-shrink-0 group-hover:bg-[#B88E44] group-hover:text-white group-hover:border-[#B88E44] transition-colors duration-200">
@@ -98,7 +100,7 @@ export default function AboutContactCtaSection() {
                 PHONE
               </div>
               <span className="text-xs sm:text-[13.5px] font-medium text-[#1A1817] font-dm group-hover:text-[#B88E44] transition-colors">
-                +91 11 4158 2300
+                +91 99999 53430
               </span>
             </div>
           </a>
@@ -129,7 +131,7 @@ export default function AboutContactCtaSection() {
 
           {/* Item 3: Chambers */}
           <a 
-            href="https://maps.google.com/?q=New+Delhi,+India" 
+            href="https://maps.google.com/?q=H-8+Lajpat+Nagar+III+New+Delhi+110024" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group flex items-center gap-3.5 p-2.5 sm:p-0 rounded-xl sm:rounded-none bg-white/70 sm:bg-transparent border border-[#E8E1D5] sm:border-0 cursor-pointer transition-all hover:border-[#B88E44]/60"
@@ -142,7 +144,7 @@ export default function AboutContactCtaSection() {
                 CHAMBERS
               </div>
               <span className="text-xs sm:text-[13.5px] font-medium text-[#1A1817] font-dm group-hover:text-[#B88E44] transition-colors">
-                New Delhi, India
+                H-8, Lajpat Nagar III, New Delhi
               </span>
             </div>
           </a>

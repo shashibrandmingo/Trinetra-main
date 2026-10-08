@@ -78,7 +78,7 @@ export default function ContactProximitySection() {
 
           <div className="flex items-center gap-3">
             <a
-              href="https://maps.google.com/?q=A-9+Green+Park+New+Delhi"
+              href="https://maps.google.com/?q=H-8+Lajpat+Nagar+III+New+Delhi+110024"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-6 py-3.5 bg-white hover:bg-[#FAF4EB] border border-[#D5CDC0] hover:border-[#9E6728] text-[#1A1817] rounded-lg transition-all duration-300 shadow-xs font-dm text-xs font-semibold tracking-wider uppercase"
@@ -160,39 +160,80 @@ export default function ContactProximitySection() {
                 Trinetra Law Chambers
               </h3>
               <p className="text-xs text-[#C8BEB2] mt-1.5 font-dm leading-relaxed">
-                A-9, Green Park, New Delhi – 110016
+                Central Chambers & Regional Practice Offices
               </p>
 
               {/* Transit & Court Proximity Details */}
               <div className="mt-6 space-y-3.5 pt-5 border-t border-white/10 text-xs font-dm">
                 
+                {/* Location 1: Lajpat Nagar */}
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-[#FAF8F5] block">Apex Court Access</span>
-                    <span className="text-[#A69C8E] text-[11px]">
-                      15 mins driving distance to the Supreme Court of India (Tilak Marg).
-                    </span>
+                    <span className="font-semibold text-[#FAF8F5] block">South Delhi Chambers</span>
+                    <a
+                      href="https://maps.google.com/?q=H-8+Lajpat+Nagar+III+New+Delhi+110024"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#C8BEB2] hover:text-[#C5A059] text-[11.5px] transition-colors block mt-0.5"
+                    >
+                      H-8, Lajpat Nagar III, New Delhi – 110024
+                    </a>
                   </div>
                 </div>
 
+                {/* Location 2: Noida */}
                 <div className="flex items-start gap-3">
-                  <Train className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+                  <Building2 className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-[#FAF8F5] block">Metro Connectivity</span>
-                    <span className="text-[#A69C8E] text-[11px]">
-                      200 meters from Green Park Metro Station (Yellow Line).
-                    </span>
+                    <span className="font-semibold text-[#FAF8F5] block">Noida Corporate Chambers</span>
+                    <a
+                      href="https://maps.google.com/?q=8th+Floor+ITHUM+TOWER+B-806+Block+A+Sector+62+Noida+201309"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#C8BEB2] hover:text-[#C5A059] text-[11.5px] transition-colors block mt-0.5"
+                    >
+                      8th Floor, ITHUM TOWER, B-806, Block A, Industrial Area, Sector 62, Noida, UP – 201309
+                    </a>
                   </div>
                 </div>
 
+                {/* Location 3: Madhu Vihar */}
                 <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-[#FAF8F5] block">East Delhi Chambers</span>
+                    <a
+                      href="https://maps.google.com/?q=A-62+Third+floor+Street+no+04+Madhu+vihar+Delhi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#C8BEB2] hover:text-[#C5A059] text-[11.5px] transition-colors block mt-0.5"
+                    >
+                      A-62, Third floor Street no. 04 Madhu vihar Delhi
+                    </a>
+                  </div>
+                </div>
+
+                {/* Phones */}
+                <div className="flex items-start gap-3 pt-1 border-t border-white/5">
                   <Phone className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-[#FAF8F5] block">Chambers Reception</span>
-                    <span className="text-[#A69C8E] text-[11px]">
-                      Direct Telephone: +91 11 4151 2345
-                    </span>
+                    <span className="font-semibold text-[#FAF8F5] block">Direct Consultation Lines</span>
+                    <div className="flex items-center gap-2 mt-0.5 flex-wrap">
+                      <a
+                        href="tel:+919999953430"
+                        className="text-[#C5A059] hover:underline font-bold text-[12px]"
+                      >
+                        +91 99999 53430
+                      </a>
+                      <span className="text-white/20">|</span>
+                      <a
+                        href="tel:+919990613140"
+                        className="text-[#C5A059] hover:underline font-bold text-[12px]"
+                      >
+                        +91 99906 13140
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -227,13 +268,13 @@ export default function ContactProximitySection() {
             {/* Bottom Button */}
             <div className="mt-6 pt-5 border-t border-white/10">
               <a
-                href="https://maps.google.com/?q=A-9+Green+Park+New+Delhi"
+                href="https://maps.google.com/?q=H-8+Lajpat+Nagar+III+New+Delhi+110024"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-3 bg-[#9E6728] hover:bg-[#B88E44] text-white py-3 px-5 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all duration-300 font-dm shadow-md"
               >
                 <Navigation className="w-3.5 h-3.5" />
-                <span>Navigate on Google Maps</span>
+                <span>Navigate to Central Chambers</span>
               </a>
             </div>
 

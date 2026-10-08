@@ -11,6 +11,7 @@ import {
   Phone,
   Mail,
   MapPin,
+  ArrowRight,
 } from 'lucide-react';
 
 const practiceDetails = {
@@ -304,6 +305,20 @@ export default function PracticeDetailModal({
                   </div>
                 </div>
 
+                {/* Direct Enquiry Button for this domain */}
+                <div className="mt-4 pt-1">
+                  <button
+                    type="button"
+                    data-open-enquiry="true"
+                    data-practice={data.title}
+                    onClick={onClose}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#1A1817] hover:bg-[#9E6728] text-white text-[10.5px] font-semibold tracking-[0.2em] uppercase rounded-sm transition-colors cursor-pointer shadow-xs"
+                  >
+                    <span>ENQUIRE ON THIS DOMAIN</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+
               </div>
             </div>
 
@@ -345,7 +360,7 @@ export default function PracticeDetailModal({
             
             {/* Phone */}
             <a
-              href="tel:+911141512345"
+              href="tel:+919999953430"
               className="flex items-center gap-2.5 p-2 sm:p-0 rounded-lg sm:rounded-none bg-white/50 sm:bg-transparent border border-[#E8E1D5]/60 sm:border-0 hover:border-[#9E6728]/50 transition-colors"
             >
               <div className="w-7 h-7 rounded-full border border-[#D5CDC0] bg-[#FAF8F5] text-[#9E6728] flex items-center justify-center shrink-0">
@@ -356,7 +371,7 @@ export default function PracticeDetailModal({
                   PHONE
                 </span>
                 <span className="text-[11px] font-semibold text-[#1A1817] hover:text-[#9E6728] transition-colors mt-0.5 block">
-                  +91 11 4151 2345
+                  +91 99999 53430
                 </span>
               </div>
             </a>
@@ -380,7 +395,12 @@ export default function PracticeDetailModal({
             </a>
 
             {/* Chambers Address */}
-            <div className="flex items-center gap-2.5 p-2 sm:p-0 rounded-lg sm:rounded-none bg-white/50 sm:bg-transparent border border-[#E8E1D5]/60 sm:border-0">
+            <a
+              href="https://maps.google.com/?q=H-8+Lajpat+Nagar+III+New+Delhi+110024"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2.5 p-2 sm:p-0 rounded-lg sm:rounded-none bg-white/50 sm:bg-transparent border border-[#E8E1D5]/60 sm:border-0 hover:border-[#9E6728]/50 transition-colors group"
+            >
               <div className="w-7 h-7 rounded-full border border-[#D5CDC0] bg-[#FAF8F5] text-[#9E6728] flex items-center justify-center shrink-0">
                 <MapPin className="w-3.5 h-3.5" />
               </div>
@@ -388,11 +408,11 @@ export default function PracticeDetailModal({
                 <span className="text-[8px] font-semibold tracking-[0.22em] text-[#8C827A] uppercase block font-dm leading-none">
                   NEW DELHI CHAMBERS
                 </span>
-                <p className="text-[10.5px] text-[#1A1817] font-medium leading-tight mt-0.5">
-                  A-9, Green Park, New Delhi - 110016
+                <p className="text-[10.5px] text-[#1A1817] group-hover:text-[#9E6728] transition-colors font-medium leading-tight mt-0.5">
+                  H-8, Lajpat Nagar III, New Delhi - 110024
                 </p>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>

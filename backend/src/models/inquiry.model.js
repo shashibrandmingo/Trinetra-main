@@ -15,9 +15,10 @@ const inquirySchema = new mongoose.Schema(
     },
     email: {
       type: String,
-      required: [true, 'Email address is required'],
+      required: false,
       trim: true,
       lowercase: true,
+      default: '',
     },
     practiceArea: {
       type: String,

@@ -41,13 +41,15 @@ export default function ContactCtaSection() {
                   </p>
 
                   <div className="mt-5 sm:mt-6">
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded-sm transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 active:scale-[0.98]"
+                    <button
+                      type="button"
+                      data-open-enquiry="true"
+                      data-note="Initiated from Home Page Contact CTA"
+                      className="inline-flex items-center justify-center gap-2.5 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded-sm transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 active:scale-[0.98] cursor-pointer"
                     >
                       <span>GET IN TOUCH</span>
                       <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -62,7 +64,7 @@ export default function ContactCtaSection() {
                 {/* Metric 1 */}
                 <div className="px-2 py-1 text-center sm:text-left sm:px-0 sm:py-5 sm:first:pt-0">
                   <div className="font-heading font-extrabold text-xl min-[380px]:text-2xl sm:text-3xl text-[#1A1817]">
-                    10+
+                    9+
                   </div>
                   <div className="font-dm text-[9px] min-[380px]:text-[9.5px] sm:text-[10px] font-bold tracking-[0.16em] sm:tracking-[0.2em] text-[#8C847B] uppercase mt-1 leading-tight">
                     <span className="sm:hidden">YEARS EXP.</span>
@@ -73,7 +75,7 @@ export default function ContactCtaSection() {
                 {/* Metric 2 */}
                 <div className="px-2 py-1 text-center sm:text-left sm:px-0 sm:py-5">
                   <div className="font-heading font-extrabold text-xl min-[380px]:text-2xl sm:text-3xl text-[#1A1817]">
-                    500+
+                    300+
                   </div>
                   <div className="font-dm text-[9px] min-[380px]:text-[9.5px] sm:text-[10px] font-bold tracking-[0.16em] sm:tracking-[0.2em] text-[#8C847B] uppercase mt-1 leading-tight">
                     CLIENTS ADVISED

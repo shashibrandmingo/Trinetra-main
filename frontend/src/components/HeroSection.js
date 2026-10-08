@@ -123,12 +123,14 @@ export default function HeroSection() {
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
-              <Link
-                href="#consultation"
-                className="inline-flex items-center justify-center px-3 sm:px-7 py-3 sm:py-3.5 bg-transparent hover:bg-[#4A1118]/5 text-[#4A1118] text-[11px] sm:text-sm font-semibold tracking-wide border border-[#4A1118] rounded-sm transition-all duration-200 active:scale-[0.98] text-center"
+              <button
+                type="button"
+                data-open-enquiry="true"
+                data-note="Initiated from Homepage Hero"
+                className="inline-flex items-center justify-center px-3 sm:px-7 py-3 sm:py-3.5 bg-transparent hover:bg-[#4A1118]/5 text-[#4A1118] text-[11px] sm:text-sm font-semibold tracking-wide border border-[#4A1118] rounded-sm transition-all duration-200 active:scale-[0.98] text-center cursor-pointer"
               >
                 <span>DISCUSS YOUR MATTER</span>
-              </Link>
+              </button>
             </div>
 
             {/* Lower Credential Strip */}

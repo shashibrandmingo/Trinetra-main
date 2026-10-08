@@ -28,15 +28,17 @@ export default function PracticeContactCtaSection() {
 
         {/* ─── Center CTA Button ───────────────────────────────────── */}
         <div className="flex justify-center mb-8 sm:mb-12 lg:mb-14">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-3 px-7 sm:px-10 py-3 sm:py-3.5 bg-[#121110] text-[#FAF8F5] border border-[#9E6728]/35 hover:border-[#9E6728] hover:bg-[#1A1817] transition-all duration-300 shadow-sm group"
+          <button
+            type="button"
+            data-open-enquiry="true"
+            data-note="Initiated from Practice Areas Page CTA"
+            className="inline-flex items-center justify-center gap-3 px-7 sm:px-10 py-3 sm:py-3.5 bg-[#121110] text-[#FAF8F5] border border-[#9E6728]/35 hover:border-[#9E6728] hover:bg-[#1A1817] transition-all duration-300 shadow-sm group cursor-pointer"
           >
             <span className="font-dm text-[10.5px] sm:text-[11px] font-semibold tracking-[0.24em] uppercase">
               DISCUSS YOUR MATTER
             </span>
             <ArrowRight className="w-4 h-4 text-[#FAF8F5] group-hover:translate-x-1.5 transition-transform duration-300" strokeWidth={1.8} />
-          </Link>
+          </button>
         </div>
 
         {/* ─── 3 Contact Pillars (Clean Cards on Mobile, 3 Cols on Desktop) ─── */}
@@ -44,7 +46,7 @@ export default function PracticeContactCtaSection() {
 
           {/* 1. Phone */}
           <a
-            href="tel:+911141512345"
+            href="tel:+919999953430"
             className="group flex items-center justify-start md:justify-center gap-3.5 p-3 sm:p-3.5 md:py-2 md:px-4 lg:px-6 bg-white/75 md:bg-transparent border border-[#E8E1D5] md:border-0 rounded-xl md:rounded-none shadow-2xs md:shadow-none hover:border-[#9E6728]/50 transition-all cursor-pointer"
           >
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#C29354] flex items-center justify-center flex-shrink-0 bg-[#FAF8F5] group-hover:bg-[#9E6728] transition-colors duration-200">
@@ -55,7 +57,7 @@ export default function PracticeContactCtaSection() {
                 PHONE
               </span>
               <span className="font-heading text-[14.5px] sm:text-[15px] md:text-[16px] font-semibold text-[#1A1817] group-hover:text-[#9E6728] transition-colors leading-none tracking-tight">
-                +91 11 4151 2345
+                +91 99999 53430
               </span>
             </div>
           </a>
@@ -80,7 +82,7 @@ export default function PracticeContactCtaSection() {
 
           {/* 3. New Delhi Chambers (Address) */}
           <a
-            href="https://maps.google.com/?q=New+Delhi,+India"
+            href="https://maps.google.com/?q=H-8+Lajpat+Nagar+III+New+Delhi+110024"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center justify-start md:justify-center gap-3.5 p-3 sm:p-3.5 md:py-2 md:px-4 lg:px-6 bg-white/75 md:bg-transparent border border-[#E8E1D5] md:border-0 rounded-xl md:rounded-none shadow-2xs md:shadow-none hover:border-[#9E6728]/50 transition-all cursor-pointer"
@@ -93,7 +95,7 @@ export default function PracticeContactCtaSection() {
                 NEW DELHI CHAMBERS
               </span>
               <span className="font-dm text-[12.5px] sm:text-[13px] md:text-[14px] text-[#4A433D] group-hover:text-[#1A1817] leading-snug">
-                A-9, Green Park, New Delhi – 110016
+                H-8, Lajpat Nagar III, New Delhi – 110024
               </span>
             </div>
           </a>

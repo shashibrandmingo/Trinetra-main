@@ -18,7 +18,7 @@ export const metadata = {
     title: 'Legal Insights & Judicial Perspectives | Trinetra Law Chambers',
     description:
       'In-depth strategic analyses on landmark Supreme Court rulings, commercial arbitration, and regulatory frameworks.',
-    url: 'https://trinetralawchambers.com/blogs',
+    url: 'https://monikaanand.com/blogs',
     siteName: 'Trinetra Law Chambers',
     images: [
       {
@@ -39,7 +39,7 @@ export const metadata = {
     images: ['/court-building.png'],
   },
   alternates: {
-    canonical: 'https://trinetralawchambers.com/blogs',
+    canonical: 'https://monikaanand.com/blogs',
   },
 };
 
@@ -50,19 +50,19 @@ export default function BlogsPage() {
     name: 'Trinetra Law Chambers Insights & Legal Perspectives',
     description:
       'Authoritative legal discourse on constitutional law, corporate dispute resolution, and appellate litigation before the Supreme Court of India.',
-    url: 'https://trinetralawchambers.com/blogs',
+    url: 'https://monikaanand.com/blogs',
     publisher: {
       '@type': 'LegalService',
       name: 'Trinetra Law Chambers',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://trinetralawchambers.com/logo.png',
+        url: 'https://monikaanand.com/logo.png',
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Green Park Main',
+        streetAddress: 'H-8, Lajpat Nagar III',
         addressLocality: 'New Delhi',
-        postalCode: '110016',
+        postalCode: '110024',
         addressCountry: 'IN',
       },
     },

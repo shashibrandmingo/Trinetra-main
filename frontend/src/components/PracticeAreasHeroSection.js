@@ -64,21 +64,23 @@ export default function PracticeAreasHeroSection({
       </div>
 
       {/* ================= TOP HEADER STRIP ================= */}
-      <div className="relative z-10 w-full border-b border-[#E8E1D5]/90 bg-[#FAF8F5]/80 backdrop-blur-[2px]">
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-2 sm:py-2.5 flex flex-col xs:flex-row items-center justify-between gap-1 xs:gap-2 text-[8.5px] sm:text-[10px] font-semibold tracking-[0.16em] sm:tracking-[0.24em] text-[#78716A] uppercase font-dm text-center xs:text-left">
-          <span className="hover:text-[#1A1817] transition-colors whitespace-normal xs:whitespace-nowrap">ADVOCACY FOR A STRONGER TOMORROW</span>
-          <div className="flex items-center gap-1.5 sm:gap-2.5 text-center xs:text-right text-[8px] sm:text-[10px]">
+      <div className="relative z-10 w-full border-b border-[#E8E1D5] bg-[#FAF8F5]">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-2 sm:py-2.5 flex items-center justify-between gap-2 text-[8px] sm:text-[10.5px] font-semibold tracking-[0.12em] sm:tracking-[0.24em] text-[#78716A] uppercase font-dm">
+          <span className="hover:text-[#1A1817] transition-colors truncate">
+            ADVOCACY FOR A STRONGER TOMORROW
+          </span>
+          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0 text-[8px] sm:text-[10px]">
             <span>LAW</span>
-            <span className="text-[#C4B8A5]">|</span>
+            <span className="text-[#B88E44]/70">|</span>
             <span>STRATEGY</span>
-            <span className="text-[#C4B8A5]">|</span>
+            <span className="text-[#B88E44]/70">|</span>
             <span>JUSTICE</span>
           </div>
         </div>
       </div>
 
       {/* ================= MAIN CONTENT BODY ================= */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-4 xs:pt-5 sm:pt-14 lg:pt-22 pb-8 xs:pb-10 sm:pb-5 lg:pb-6 flex-grow flex flex-col justify-start">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-5 sm:pt-12 lg:pt-16 pb-8 sm:pb-6 flex-grow flex flex-col justify-start">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-start">
           
           {/* Left Column: Eyebrow + Huge Two-Tone Headline + Narrative Description */}

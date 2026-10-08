@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const siteUrl = 'https://trinetralawchambers.com';
+  const siteUrl = 'https://monikaanand.com';
   const articleUrl = `${siteUrl}/blogs/${blog.slug}`;
   const bannerImg = blog.banner?.url?.startsWith('http')
     ? blog.banner.url
@@ -98,14 +98,14 @@ export default async function BlogDetailPage({ params }) {
     '@type': 'Article',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://trinetralawchambers.com/blogs/${blog.slug}`,
+      '@id': `https://monikaanand.com/blogs/${blog.slug}`,
     },
     headline: blog.title,
     description: blog.excerpt,
     image: [
       blog.banner?.url?.startsWith('http')
         ? blog.banner.url
-        : `https://trinetralawchambers.com${blog.banner?.url || '/court-building.png'}`,
+        : `https://monikaanand.com${blog.banner?.url || '/court-building.png'}`,
     ],
     datePublished: blog.publishedAt || blog.createdAt || new Date().toISOString(),
     dateModified: blog.updatedAt || blog.publishedAt || new Date().toISOString(),
@@ -118,7 +118,7 @@ export default async function BlogDetailPage({ params }) {
       name: 'Trinetra Law Chambers',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://trinetralawchambers.com/logo.png',
+        url: 'https://monikaanand.com/logo.png',
       },
     },
     articleSection: blog.category,

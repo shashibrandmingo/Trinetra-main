@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -53,58 +53,17 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Social Media Circular Links with Gold Borders and Gold Icons */}
+            {/* Social Media Circular Links - LinkedIn Only */}
             <div className="mt-7 flex items-center justify-center sm:justify-start gap-2.5">
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/monika-anand-b2bb842b5/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="w-8 h-8 rounded-full border border-[#C59633] hover:border-[#F2D079] bg-[#360C11] hover:bg-[#4A1118] text-[#DEAF3D] hover:text-[#FAF8F5] flex items-center justify-center transition-all duration-200 shadow-xs"
               >
                 <span className="text-[11px] font-bold font-sans">in</span>
-              </a>
-
-              {/* X / Twitter */}
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter / X"
-                className="w-8 h-8 rounded-full border border-[#C59633] hover:border-[#F2D079] bg-[#360C11] hover:bg-[#4A1118] text-[#DEAF3D] hover:text-[#FAF8F5] flex items-center justify-center transition-all duration-200 shadow-xs"
-              >
-                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-
-              {/* Instagram */}
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="w-8 h-8 rounded-full border border-[#C59633] hover:border-[#F2D079] bg-[#360C11] hover:bg-[#4A1118] text-[#DEAF3D] hover:text-[#FAF8F5] flex items-center justify-center transition-all duration-200 shadow-xs"
-              >
-                <svg className="w-3.5 h-3.5 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                </svg>
-              </a>
-
-              {/* YouTube */}
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="w-8 h-8 rounded-full border border-[#C59633] hover:border-[#F2D079] bg-[#360C11] hover:bg-[#4A1118] text-[#DEAF3D] hover:text-[#FAF8F5] flex items-center justify-center transition-all duration-200 shadow-xs"
-              >
-                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
               </a>
             </div>
           </div>
@@ -164,12 +123,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#creed" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
+                <Link href="/#creed" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
                   Chamber Creed
                 </Link>
               </li>
               <li>
-                <Link href="#admissions" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
+                <Link href="/#admissions" className="hover:text-[#FAF8F5] hover:translate-x-1 transition-all duration-200 inline-block">
                   Bar Admissions
                 </Link>
               </li>
@@ -188,17 +147,62 @@ export default function Footer() {
               We&apos;re here to help.
             </p>
 
+            {/* Direct Contact Numbers & Offices */}
+            <div className="mt-3.5 space-y-2.5 text-xs font-dm">
+              <div className="flex items-center gap-2 text-[#E5C158] flex-wrap">
+                <Phone className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
+                <a href="tel:+919999953430" className="hover:underline font-bold">
+                  +91 99999 53430
+                </a>
+                <span className="text-white/20">•</span>
+                <a href="tel:+919990613140" className="hover:underline font-bold">
+                  99906 13140
+                </a>
+              </div>
+              <div className="space-y-1.5 text-[11.5px] text-[#CBBDB1]">
+                <a
+                  href="https://maps.google.com/?q=H-8+Lajpat+Nagar+III+New+Delhi+110024"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#FAF8F5] transition-colors flex items-start gap-1.5 group max-w-xs"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-[#C59633] group-hover:text-[#F2D079] shrink-0 mt-0.5" />
+                  <span>H-8, Lajpat Nagar III, New Delhi</span>
+                </a>
+                <a
+                  href="https://maps.google.com/?q=8th+Floor+ITHUM+TOWER+B-806+Block+A+Sector+62+Noida+201309"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#FAF8F5] transition-colors flex items-start gap-1.5 group max-w-xs"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-[#C59633] group-hover:text-[#F2D079] shrink-0 mt-0.5" />
+                  <span>ITHUM Tower B-806, Sector 62, Noida</span>
+                </a>
+                <a
+                  href="https://maps.google.com/?q=A-62+Third+floor+Street+no+04+Madhu+vihar+Delhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#FAF8F5] transition-colors flex items-start gap-1.5 group max-w-xs"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-[#C59633] group-hover:text-[#F2D079] shrink-0 mt-0.5" />
+                  <span>A-62, Madhu Vihar, Delhi</span>
+                </a>
+              </div>
+            </div>
+
             {/* Outlined Gold CTA Button */}
-            <div className="mt-4 sm:mt-6">
-              <Link
-                href="#contact"
-                className="inline-flex items-center justify-between w-full max-w-[210px] px-3.5 sm:px-5 py-2.5 sm:py-3 border border-[#C59633] hover:border-[#DEAF3D] bg-transparent hover:bg-[#3E1016]/80 rounded-sm transition-all duration-200 group shadow-xs"
+            <div className="mt-4 sm:mt-5">
+              <button
+                type="button"
+                data-open-enquiry="true"
+                data-note="Initiated from Footer CTA"
+                className="inline-flex items-center justify-between w-full max-w-[210px] px-3.5 sm:px-5 py-2.5 sm:py-3 border border-[#C59633] hover:border-[#DEAF3D] bg-transparent hover:bg-[#3E1016]/80 rounded-sm transition-all duration-200 group shadow-xs cursor-pointer text-left"
               >
                 <span className="gold-gradient-shine text-[11px] sm:text-xs font-bold tracking-[0.14em] sm:tracking-[0.18em] uppercase">
                   GET IN TOUCH
                 </span>
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#DEAF3D] transition-transform duration-200 group-hover:translate-x-1 shrink-0" />
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -246,9 +250,9 @@ export default function Footer() {
               Terms of Use
             </Link>
             <span className="text-[#5A1C23]">|</span>
-            <Link href="#sitemap" className="hover:text-[#FAF8F5] transition-colors">
+            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF8F5] transition-colors">
               Sitemap
-            </Link>
+            </a>
           </div>
         </div>
       </div>

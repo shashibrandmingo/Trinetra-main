@@ -11,36 +11,56 @@ import ContactCtaSection from '@/components/ContactCtaSection';
 export const metadata = {
   title: 'Advocate Monika Anand | Trinetra Law Chambers — Supreme Court & High Court Advocates New Delhi',
   description:
-    'Adv. Monika Anand is a leading litigation advocate in New Delhi with 9+ years experience. Representing clients in Supreme Court of India & Delhi High Court in Criminal Defense, Bail, Civil, Matrimonial, Service & Tax matters.',
+    'Adv. Monika Anand is a leading litigation advocate in New Delhi with 9+ years experience. Representing clients in Supreme Court of India & Delhi High Court in Criminal Defense, Anticipatory Bail, NDPS, POCSO, Civil, Matrimonial, Service (CAT) & Tax matters.',
   keywords: [
     'Advocate Monika Anand',
     'Monika Anand Advocate',
     'Best Advocate in Delhi',
     'Supreme Court Advocate New Delhi',
-    'Delhi High Court Lawyer',
+    'Best Supreme Court Lawyer India',
+    'Top High Court Advocate Delhi',
     'Criminal Lawyer Delhi',
+    'Criminal Defense Lawyer Delhi High Court',
     'Bail Advocate Delhi High Court',
-    'NDPS Act Lawyer Delhi',
+    'Anticipatory Bail Lawyer Delhi',
+    'NDPS Act Lawyer Delhi High Court',
     'POCSO Lawyer Delhi High Court',
-    'Advocate in Noida',
     'Matrimonial Lawyer Delhi',
     'Divorce Advocate Supreme Court',
-    'Civil Court Advocate Delhi',
+    'Civil Property Dispute Lawyer Delhi',
     'Service Matter Lawyer CAT Delhi',
     'Tax Advocate Delhi',
-    'Anticipatory Bail Lawyer Delhi',
-    'PMLA ED Defense Advocate',
-    'Monika Anand Ph.D. in Law',
+    'PMLA ED Defense Advocate Delhi',
+    'Supreme Court SLP Article 136 Advocate',
+    'Supreme Court Transfer Petition Article 139A',
+    'Writ Petition Article 226 Delhi High Court',
+    'Section 138 Cheque Bounce Advocate Delhi',
+    'Advocate in Noida Sector 62',
+    'Advocate Office in Lajpat Nagar III Delhi',
     'Trinetra Law Chambers',
   ],
   alternates: {
-    canonical: 'https://trinetralawchambers.com',
+    canonical: 'https://monikaanand.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
     title: 'Advocate Monika Anand | Trinetra Law Chambers — Supreme Court & High Courts',
     description:
-      'Premier litigation practice in New Delhi led by Adv. Monika Anand (LL.B., LL.M., Ph.D. in Law). 9+ years defending complex criminal, NDPS, POCSO, civil, matrimonial, service, and tax matters before the Supreme Court of India.',
-    url: 'https://trinetralawchambers.com',
+      'Premier litigation practice in New Delhi led by Adv. Monika Anand. 9+ years defending complex criminal, NDPS, POCSO, civil, matrimonial, service, and tax matters before the Supreme Court of India.',
+    url: 'https://monikaanand.com',
+    siteName: 'Trinetra Law Chambers',
+    locale: 'en_IN',
+    type: 'website',
     images: [
       {
         url: '/counsel-portrait.jpg',
@@ -49,6 +69,13 @@ export const metadata = {
         alt: 'Advocate Monika Anand — Lead Counsel Trinetra Law Chambers',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Advocate Monika Anand | Trinetra Law Chambers New Delhi',
+    description:
+      'Supreme Court of India & Delhi High Court Litigation Counsel — Criminal Defense, Bail, Civil, Matrimonial & Constitutional Law.',
+    images: ['/counsel-portrait.jpg'],
   },
 };
 
@@ -123,8 +150,8 @@ export default function Home() {
       {/* Official Chamber Jurisprudence & Creed Quote Section */}
       <ChamberCreedSection />
 
-      {/* Official Client Testimonials Section */}
-      <TestimonialsSection />
+      {/* Official Client Testimonials Section (Hidden) */}
+      {/* <TestimonialsSection /> */}
 
       {/* Official Awards & Milestones Recognition Section */}
       <AwardsSection />

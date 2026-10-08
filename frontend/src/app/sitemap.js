@@ -1,5 +1,14 @@
+import { initialBlogs } from '@/data/blogsData';
+
 export default function sitemap() {
-  const baseUrl = 'https://trinetralawchambers.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://monikaanand.com';
+
+  const blogUrls = (initialBlogs || []).map((blog) => ({
+    url: `${baseUrl}/blogs/${blog.slug}`,
+    lastModified: new Date(blog.publishedAt || Date.now()),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
 
   return [
     {
@@ -32,5 +41,6 @@ export default function sitemap() {
       changeFrequency: 'daily',
       priority: 0.85,
     },
+    ...blogUrls,
   ];
 }

@@ -76,7 +76,7 @@ const rightColumnCredentials = [
   },
   {
     Icon: PracticeYearsIcon,
-    titleLine1: '18+ YEARS',
+    titleLine1: '9+ YEARS',
     titleLine2: 'OF PRACTICE',
     subtitle: 'Trusted for consistent, principled and effective advocacy.',
   },
@@ -119,7 +119,7 @@ export default function AboutPrincipalCounselSection() {
 
               {/* Overview Paragraph */}
               <p className="mt-4 text-[#554E46] text-sm sm:text-base leading-relaxed font-dm font-normal">
-                For Adv. Anunay Kashyap, the practice of law is not just a profession — it is a{' '}
+                For Adv. MONIKA ANAND, the practice of law is not just a profession — it is a{' '}
                 <strong className="font-bold text-[#1A1817]">commitment</strong> to people,
                 institutions and a fairer tomorrow.
               </p>
@@ -128,13 +128,13 @@ export default function AboutPrincipalCounselSection() {
               <div className="mt-4 pt-1">
                 <div className="mb-2">
                   <img
-                    src="/counsel-signature.png"
-                    alt="A. Kashyap Signature"
+                    src="/monika-anand-signature.png"
+                    alt="Adv. Monika Anand Signature"
                     className="h-11 sm:h-13 w-auto object-contain select-none"
                   />
                 </div>
                 <div className="text-[9.5px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm leading-snug">
-                  <div className="text-[#1A1817] font-bold">ADV. ANUNAY KASHYAP</div>
+                  <div className="text-[#1A1817] font-bold">ADV. MONIKA ANAND</div>
                   <div className="text-[#8C847B]">SENIOR ADVOCATE</div>
                 </div>
               </div>
@@ -145,10 +145,10 @@ export default function AboutPrincipalCounselSection() {
               
               {/* Full Image: Advocate, Supreme Court Dome, Mahogany Desk, Leather Armchair, Books & Red Box */}
               <Image
-                src="/about-chamber.png"
-                alt="Adv. Anunay Kashyap, Senior Advocate - Principal Counsel at Supreme Court of India"
-                width={1240}
-                height={1269}
+                src="/Confident Advocate with Supreme Court and Law Desk.png"
+                alt="Adv. Monika Anand, Senior Advocate - Principal Counsel at Supreme Court of India"
+                width={1254}
+                height={1254}
                 priority
                 className="w-full h-auto block"
               />
@@ -179,7 +179,7 @@ export default function AboutPrincipalCounselSection() {
 
                 {/* Overview Paragraph */}
                 <p className="mt-3 xl:mt-4 text-[#554E46] text-xs xl:text-[13.5px] 2xl:text-[14.5px] leading-relaxed font-dm font-normal">
-                  For Adv. Anunay Kashyap, the practice of law is not just a profession — it is a{' '}
+                  For Adv. Monika Anand, the practice of law is not just a profession — it is a{' '}
                   <strong className="font-bold text-[#1A1817]">commitment</strong> to people,
                   institutions and a fairer tomorrow.
                 </p>
@@ -188,13 +188,13 @@ export default function AboutPrincipalCounselSection() {
                 <div className="mt-3 xl:mt-4">
                   <div className="mb-1.5 xl:mb-2">
                     <img
-                      src="/counsel-signature.png"
-                      alt="A. Kashyap Signature"
+                      src="/monika-anand-signature.png"
+                      alt="Adv. Monika Anand Signature"
                       className="h-10 xl:h-12 2xl:h-14 w-auto object-contain select-none"
                     />
                   </div>
                   <div className="text-[8.5px] xl:text-[9.5px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm leading-snug">
-                    <div className="text-[#1A1817] font-bold">ADV. ANUNAY KASHYAP</div>
+                    <div className="text-[#1A1817] font-bold">ADV. MONIKA ANAND</div>
                     <div className="text-[#8C847B]">SENIOR ADVOCATE</div>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ export default function AboutPrincipalCounselSection() {
                 <div className="flex items-center gap-2.5 pt-1 sm:pt-2">
                   <span className="w-5 sm:w-7 h-[1.5px] bg-[#C5A059]" />
                   <span className="text-[7.5px] min-[400px]:text-[8.5px] sm:text-[10px] xl:text-[11px] font-semibold tracking-[0.26em] text-[#E8DFD5] uppercase font-dm">
-                    A. KASHYAP
+                    MONIKA ANAND
                   </span>
                 </div>
               </div>
@@ -266,7 +266,7 @@ export default function AboutPrincipalCounselSection() {
               })}
             </div>
 
-            {/* Middle & Lower: Authentic Handwritten Note Card & 2x2 Key Areas of Work */}
+            {/* Middle & Lower: Authentic Handwritten Note Card with Signature & 2x2 Key Areas of Work */}
             <div className="my-5 sm:my-8 lg:my-10 pt-5 sm:pt-6 border-t border-[#E8E1D5] lg:border-t-0 flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-start justify-between gap-5 sm:gap-6 lg:gap-8">
               {/* Authentic Handwritten Sticky Note Card (Smaller, cute & compact) */}
               <div className="w-full max-w-[175px] xs:max-w-[190px] sm:max-w-[210px] xl:max-w-[240px] flex justify-center sm:justify-start">

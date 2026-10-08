@@ -5,7 +5,7 @@ import Image from 'next/image';
 const timelineSteps = [
   {
     step: '01',
-    title: '2008',
+    title: '2017',
     eyebrow: 'FOUNDATION',
     image: '/timeline-2008-foundation.jpg',
     alt: 'Trinetra Law Chambers foundation desk in 2008 with leather-bound book and brass lamp',
