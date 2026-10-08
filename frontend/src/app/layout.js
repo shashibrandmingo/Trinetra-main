@@ -32,11 +32,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata = {
   metadataBase: new URL('https://monikaanand.com'),
   title: {
-    default: 'Trinetra Law Chambers | Adv. Monika Anand | Supreme Court & High Court Advocates New Delhi',
+    default: 'Trinetra Law Chambers | Adv. Monika Anand | Best Advocate in Delhi & Noida | Supreme Court & High Courts',
     template: '%s | Trinetra Law Chambers — Adv. Monika Anand',
   },
   description:
-    'Trinetra Law Chambers is a premier litigation law firm led by Adv. Monika Anand, with 9+ years of experience across Criminal, Civil, Matrimonial, Service, Tax, and Constitutional matters before the Supreme Court of India and High Courts.',
+    'Trinetra Law Chambers is a premier litigation law firm led by Adv. Monika Anand, with 9+ years of experience across Criminal, Civil, Matrimonial, Service, Tax, and Constitutional matters before the Supreme Court of India, Delhi High Court, and Noida District Courts.',
   keywords: [
     // Brand & Lead Advocate
     'Advocate Monika Anand',
@@ -46,6 +46,42 @@ export const metadata = {
     'Trinetra Law',
     'Monika Anand Lawyer Delhi',
     
+    // High-Intent Noida Search Queries (HOT KEYWORDS)
+    'advocate in noida',
+    'advocate in nodia',
+    'Advocate in Noida',
+    'Best Advocate in Noida',
+    'Top Advocate in Noida',
+    'lawyer in noida',
+    'lawyer in nodia',
+    'Best Lawyer in Noida',
+    'best lawyer in nodia',
+    'advocates in noida',
+    'lawyers in noida',
+    'advocate near me noida',
+    'advocate in greater noida',
+    'advocate in noida extension',
+    'Top Lawyer in Noida',
+    'Best Criminal Lawyer in Noida',
+    'Top Criminal Advocate Noida',
+    'Bail Advocate in Noida',
+    'Anticipatory Bail Lawyer Noida',
+    'Best Divorce Lawyer in Noida',
+    'Top Matrimonial Lawyer in Noida',
+    'Family Court Advocate Noida',
+    'Property Dispute Lawyer in Noida',
+    'Civil Advocate in Noida',
+    'Cheque Bounce 138 Advocate Noida',
+    'Advocate in Noida Sector 62',
+    'Advocate Office ITHUM Tower Sector 62 Noida',
+    'District Court Noida Lawyer',
+    'Surajpur Court Advocate Noida',
+    'Gautam Buddha Nagar District Court Lawyer',
+    'Best Law Firm in Noida Sector 62',
+    'Top Lady Lawyer in Noida',
+    'Best Female Advocate in Noida',
+    'Advocate Monika Anand Noida',
+
     // Core Courts & Geography
     'Supreme Court Advocates New Delhi',
     'Supreme Court Lawyer India',
@@ -68,12 +104,6 @@ export const metadata = {
     'White Collar Crime Advocate Supreme Court',
     'Section 482 CrPC Quashing Advocate',
     'NDPS and Economic Offenses Lawyer Delhi',
-    
-    // Noida & NCR Courts
-    'Advocate in Noida',
-    'District Court Noida Lawyer',
-    'Surajpur Court Advocate Noida',
-    'Gautam Buddha Nagar Court Lawyer',
 
     // Civil & Commercial
     'Civil Advocate Delhi High Court',
@@ -108,6 +138,7 @@ export const metadata = {
     'Monika Anand Ph.D. in Law',
     'Monika Anand LL.M. Advocate',
     'Legal Consultation New Delhi',
+    'Legal Consultation Noida',
   ],
   authors: [{ name: 'Adv. Monika Anand' }, { name: 'Trinetra Law Chambers' }],
   creator: 'Adv. Monika Anand',
@@ -183,13 +214,36 @@ const jsonLdLegalService = {
       description:
         'Premier litigation law chambers in New Delhi led by Adv. Monika Anand (9+ years experience) specializing in Criminal Defense, Civil Litigation, Matrimonial Disputes, Service Matters, Tax, and Supreme Court SLP / High Court Writ Petitions.',
       priceRange: '₹₹₹',
-      telephone: '+91-9810000000',
+      telephone: '+919999953430',
       address: {
         '@type': 'PostalAddress',
+        streetAddress: 'H-8, Lajpat Nagar III',
         addressLocality: 'New Delhi',
         addressRegion: 'Delhi',
+        postalCode: '110024',
         addressCountry: 'IN',
       },
+      department: [
+        {
+          '@type': 'LegalService',
+          name: 'Trinetra Law Chambers - Noida Corporate Chambers',
+          description: 'Best Advocate in Noida Sector 62 for Supreme Court, High Court & Surajpur District Court matters.',
+          telephone: '+919999953430',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '8th Floor, ITHUM TOWER, B-806, Block A, Industrial Area, Sector 62',
+            addressLocality: 'Noida',
+            addressRegion: 'Uttar Pradesh',
+            postalCode: '201309',
+            addressCountry: 'IN',
+          },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: '28.6276',
+            longitude: '77.3732',
+          },
+        },
+      ],
       geo: {
         '@type': 'GeoCoordinates',
         latitude: '28.6143',
@@ -201,6 +255,8 @@ const jsonLdLegalService = {
         { '@type': 'AdministrativeArea', name: 'New Delhi' },
         { '@type': 'AdministrativeArea', name: 'Delhi NCR' },
         { '@type': 'AdministrativeArea', name: 'Noida & Gautam Buddha Nagar' },
+        { '@type': 'AdministrativeArea', name: 'Noida Sector 62' },
+        { '@type': 'AdministrativeArea', name: 'Surajpur District Court' },
         { '@type': 'AdministrativeArea', name: 'Central Administrative Tribunal CAT' },
         { '@type': 'Country', name: 'India' },
       ],

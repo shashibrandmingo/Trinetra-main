@@ -8,10 +8,36 @@ import ChambersPerspectiveSection from '@/components/ChambersPerspectiveSection'
 import PracticeContactCtaSection from '@/components/PracticeContactCtaSection';
 
 export const metadata = {
-  title: 'Legal Practice Areas | Criminal Defense, Bail, Civil, Matrimonial, CAT & Tax | Trinetra Law Chambers',
+  title: 'Legal Practice Areas | Best Advocate in Delhi & Noida — Adv. Monika Anand',
   description:
-    'Comprehensive trial & appellate litigation practice represented by Adv. Monika Anand before the Supreme Court of India & Delhi High Court: Criminal Defense, Anticipatory Bail, NDPS, POCSO, Civil Property Disputes, Matrimonial Divorce, CAT Service Matters, NCLT Corporate Insolvency, and Tax Litigation.',
+    'Comprehensive litigation practice across Delhi & Noida led by Adv. Monika Anand: Criminal Defense, Anticipatory Bail, NDPS, POCSO, Civil Property Disputes, Matrimonial Divorce, CAT Service Matters, Corporate Insolvency, and Supreme Court SLP.',
   keywords: [
+    // Hot Noida Practice Area Keywords
+    'advocate in noida',
+    'advocate in nodia',
+    'Advocate in Noida',
+    'Best Advocate in Noida',
+    'lawyer in noida',
+    'lawyer in nodia',
+    'Best Lawyer in Noida',
+    'advocates in noida',
+    'advocate near me noida',
+    'Best Criminal Lawyer in Noida',
+    'Top Criminal Advocate Noida',
+    'Bail Advocate in Noida Surajpur Court',
+    'Anticipatory Bail Lawyer Noida',
+    'Best Divorce Lawyer in Noida',
+    'Matrimonial Advocate Noida',
+    'Family Court Advocate Noida',
+    'Property Dispute Lawyer in Noida',
+    'Civil Advocate in Noida',
+    'Cheque Bounce 138 Lawyer Noida',
+    'Surajpur District Court Lawyer Noida',
+    'Gautam Buddha Nagar District Court Lawyer',
+    'Corporate Litigation Advocate Sector 62 Noida',
+    'Best Law Firm in Noida Sector 62',
+
+    // Delhi & Supreme Court Practice Areas
     'Criminal Lawyer in Delhi',
     'Criminal Defense Lawyer Supreme Court Delhi',
     'Anticipatory Bail Advocate Delhi High Court',
@@ -49,9 +75,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'Litigation Practice Areas | Trinetra Law Chambers — Adv. Monika Anand',
+    title: 'Litigation Practice Areas | Best Advocate in Delhi & Noida — Adv. Monika Anand',
     description:
-      'Core litigation domains: Criminal Defense, Anticipatory Bail, NDPS, Civil Litigation, Matrimonial, Service Law (CAT), Corporate Insolvency (NCLT) & Supreme Court SLP Appeals.',
+      'Core litigation domains across Delhi & Noida: Criminal Defense, Anticipatory Bail, NDPS, Civil Litigation, Matrimonial, Service Law (CAT), Corporate Insolvency (NCLT) & Supreme Court SLP Appeals.',
     url: 'https://monikaanand.com/practice-areas',
     siteName: 'Trinetra Law Chambers',
     locale: 'en_IN',
@@ -67,9 +93,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Legal Practice Areas | Trinetra Law Chambers',
+    title: 'Legal Practice Areas | Best Advocate in Delhi & Noida',
     description:
-      'Supreme Court & High Court Advocacy in Criminal, Civil, Matrimonial, CAT & Tax matters.',
+      'Supreme Court & High Court Advocacy in Criminal, Civil, Matrimonial, CAT & Tax matters across Delhi & Noida.',
     images: ['/counsel-portrait.jpg'],
   },
 };
@@ -80,6 +106,16 @@ const practiceSchema = {
   name: 'Trinetra Law Chambers Practice Areas',
   url: 'https://monikaanand.com/practice-areas',
   telephone: '+919999953430',
+  areaServed: [
+    'New Delhi',
+    'Delhi NCR',
+    'Noida',
+    'Noida Sector 62',
+    'Gautam Buddha Nagar',
+    'Surajpur District Court',
+    'Supreme Court of India',
+    'Delhi High Court',
+  ],
   provider: {
     '@type': 'Attorney',
     name: 'Advocate Monika Anand',
@@ -92,8 +128,8 @@ const practiceSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Criminal Defense & Bail Advocacy',
-          description: 'Anticipatory bail, regular bail, NDPS, POCSO, and trial representation before Delhi High Court and Supreme Court.',
+          name: 'Criminal Defense & Bail Advocacy (Delhi & Noida)',
+          description: 'Anticipatory bail, regular bail, NDPS, POCSO, and trial representation before Surajpur District Court Noida, Delhi High Court and Supreme Court.',
         },
       },
       {
@@ -108,16 +144,16 @@ const practiceSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Civil & Property Disputes',
-          description: 'Property partition suits, injunctions, commercial contracts, and title declarations.',
+          name: 'Civil & Property Disputes (Delhi & Noida)',
+          description: 'Property partition suits, injunctions, commercial contracts, and title declarations in Delhi NCR & Gautam Buddha Nagar.',
         },
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Matrimonial & Family Law',
-          description: 'Mutual consent divorce, contested divorce, maintenance, and child custody.',
+          name: 'Matrimonial & Family Law (Delhi & Noida)',
+          description: 'Mutual consent divorce, contested divorce, maintenance, 498A defense, and child custody.',
         },
       },
       {

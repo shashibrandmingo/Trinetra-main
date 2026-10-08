@@ -4,10 +4,21 @@ import ContactProximitySection from '@/components/ContactProximitySection';
 import ContactProtocolSection from '@/components/ContactProtocolSection';
 
 export const metadata = {
-  title: 'Contact Adv. Monika Anand | Trinetra Law Chambers New Delhi & Noida Offices',
+  title: 'Contact Adv. Monika Anand | Best Advocate in Noida & Delhi | Trinetra Law Chambers',
   description:
-    'Schedule a confidential legal consultation with Adv. Monika Anand at Trinetra Law Chambers. Chambers located at Lajpat Nagar III New Delhi, Sector 62 Noida, and Madhu Vihar. Direct intake for Supreme Court of India & Delhi High Court matters. Call: +91 99999 53430.',
+    'Schedule a confidential legal consultation with Adv. Monika Anand. Recognized among the best advocates in Noida & Delhi. Chambers located at Sector 62 Noida (ITHUM Tower) & Lajpat Nagar III New Delhi. Call: +91 99999 53430.',
   keywords: [
+    // Hot Noida Contact Keywords
+    'Best Advocate in Noida Contact Number',
+    'Best Lawyer in Noida Sector 62 Consultation',
+    'Top Criminal Advocate Noida Phone',
+    'Advocate Office Sector 62 Noida ITHUM Tower',
+    'Surajpur Court Lawyer Contact Number Noida',
+    'Best Divorce Lawyer in Noida Contact',
+    'Lawyer Near Me in Noida Sector 62',
+    'Advocate Monika Anand Noida Phone',
+
+    // Delhi & General
     'Consult Advocate Monika Anand',
     'Lawyer Consultation New Delhi',
     'Supreme Court Advocate Appointment',
@@ -15,11 +26,8 @@ export const metadata = {
     'Trinetra Law Chambers Contact Number',
     'Phone Number Advocate Monika Anand +91 9999953430',
     'Lawyer Office Lajpat Nagar III Delhi',
-    'Advocate Office Sector 62 Noida ITHUM Tower',
-    'Law Office Madhu Vihar Delhi',
     'Urgent Bail Consultation Delhi WhatsApp',
     'Emergency Stay Order Supreme Court Advocate',
-    'Lawyer Consultation Fee Delhi',
     'Chambers Address New Delhi',
   ],
   alternates: {
@@ -37,9 +45,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'Consult Adv. Monika Anand | Trinetra Law Chambers New Delhi',
+    title: 'Contact Adv. Monika Anand | Best Advocate in Noida & Delhi',
     description:
-      'Direct intake and confidential legal consultation for Supreme Court of India and High Court matters. Call +91 99999 53430.',
+      'Direct intake and confidential legal consultation for Supreme Court of India, High Court, and Noida District Court matters. Call +91 99999 53430.',
     url: 'https://monikaanand.com/contact',
     siteName: 'Trinetra Law Chambers',
     locale: 'en_IN',

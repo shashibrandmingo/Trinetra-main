@@ -7,11 +7,16 @@ import AboutPracticeCourtsSection from '@/components/AboutPracticeCourtsSection'
 import AboutContactCtaSection from '@/components/AboutContactCtaSection';
 
 export const metadata = {
-  title: 'About Adv. Monika Anand | Supreme Court & Delhi High Court Advocate | Trinetra Law Chambers',
+  title: 'About Adv. Monika Anand | Best Advocate in Delhi & Noida | Trinetra Law Chambers',
   description:
-    'Learn about Adv. Monika Anand, Principal Counsel at Trinetra Law Chambers. Over 9+ years of distinguished litigation advocacy in the Supreme Court of India, Delhi High Court, and Appellate Tribunals across Criminal Defense, Civil, Matrimonial & Constitutional Law.',
+    'Learn about Adv. Monika Anand, Principal Counsel at Trinetra Law Chambers. Recognized among the best advocates in Delhi & Noida with 9+ years of distinguished litigation advocacy in the Supreme Court of India, Delhi High Court, and Surajpur Court Noida.',
   keywords: [
+    // Hot Noida & Delhi Brand Keywords
+    'Best Advocate in Noida',
+    'Best Lady Advocate in Noida',
+    'Top Advocate in Noida Sector 62',
     'About Adv Monika Anand',
+    'Advocate Monika Anand Noida Chamber',
     'Advocate Monika Anand Profile',
     'Advocate Monika Anand Experience',
     'Supreme Court Advocate Monika Anand',
@@ -23,6 +28,7 @@ export const metadata = {
     'Principal Counsel Monika Anand',
     'Chambers of Monika Anand New Delhi',
     'Advocate Office Lajpat Nagar III Delhi',
+    'Advocate Office Sector 62 Noida',
     'Supreme Court Litigation Attorney Delhi',
     'Senior Legal Advisory Chambers Delhi NCR',
   ],
