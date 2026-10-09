@@ -232,10 +232,10 @@ export default function PracticeAreasModal({ isOpen, onClose, onSelectPractice }
                   EMAIL
                 </span>
                 <a
-                  href="mailto:info@trinetralaw.com"
+                  href="mailto:support@monikaanand.com"
                   className="text-[11px] sm:text-xs font-semibold text-[#1A1817] hover:text-[#9E6728] transition-colors mt-0.5 block"
                 >
-                  info@trinetralaw.com
+                  support@monikaanand.com
                 </a>
               </div>
             </div>

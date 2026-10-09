@@ -215,6 +215,7 @@ const jsonLdLegalService = {
         'Premier litigation law chambers in New Delhi led by Adv. Monika Anand (9+ years experience) specializing in Criminal Defense, Civil Litigation, Matrimonial Disputes, Service Matters, Tax, and Supreme Court SLP / High Court Writ Petitions.',
       priceRange: '₹₹₹',
       telephone: '+919999953430',
+      email: 'support@monikaanand.com',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'H-8, Lajpat Nagar III',

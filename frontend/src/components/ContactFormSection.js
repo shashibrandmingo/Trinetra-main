@@ -228,7 +228,7 @@ export default function ContactFormSection() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="counsel@clientdomain.com"
+                        placeholder="client@domain.com"
                         className="w-full bg-[#FAF8F5] border border-[#D5CDC0] focus:border-[#9E6728] focus:bg-white rounded-lg px-4 py-3 text-xs sm:text-[13px] text-[#1A1817] outline-none transition-all placeholder:text-[#A69C8E]"
                       />
                     </div>
@@ -470,16 +470,10 @@ export default function ContactFormSection() {
                     ELECTRONIC INTAKE
                   </span>
                   <a
-                    href="mailto:info@trinetralaw.com"
+                    href="mailto:support@monikaanand.com"
                     className="text-xs sm:text-[13px] font-medium text-[#FAF8F5] hover:text-[#C5A059] transition-colors mt-0.5 block font-dm"
                   >
-                    info@trinetralaw.com
-                  </a>
-                  <a
-                    href="mailto:registry@trinetralaw.com"
-                    className="text-xs sm:text-[13px] font-medium text-[#FAF8F5] hover:text-[#C5A059] transition-colors mt-0.5 block font-dm"
-                  >
-                    registry@trinetralaw.com
+                    support@monikaanand.com
                   </a>
                 </div>
               </div>

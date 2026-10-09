@@ -378,7 +378,7 @@ export default function PracticeDetailModal({
 
             {/* Email */}
             <a
-              href="mailto:info@trinetralaw.com"
+              href="mailto:support@monikaanand.com"
               className="flex items-center gap-2.5 p-2 sm:p-0 rounded-lg sm:rounded-none bg-white/50 sm:bg-transparent border border-[#E8E1D5]/60 sm:border-0 hover:border-[#9E6728]/50 transition-colors"
             >
               <div className="w-7 h-7 rounded-full border border-[#D5CDC0] bg-[#FAF8F5] text-[#9E6728] flex items-center justify-center shrink-0">
@@ -389,7 +389,7 @@ export default function PracticeDetailModal({
                   EMAIL
                 </span>
                 <span className="text-[11px] font-semibold text-[#1A1817] hover:text-[#9E6728] transition-colors mt-0.5 block">
-                  info@trinetralaw.com
+                  support@monikaanand.com
                 </span>
               </div>
             </a>

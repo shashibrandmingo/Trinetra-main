@@ -64,7 +64,7 @@ export default function PracticeContactCtaSection() {
 
           {/* 2. Email */}
           <a
-            href="mailto:info@trinetralaw.com"
+            href="mailto:support@monikaanand.com"
             className="group flex items-center justify-start md:justify-center gap-3.5 p-3 sm:p-3.5 md:py-2 md:px-4 lg:px-6 bg-white/75 md:bg-transparent border border-[#E8E1D5] md:border-0 rounded-xl md:rounded-none shadow-2xs md:shadow-none hover:border-[#9E6728]/50 transition-all cursor-pointer"
           >
             <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[#C29354] flex items-center justify-center flex-shrink-0 bg-[#FAF8F5] group-hover:bg-[#9E6728] transition-colors duration-200">
@@ -75,7 +75,7 @@ export default function PracticeContactCtaSection() {
                 EMAIL
               </span>
               <span className="font-heading text-[14.5px] sm:text-[15px] md:text-[16px] font-semibold text-[#1A1817] group-hover:text-[#9E6728] transition-colors leading-none tracking-tight">
-                info@trinetralaw.com
+                support@monikaanand.com
               </span>
             </div>
           </a>

@@ -79,7 +79,7 @@ const contactPageSchema = {
     '@type': 'LegalService',
     name: 'Trinetra Law Chambers',
     telephone: ['+919999953430', '+919990613140'],
-    email: 'info@trinetralaw.com',
+    email: 'support@monikaanand.com',
     address: [
       {
         '@type': 'PostalAddress',

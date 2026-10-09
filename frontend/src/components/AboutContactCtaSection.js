@@ -110,7 +110,7 @@ export default function AboutContactCtaSection() {
 
           {/* Item 2: Email */}
           <a 
-            href="mailto:connect@trinetralaw.com" 
+            href="mailto:support@monikaanand.com" 
             className="group flex items-center gap-3.5 p-2.5 sm:p-0 rounded-xl sm:rounded-none bg-white/70 sm:bg-transparent border border-[#E8E1D5] sm:border-0 cursor-pointer transition-all hover:border-[#B88E44]/60"
           >
             <div className="w-9 h-9 rounded-full bg-[#FAF8F5] border border-[#E8E1D5] flex items-center justify-center text-[#B88E44] shadow-2xs flex-shrink-0 group-hover:bg-[#B88E44] group-hover:text-white group-hover:border-[#B88E44] transition-colors duration-200">
@@ -121,7 +121,7 @@ export default function AboutContactCtaSection() {
                 EMAIL
               </div>
               <span className="text-xs sm:text-[13.5px] font-medium text-[#1A1817] font-dm group-hover:text-[#B88E44] transition-colors">
-                connect@trinetralaw.com
+                support@monikaanand.com
               </span>
             </div>
           </a>

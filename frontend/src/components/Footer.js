@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -157,6 +157,12 @@ export default function Footer() {
                 <span className="text-white/20">•</span>
                 <a href="tel:+919990613140" className="hover:underline font-bold">
                   99906 13140
+                </a>
+              </div>
+              <div className="flex items-center gap-2 text-[#E5C158]">
+                <Mail className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
+                <a href="mailto:support@monikaanand.com" className="hover:underline font-medium text-[11.5px] sm:text-xs">
+                  support@monikaanand.com
                 </a>
               </div>
               <div className="space-y-1.5 text-[11.5px] text-[#CBBDB1]">
