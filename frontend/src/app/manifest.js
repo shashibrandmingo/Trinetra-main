@@ -1,9 +1,9 @@
 export default function manifest() {
   return {
-    name: 'Trinetra Law Chambers — Adv. Monika Anand',
+    name: 'Trinetra Law Chambers — Dr. Monika Anand',
     short_name: 'Trinetra Law',
     description:
-      'Premier litigation practice led by Adv. Monika Anand (LL.B., LL.M., Ph.D. in Law) before Supreme Court of India, Delhi High Court & NCR Courts.',
+      'Premier litigation practice led by Dr. Monika Anand (LL.B., LL.M., Ph.D. in Law) before Supreme Court of India, Delhi High Court & NCR Courts.',
     start_url: '/',
     display: 'standalone',
     background_color: '#FAF8F5',

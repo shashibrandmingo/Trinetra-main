@@ -1,81 +1,35 @@
-import PracticeAreasHeroSection from '@/components/PracticeAreasHeroSection';
-import PracticeAreasListSection from '@/components/PracticeAreasListSection';
-import FeaturedPracticeSection from '@/components/FeaturedPracticeSection';
-import PracticeDepthSection from '@/components/PracticeDepthSection';
-import OurApproachSection from '@/components/OurApproachSection';
-import PracticeJurisdictionsSection from '@/components/PracticeJurisdictionsSection';
-import ChambersPerspectiveSection from '@/components/ChambersPerspectiveSection';
-import PracticeContactCtaSection from '@/components/PracticeContactCtaSection';
+import PracticeAreasClient from './PracticeAreasClient';
+import { practiceAreasData } from '@/data/practiceAreasData';
 
 export const metadata = {
-  title: 'Legal Practice Areas | Best Advocate in Delhi & Noida — Adv. Monika Anand',
+  title: 'Legal Practice Areas | Best Advocate in Delhi & Noida — Dr. Monika Anand',
   description:
-    'Comprehensive litigation practice across Delhi & Noida led by Adv. Monika Anand: Criminal Defense, Anticipatory Bail, NDPS, POCSO, Civil Property Disputes, Matrimonial Divorce, CAT Service Matters, Corporate Insolvency, and Supreme Court SLP.',
+    'Comprehensive litigation practice across Delhi & Noida led by Dr. Monika Anand: Criminal Defense, Anticipatory Bail, NDPS, POCSO, Civil Property Disputes, Matrimonial Divorce, CAT Service Matters, Corporate Insolvency, and Supreme Court SLP.',
   keywords: [
-    // Hot Noida Practice Area Keywords
     'advocate in noida',
     'advocate in nodia',
     'Advocate in Noida',
     'Best Advocate in Noida',
     'lawyer in noida',
-    'lawyer in nodia',
-    'Best Lawyer in Noida',
-    'advocates in noida',
-    'advocate near me noida',
     'Best Criminal Lawyer in Noida',
-    'Top Criminal Advocate Noida',
     'Bail Advocate in Noida Surajpur Court',
     'Anticipatory Bail Lawyer Noida',
     'Best Divorce Lawyer in Noida',
-    'Matrimonial Advocate Noida',
-    'Family Court Advocate Noida',
     'Property Dispute Lawyer in Noida',
     'Civil Advocate in Noida',
-    'Cheque Bounce 138 Lawyer Noida',
-    'Surajpur District Court Lawyer Noida',
-    'Gautam Buddha Nagar District Court Lawyer',
-    'Corporate Litigation Advocate Sector 62 Noida',
-    'Best Law Firm in Noida Sector 62',
-
-    // Delhi & Supreme Court Practice Areas
+    'Service Matter Lawyer CAT Delhi',
     'Criminal Lawyer in Delhi',
-    'Criminal Defense Lawyer Supreme Court Delhi',
-    'Anticipatory Bail Advocate Delhi High Court',
-    'Regular Bail Application Lawyer Delhi',
     'NDPS Act Defense Advocate Delhi',
     'POCSO Act Defense Lawyer Delhi High Court',
     'Section 138 NI Act Cheque Bounce Lawyer Delhi',
-    'Civil Dispute Lawyer Delhi High Court',
-    'Property Partition Suit Advocate Delhi',
-    'Injunction and Property Declaration Suit Lawyer',
-    'Matrimonial and Divorce Advocate Delhi',
-    'Mutual Consent Divorce Section 13B Lawyer Delhi',
-    'Child Custody Maintenance 125 CrPC Advocate',
-    'Service Matter Lawyer CAT Delhi',
-    'Central Administrative Tribunal Advocate Delhi',
-    'PMLA CBI Defense Advocate Delhi',
-    'NCLT Insolvency IBC Corporate Lawyer Delhi',
-    'Tax Litigation Advocate Delhi',
     'Supreme Court SLP Article 136 Advocate',
-    'Writ Petition Article 226 32 Supreme Court',
     'Trinetra Law Chambers Practice Areas',
   ],
   alternates: {
     canonical: 'https://monikaanand.com/practice-areas',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
   openGraph: {
-    title: 'Litigation Practice Areas | Best Advocate in Delhi & Noida — Adv. Monika Anand',
+    title: 'Litigation Practice Areas | Best Advocate in Delhi & Noida — Dr. Monika Anand',
     description:
       'Core litigation domains across Delhi & Noida: Criminal Defense, Anticipatory Bail, NDPS, Civil Litigation, Matrimonial, Service Law (CAT), Corporate Insolvency (NCLT) & Supreme Court SLP Appeals.',
     url: 'https://monikaanand.com/practice-areas',
@@ -118,88 +72,31 @@ const practiceSchema = {
   ],
   provider: {
     '@type': 'Attorney',
-    name: 'Advocate Monika Anand',
+    name: 'Dr. Monika Anand',
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Litigation Services Catalog',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Criminal Defense & Bail Advocacy (Delhi & Noida)',
-          description: 'Anticipatory bail, regular bail, NDPS, POCSO, and trial representation before Surajpur District Court Noida, Delhi High Court and Supreme Court.',
-        },
+    itemListElement: practiceAreasData.map((item) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: item.title,
+        description: item.tagline,
+        url: `https://monikaanand.com/practice-areas/${item.slug}`,
       },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Constitutional & Writ Jurisdiction',
-          description: 'Special Leave Petitions (SLP Article 136) and High Court Writs under Article 226 and Article 32.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Civil & Property Disputes (Delhi & Noida)',
-          description: 'Property partition suits, injunctions, commercial contracts, and title declarations in Delhi NCR & Gautam Buddha Nagar.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Matrimonial & Family Law (Delhi & Noida)',
-          description: 'Mutual consent divorce, contested divorce, maintenance, 498A defense, and child custody.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Administrative & Service Law (CAT)',
-          description: 'Senior civil servants, government employee disputes, pensions, and promotions before CAT.',
-        },
-      },
-    ],
+    })),
   },
 };
 
 export default function PracticeAreasPage() {
   return (
-    <div className="w-full bg-[#FAF8F5]">
-      {/* Practice Areas Catalog Schema */}
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(practiceSchema) }}
       />
-      {/* Practice Areas Hero Section */}
-      <PracticeAreasHeroSection />
-
-      {/* Areas of Practice - Accordion List Section */}
-      <PracticeAreasListSection />
-
-      {/* Featured Practice Showcase Section */}
-      <FeaturedPracticeSection />
-
-      {/* Practice Across Jurisdictions - Courts Timeline Section */}
-      <PracticeJurisdictionsSection />
-
-      {/* Our Approach - 4 Step Process & Courthouse Colonnade Section */}
-      <OurApproachSection />
-
-      {/* Depth Where It Matters - Circular Collage + 4 Practice Areas */}
-      <PracticeDepthSection />
-
-      {/* The Chambers' Perspective - Editorial Headline & Court Image */}
-      <ChambersPerspectiveSection />
-
-      {/* Get In Touch - Final Contact / CTA Section */}
-      <PracticeContactCtaSection />
-    </div>
+      <PracticeAreasClient />
+    </>
   );
 }
-

@@ -119,7 +119,7 @@ export default function AboutPrincipalCounselSection() {
 
               {/* Overview Paragraph */}
               <p className="mt-4 text-[#554E46] text-sm sm:text-base leading-relaxed font-dm font-normal">
-                For Adv. MONIKA ANAND, the practice of law is not just a profession — it is a{' '}
+                For Dr. MONIKA ANAND, the practice of law is not just a profession — it is a{' '}
                 <strong className="font-bold text-[#1A1817]">commitment</strong> to people,
                 institutions and a fairer tomorrow.
               </p>
@@ -129,12 +129,12 @@ export default function AboutPrincipalCounselSection() {
                 <div className="mb-2">
                   <img
                     src="/monika-anand-signature.png"
-                    alt="Adv. Monika Anand Signature"
+                    alt="Dr. Monika Anand Signature"
                     className="h-11 sm:h-13 w-auto object-contain select-none"
                   />
                 </div>
                 <div className="text-[9.5px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm leading-snug">
-                  <div className="text-[#1A1817] font-bold">ADV. MONIKA ANAND</div>
+                  <div className="text-[#1A1817] font-bold">DR. MONIKA ANAND</div>
                   <div className="text-[#8C847B]">SENIOR ADVOCATE</div>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function AboutPrincipalCounselSection() {
               {/* Full Image: Advocate, Supreme Court Dome, Mahogany Desk, Leather Armchair, Books & Red Box */}
               <Image
                 src="/Confident Advocate with Supreme Court and Law Desk.png"
-                alt="Adv. Monika Anand, Senior Advocate - Principal Counsel at Supreme Court of India"
+                alt="Dr. Monika Anand, Senior Advocate - Principal Counsel at Supreme Court of India"
                 width={1254}
                 height={1254}
                 priority
@@ -179,7 +179,7 @@ export default function AboutPrincipalCounselSection() {
 
                 {/* Overview Paragraph */}
                 <p className="mt-3 xl:mt-4 text-[#554E46] text-xs xl:text-[13.5px] 2xl:text-[14.5px] leading-relaxed font-dm font-normal">
-                  For Adv. Monika Anand, the practice of law is not just a profession — it is a{' '}
+                  For Dr. Monika Anand, the practice of law is not just a profession — it is a{' '}
                   <strong className="font-bold text-[#1A1817]">commitment</strong> to people,
                   institutions and a fairer tomorrow.
                 </p>
@@ -189,12 +189,12 @@ export default function AboutPrincipalCounselSection() {
                   <div className="mb-1.5 xl:mb-2">
                     <img
                       src="/monika-anand-signature.png"
-                      alt="Adv. Monika Anand Signature"
+                      alt="Dr. Monika Anand Signature"
                       className="h-10 xl:h-12 2xl:h-14 w-auto object-contain select-none"
                     />
                   </div>
                   <div className="text-[8.5px] xl:text-[9.5px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm leading-snug">
-                    <div className="text-[#1A1817] font-bold">ADV. MONIKA ANAND</div>
+                    <div className="text-[#1A1817] font-bold">DR. MONIKA ANAND</div>
                     <div className="text-[#8C847B]">SENIOR ADVOCATE</div>
                   </div>
                 </div>

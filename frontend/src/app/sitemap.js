@@ -1,7 +1,15 @@
 import { initialBlogs } from '@/data/blogsData';
+import { practiceAreasData } from '@/data/practiceAreasData';
 
 export default function sitemap() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://monikaanand.com';
+
+  const practiceUrls = (practiceAreasData || []).map((practice) => ({
+    url: `${baseUrl}/practice-areas/${practice.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  }));
 
   const blogUrls = (initialBlogs || []).map((blog) => ({
     url: `${baseUrl}/blogs/${blog.slug}`,
@@ -42,5 +50,6 @@ export default function sitemap() {
       priority: 0.85,
     },
     ...blogUrls,
+    ...practiceUrls,
   ];
 }

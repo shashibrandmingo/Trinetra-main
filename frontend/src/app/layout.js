@@ -32,16 +32,16 @@ const cormorant = Cormorant_Garamond({
 export const metadata = {
   metadataBase: new URL('https://monikaanand.com'),
   title: {
-    default: 'Trinetra Law Chambers | Adv. Monika Anand | Best Advocate in Delhi & Noida | Supreme Court & High Courts',
-    template: '%s | Trinetra Law Chambers — Adv. Monika Anand',
+    default: 'Trinetra Law Chambers | Dr. Monika Anand | Best Advocate in Delhi & Noida | Supreme Court & High Courts',
+    template: '%s | Trinetra Law Chambers — Dr. Monika Anand',
   },
   description:
-    'Trinetra Law Chambers is a premier litigation law firm led by Adv. Monika Anand, with 9+ years of experience across Criminal, Civil, Matrimonial, Service, Tax, and Constitutional matters before the Supreme Court of India, Delhi High Court, and Noida District Courts.',
+    'Trinetra Law Chambers is a premier litigation law firm led by Dr. Monika Anand, with 9+ years of experience across Criminal, Civil, Matrimonial, Service, Tax, and Constitutional matters before the Supreme Court of India, Delhi High Court, and Noida District Courts.',
   keywords: [
     // Brand & Lead Advocate
     'Advocate Monika Anand',
     'Monika Anand Advocate',
-    'Adv Monika Anand Supreme Court',
+    'Dr Monika Anand Supreme Court',
     'Trinetra Law Chambers',
     'Trinetra Law',
     'Monika Anand Lawyer Delhi',
@@ -140,8 +140,8 @@ export const metadata = {
     'Legal Consultation New Delhi',
     'Legal Consultation Noida',
   ],
-  authors: [{ name: 'Adv. Monika Anand' }, { name: 'Trinetra Law Chambers' }],
-  creator: 'Adv. Monika Anand',
+  authors: [{ name: 'Dr. Monika Anand' }, { name: 'Trinetra Law Chambers' }],
+  creator: 'Dr. Monika Anand',
   publisher: 'Trinetra Law Chambers',
   category: 'Legal Services & Litigation',
   formatDetection: {
@@ -153,9 +153,9 @@ export const metadata = {
     canonical: 'https://monikaanand.com',
   },
   openGraph: {
-    title: 'Trinetra Law Chambers | Adv. Monika Anand | Supreme Court & High Court Advocates',
+    title: 'Trinetra Law Chambers | Dr. Monika Anand | Supreme Court & High Court Advocates',
     description:
-      'Litigation-focused legal practice led by Adv. Monika Anand with 9+ years of experience across Criminal, Civil, Matrimonial, Service, Tax, and Constitutional law before the Supreme Court of India and High Courts.',
+      'Litigation-focused legal practice led by Dr. Monika Anand with 9+ years of experience across Criminal, Civil, Matrimonial, Service, Tax, and Constitutional law before the Supreme Court of India and High Courts.',
     url: 'https://monikaanand.com',
     siteName: 'Trinetra Law Chambers',
     images: [
@@ -163,7 +163,7 @@ export const metadata = {
         url: '/counsel-portrait.jpg',
         width: 1000,
         height: 1000,
-        alt: 'Advocate Monika Anand — Lead Counsel at Trinetra Law Chambers Supreme Court of India',
+        alt: 'Dr. Monika Anand — Lead Counsel at Trinetra Law Chambers Supreme Court of India',
       },
     ],
     locale: 'en_IN',
@@ -171,7 +171,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Trinetra Law Chambers | Adv. Monika Anand',
+    title: 'Trinetra Law Chambers | Dr. Monika Anand',
     description:
       'Premier litigation practice before the Supreme Court of India & High Courts across Criminal, Civil, Matrimonial, Service & Tax law.',
     images: ['/counsel-portrait.jpg'],
@@ -207,12 +207,12 @@ const jsonLdLegalService = {
       '@type': ['LegalService', 'Attorney'],
       '@id': 'https://monikaanand.com/#organization',
       name: 'Trinetra Law Chambers',
-      alternateName: 'Adv. Monika Anand Law Chambers',
+      alternateName: 'Dr. Monika Anand Law Chambers',
       url: 'https://monikaanand.com',
       logo: 'https://monikaanand.com/Trinetra-Law-Chamber-logo.jpg',
       image: 'https://monikaanand.com/counsel-portrait.jpg',
       description:
-        'Premier litigation law chambers in New Delhi led by Adv. Monika Anand (9+ years experience) specializing in Criminal Defense, Civil Litigation, Matrimonial Disputes, Service Matters, Tax, and Supreme Court SLP / High Court Writ Petitions.',
+        'Premier litigation law chambers in New Delhi led by Dr. Monika Anand (9+ years experience) specializing in Criminal Defense, Civil Litigation, Matrimonial Disputes, Service Matters, Tax, and Supreme Court SLP / High Court Writ Petitions.',
       priceRange: '₹₹₹',
       telephone: '+919999953430',
       email: 'support@monikaanand.com',
@@ -264,7 +264,7 @@ const jsonLdLegalService = {
       founder: {
         '@type': 'Person',
         name: 'Monika Anand',
-        honorificPrefix: 'Adv.',
+        honorificPrefix: 'Dr.',
         honorificSuffix: 'LL.B., LL.M., Ph.D. in Law',
         jobTitle: 'Litigation Counsel & Advocate',
         image: 'https://monikaanand.com/counsel-portrait.jpg',
@@ -336,7 +336,7 @@ const jsonLdLegalService = {
       '@type': 'Person',
       '@id': 'https://monikaanand.com/#attorney',
       name: 'Monika Anand',
-      honorificPrefix: 'Adv.',
+      honorificPrefix: 'Dr.',
       honorificSuffix: 'LL.B., LL.M., Ph.D. in Law',
       jobTitle: 'Advocate & Litigation Counsel',
       worksFor: {

@@ -86,7 +86,7 @@ export default function HeroSection() {
             {/* Eyebrow Label with Gold Accent Line */}
             <div className="flex items-center gap-3 mb-3">
               <span className="text-[11px] sm:text-xs font-bold tracking-[0.22em] text-[#4A1118] uppercase">
-                TRINETRA LAW CHAMBERS &bull; ADV. MONIKA ANAND
+                TRINETRA LAW CHAMBERS &bull; DR. MONIKA ANAND
               </span>
               <span className="h-[1.5px] w-12 bg-[#B88E44] rounded-full" />
             </div>

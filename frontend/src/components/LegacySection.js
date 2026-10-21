@@ -98,7 +98,7 @@ export default function LegacySection() {
               <div className="relative aspect-[4/4] w-full bg-[#1F1413] overflow-hidden">
                 <Image
                   src="/chamber-team.jpg"
-                  alt="Trinetra Law Chambers — Legal Team led by Adv. Monika Anand"
+                  alt="Trinetra Law Chambers — Legal Team led by Dr. Monika Anand"
                   fill
                   sizes="(max-width: 1024px) 100vw, 480px"
                   className="object-cover object-center hover:scale-[1.02] transition-transform duration-700"

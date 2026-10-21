@@ -11,12 +11,12 @@ import ContactCtaSection from '@/components/ContactCtaSection';
 export const metadata = {
   title: 'Advocate Monika Anand | Best Advocate in Delhi & Noida — Supreme Court & High Court Advocates',
   description:
-    'Adv. Monika Anand is recognized among the best advocates in Delhi & Noida with 9+ years experience. Chambers in Lajpat Nagar III Delhi & Sector 62 Noida. Representing clients in Supreme Court of India, Delhi High Court & Surajpur Court Noida in Criminal Defense, Anticipatory Bail, Divorce, Property & Civil matters.',
+    'Dr. Monika Anand is recognized among the best advocates in Delhi & Noida with 9+ years experience. Chambers in Lajpat Nagar III Delhi & Sector 62 Noida. Representing clients in Supreme Court of India, Delhi High Court & Surajpur Court Noida in Criminal Defense, Anticipatory Bail, Divorce, Property & Civil matters.',
   keywords: [
     // Brand & Lead Advocate
     'Advocate Monika Anand',
     'Monika Anand Advocate',
-    'Adv Monika Anand Supreme Court',
+    'Dr Monika Anand Supreme Court',
     'Trinetra Law Chambers',
 
     // Hot Noida Keywords (Targeted for High-intent Search)
@@ -95,7 +95,7 @@ export const metadata = {
   openGraph: {
     title: 'Advocate Monika Anand | Best Advocate in Delhi & Noida — Supreme Court & High Courts',
     description:
-      'Premier litigation practice in Delhi & Noida led by Adv. Monika Anand. 9+ years defending complex criminal, NDPS, POCSO, civil, matrimonial, service, and tax matters before the Supreme Court of India.',
+      'Premier litigation practice in Delhi & Noida led by Dr. Monika Anand. 9+ years defending complex criminal, NDPS, POCSO, civil, matrimonial, service, and tax matters before the Supreme Court of India.',
     url: 'https://monikaanand.com',
     siteName: 'Trinetra Law Chambers',
     locale: 'en_IN',
@@ -127,7 +127,7 @@ const homeFaqSchema = {
       name: 'Who is the best advocate in Noida for criminal, matrimonial, and civil cases?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Adv. Monika Anand of Trinetra Law Chambers is widely recognized among the best advocates serving Noida and Delhi NCR. Holding an LL.B., LL.M. and Ph.D. in Law with 9+ years of extensive litigation experience, she represents clients before the Supreme Court of India, Delhi High Court, and Gautam Buddha Nagar District Courts (Surajpur Court) in Criminal Defense, Anticipatory Bail, Divorce & Matrimonial disputes, Property conflicts, and Corporate litigation.',
+        text: 'Dr. Monika Anand of Trinetra Law Chambers is widely recognized among the best advocates serving Noida and Delhi NCR. Holding an LL.B., LL.M. and Ph.D. in Law with 9+ years of extensive litigation experience, she represents clients before the Supreme Court of India, Delhi High Court, and Gautam Buddha Nagar District Courts (Surajpur Court) in Criminal Defense, Anticipatory Bail, Divorce & Matrimonial disputes, Property conflicts, and Corporate litigation.',
       },
     },
     {
@@ -143,15 +143,15 @@ const homeFaqSchema = {
       name: 'Who is the lead advocate at Trinetra Law Chambers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Trinetra Law Chambers is led by Adv. Monika Anand, a qualified Law Graduate with an LL.M. and Ph.D. in Law, bringing 9+ years of extensive litigation experience before the Supreme Court of India, Delhi High Court, and NCR district courts.',
+        text: 'Trinetra Law Chambers is led by Dr. Monika Anand, a qualified Law Graduate with an LL.M. and Ph.D. in Law, bringing 9+ years of extensive litigation experience before the Supreme Court of India, Delhi High Court, and NCR district courts.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Which courts does Adv. Monika Anand practice in?',
+      name: 'Which courts does Dr. Monika Anand practice in?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Adv. Monika Anand regularly represents matters before the Supreme Court of India, the Delhi High Court, the Central Administrative Tribunal (CAT), and District Courts across New Delhi and Noida (Gautam Buddha Nagar Surajpur Court).',
+        text: 'Dr. Monika Anand regularly represents matters before the Supreme Court of India, the Delhi High Court, the Central Administrative Tribunal (CAT), and District Courts across New Delhi and Noida (Gautam Buddha Nagar Surajpur Court).',
       },
     },
     {
@@ -159,7 +159,7 @@ const homeFaqSchema = {
       name: 'Does the chambers handle Criminal, NDPS and POCSO cases?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Adv. Monika Anand provides comprehensive representation in Criminal & Bail matters, including specialized defense in NDPS Act matters (search, seizure, recovery, bail) and POCSO Act proceedings (investigation, evidence, statutory bail, and trial).',
+        text: 'Yes. Dr. Monika Anand provides comprehensive representation in Criminal & Bail matters, including specialized defense in NDPS Act matters (search, seizure, recovery, bail) and POCSO Act proceedings (investigation, evidence, statutory bail, and trial).',
       },
     },
     {
@@ -172,7 +172,7 @@ const homeFaqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'How can I schedule a consultation with Adv. Monika Anand in Delhi / Noida?',
+      name: 'How can I schedule a consultation with Dr. Monika Anand in Delhi / Noida?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'You can request a direct consultation through the official Trinetra Law Chambers website contact form, call +91 99999 53430, or visit our offices in Lajpat Nagar III Delhi or Sector 62 Noida.',

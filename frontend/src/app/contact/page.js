@@ -4,9 +4,9 @@ import ContactProximitySection from '@/components/ContactProximitySection';
 import ContactProtocolSection from '@/components/ContactProtocolSection';
 
 export const metadata = {
-  title: 'Contact Adv. Monika Anand | Best Advocate in Noida & Delhi | Trinetra Law Chambers',
+  title: 'Contact Dr. Monika Anand | Best Advocate in Noida & Delhi | Trinetra Law Chambers',
   description:
-    'Schedule a confidential legal consultation with Adv. Monika Anand. Recognized among the best advocates in Noida & Delhi. Chambers located at Sector 62 Noida (ITHUM Tower) & Lajpat Nagar III New Delhi. Call: +91 99999 53430.',
+    'Schedule a confidential legal consultation with Dr. Monika Anand. Recognized among the best advocates in Noida & Delhi. Chambers located at Sector 62 Noida (ITHUM Tower) & Lajpat Nagar III New Delhi. Call: +91 99999 53430.',
   keywords: [
     // Hot Noida Contact Keywords
     'Best Advocate in Noida Contact Number',
@@ -45,7 +45,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'Contact Adv. Monika Anand | Best Advocate in Noida & Delhi',
+    title: 'Contact Dr. Monika Anand | Best Advocate in Noida & Delhi',
     description:
       'Direct intake and confidential legal consultation for Supreme Court of India, High Court, and Noida District Court matters. Call +91 99999 53430.',
     url: 'https://monikaanand.com/contact',
@@ -63,7 +63,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Trinetra Law Chambers | Adv. Monika Anand',
+    title: 'Contact Trinetra Law Chambers | Dr. Monika Anand',
     description:
       'Book a confidential case consultation for Supreme Court of India & Delhi High Court matters.',
     images: ['/counsel-portrait.jpg'],
