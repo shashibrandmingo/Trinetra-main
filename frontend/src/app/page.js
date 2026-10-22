@@ -1,12 +1,12 @@
 import HeroSection from '@/components/HeroSection';
 import LegacySection from '@/components/LegacySection';
-import BarAdmissionsSection from '@/components/BarAdmissionsSection';
 import PracticeAreasSection from '@/components/PracticeAreasSection';
-import ChamberCreedSection from '@/components/ChamberCreedSection';
+import PracticeJurisdictionsSection from '@/components/PracticeJurisdictionsSection';
+import OurApproachSection from '@/components/OurApproachSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import AwardsSection from '@/components/AwardsSection';
 import InsightsSection from '@/components/InsightsSection';
-import ContactCtaSection from '@/components/ContactCtaSection';
+import ChambersConsultationSection from '@/components/ChambersConsultationSection';
 
 export const metadata = {
   title: 'Advocate Monika Anand | Best Advocate in Delhi & Noida — Supreme Court & High Court Advocates',
@@ -196,14 +196,14 @@ export default function Home() {
       {/* Official Metrics Bar & Our Legacy Section */}
       <LegacySection />
 
-      {/* Official Statutory Bar Admissions & Credentials Section */}
-      <BarAdmissionsSection />
-
       {/* Official Interactive Stacked Practice Areas Section */}
       <PracticeAreasSection />
 
-      {/* Official Chamber Jurisprudence & Creed Quote Section */}
-      <ChamberCreedSection />
+      {/* Official Courts of Practice & Judicial Benches Section */}
+      <PracticeJurisdictionsSection />
+
+      {/* Official Litigation Methodology & Approach Section */}
+      <OurApproachSection />
 
       {/* Official Client Testimonials Section (Hidden) */}
       {/* <TestimonialsSection /> */}
@@ -214,8 +214,9 @@ export default function Home() {
       {/* Official Insights & Perspectives Blogs Section */}
       <InsightsSection />
 
-      {/* Official Your Next Chapter Contact & CTA Section */}
-      <ContactCtaSection />
+      {/* Official Chambers Consultation & Contact Section */}
+      <ChambersConsultationSection />
+
     </div>
   );
 }

@@ -11,6 +11,7 @@ const articles = [
     category: 'CONSTITUTIONAL LAW',
     date: '12 AUG 2024',
     title: 'Revisiting Constitutional Morality in Modern Times',
+    slug: 'revisiting-constitutional-morality-modern-times',
     description:
       'Exploring how constitutional values continue to guide India’s evolving democracy.',
     image: '/blog-constitutional.jpg',
@@ -20,6 +21,7 @@ const articles = [
     category: 'DISPUTE RESOLUTION',
     date: '28 JUL 2024',
     title: 'The Growing Relevance of Mediation in India',
+    slug: 'growing-relevance-mediation-india',
     description:
       'How alternative dispute resolution is reshaping access to justice.',
     image: '/blog-dispute.jpg',
@@ -29,6 +31,7 @@ const articles = [
     category: 'PUBLIC POLICY',
     date: '15 JUN 2024',
     title: 'Policy Reforms for a Stronger Tomorrow',
+    slug: 'policy-reforms-stronger-tomorrow',
     description:
       'Key changes, challenges, and opportunities in India’s policy landscape.',
     image: '/blog-policy.jpg',
@@ -38,6 +41,7 @@ const articles = [
     category: 'APPELLATE PRACTICE',
     date: '02 MAY 2024',
     title: 'Precision in Appellate Documentation & Decrees',
+    slug: 'precision-appellate-documentation-decrees',
     description:
       'Strategic analysis of revenue and title records before Constitutional Benches.',
     image: '/chamber-legacy.jpg',
@@ -47,6 +51,7 @@ const articles = [
     category: 'COMMERCIAL LAW',
     date: '18 APR 2024',
     title: 'Navigating Cross-Border Shareholder Deadlocks',
+    slug: 'navigating-cross-border-shareholder-deadlocks',
     description:
       'Resolving corporate governance conflicts through specialized courtroom advocacy.',
     image: '/practice-constitutional.jpg',
@@ -56,6 +61,7 @@ const articles = [
     category: 'JUDICIAL REFORMS',
     date: '09 MAR 2024',
     title: 'Statutory Mastery in High-Stakes Litigation',
+    slug: 'statutory-mastery-high-stakes-litigation',
     description:
       'The imperative of courtroom scholarship in protecting institutional rights.',
     image: '/court-supreme-facade.jpg',
@@ -278,57 +284,67 @@ export default function InsightsSection() {
                 style={{
                   width: cardWidthPx > 0 ? `${cardWidthPx}px` : undefined,
                 }}
-                className="shrink-0 w-full sm:w-[calc(50%-10px)] lg:w-[calc((100%-40px)/3)] bg-white rounded-2xl border border-[#E8E1D5] overflow-hidden shadow-[0_4px_16px_-4px_rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between group cursor-pointer"
+                className="shrink-0 w-full sm:w-[calc(50%-10px)] lg:w-[calc((100%-40px)/3)] bg-white rounded-2xl border border-[#E8E1D5] overflow-hidden shadow-[0_4px_16px_-4px_rgba(0,0,0,0.05)] hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between group"
               >
-                {/* Compact Card Image with Badges */}
-                <div className="relative w-full h-[165px] sm:h-[180px] overflow-hidden bg-[#1A1817] pointer-events-none">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    fill
-                    draggable={false}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
-                    className="object-cover object-center pointer-events-none transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/35 pointer-events-none" />
+                <Link
+                  href={`/blogs/${article.slug}`}
+                  onClick={(e) => {
+                    if (Math.abs(dragOffset) > 8) {
+                      e.preventDefault();
+                    }
+                  }}
+                  className="flex-1 flex flex-col justify-between h-full"
+                >
+                  {/* Compact Card Image with Badges */}
+                  <div className="relative w-full h-[165px] sm:h-[180px] overflow-hidden bg-[#1A1817]">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      draggable={false}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/35 pointer-events-none" />
 
-                  {/* Overlaid Category Tag on Top Left */}
-                  <div className="absolute top-3 left-3 pointer-events-none">
-                    <span className="text-[9px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase font-dm drop-shadow">
-                      {article.category}
-                    </span>
-                  </div>
+                    {/* Overlaid Category Tag on Top Left */}
+                    <div className="absolute top-3 left-3 pointer-events-none">
+                      <span className="text-[9px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase font-dm drop-shadow">
+                        {article.category}
+                      </span>
+                    </div>
 
-                  {/* Overlaid Date on Top Right */}
-                  <div className="absolute top-3 right-3 pointer-events-none">
-                    <span className="text-[9px] font-mono font-semibold tracking-wider text-[#FAF8F5]/90 uppercase drop-shadow">
-                      {article.date}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Compact Content: Title, Description, and Read More */}
-                <div className="p-4 sm:p-4.5 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-heading font-bold text-sm sm:text-[15px] text-[#1A1817] group-hover:text-[#4A1118] transition-colors duration-200 leading-snug line-clamp-2 min-h-[42px]">
-                      {article.title}
-                    </h3>
-                    <p className="font-dm text-xs text-[#6B635B] mt-1.5 leading-relaxed line-clamp-2 min-h-[34px]">
-                      {article.description}
-                    </p>
-                  </div>
-
-                  {/* Bottom Read More Action Row */}
-                  <div className="mt-4 pt-3 border-t border-[#EFE9DF] flex items-center justify-between">
-                    <span className="text-[10px] font-bold tracking-[0.18em] text-[#8C6D37] uppercase font-dm group-hover:text-[#4A1118] transition-colors">
-                      READ MORE
-                    </span>
-                    <div className="flex-1 h-[1px] bg-[#E8E1D5] mx-3" />
-                    <div className="w-7 h-7 rounded-full bg-[#FAF3E8] group-hover:bg-[#4A1118] group-hover:text-white text-[#3D352F] flex items-center justify-center transition-colors duration-200 shadow-2xs">
-                      <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+                    {/* Overlaid Date on Top Right */}
+                    <div className="absolute top-3 right-3 pointer-events-none">
+                      <span className="text-[9px] font-mono font-semibold tracking-wider text-[#FAF8F5]/90 uppercase drop-shadow">
+                        {article.date}
+                      </span>
                     </div>
                   </div>
-                </div>
+
+                  {/* Compact Content: Title, Description, and Read More */}
+                  <div className="p-4 sm:p-4.5 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="font-heading font-bold text-sm sm:text-[15px] text-[#1A1817] group-hover:text-[#4A1118] transition-colors duration-200 leading-snug line-clamp-2 min-h-[42px]">
+                        {article.title}
+                      </h3>
+                      <p className="font-dm text-xs text-[#6B635B] mt-1.5 leading-relaxed line-clamp-2 min-h-[34px]">
+                        {article.description}
+                      </p>
+                    </div>
+
+                    {/* Bottom Read More Action Row */}
+                    <div className="mt-4 pt-3 border-t border-[#EFE9DF] flex items-center justify-between">
+                      <span className="text-[10px] font-bold tracking-[0.18em] text-[#8C6D37] uppercase font-dm group-hover:text-[#4A1118] transition-colors">
+                        READ MORE
+                      </span>
+                      <div className="flex-1 h-[1px] bg-[#E8E1D5] mx-3" />
+                      <div className="w-7 h-7 rounded-full bg-[#FAF3E8] group-hover:bg-[#4A1118] group-hover:text-white text-[#3D352F] flex items-center justify-center transition-colors duration-200 shadow-2xs">
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
               </article>
             ))}
           </div>

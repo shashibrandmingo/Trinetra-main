@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { EnquiryProvider } from "@/context/EnquiryModalContext";
 import EnquiryModal from "@/components/EnquiryModal";
+import FloatingContactBar from "@/components/FloatingContactBar";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -404,8 +405,9 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col font-sans bg-[#FAF8F5] text-[#2D2926]">
         <EnquiryProvider>
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 pb-14 lg:pb-0">{children}</main>
           <Footer />
+          <FloatingContactBar />
           <EnquiryModal />
         </EnquiryProvider>
       </body>

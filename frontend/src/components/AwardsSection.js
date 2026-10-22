@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Trophy, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const milestones = [
   {
@@ -99,21 +99,6 @@ export default function AwardsSection() {
                 continue to set.
               </p>
             </div>
-
-            {/* A journey of purpose box */}
-            <div className="mt-6 sm:mt-12 p-4 sm:p-5 bg-[#F6F0E6]/70 border border-[#E8DFCFC5] rounded-2xl flex items-center gap-4 w-full sm:max-w-[320px] shadow-2xs">
-              <div className="w-11 h-11 rounded-xl bg-white/90 border border-[#E2D6C5] flex items-center justify-center shrink-0 shadow-2xs">
-                <Trophy className="w-5 h-5 text-[#A67C38]" strokeWidth={1.75} />
-              </div>
-              <div className="h-9 w-[1px] bg-[#DCD3C5]" />
-              <p className="font-heading font-medium text-xs sm:text-[12.5px] text-[#3A332C] leading-snug">
-                A journey of
-                <br />
-                purpose, people
-                <br />
-                and progress.
-              </p>
-            </div>
           </div>
 
           {/* Center Column: Interactive Vertical Timeline */}
@@ -196,19 +181,7 @@ export default function AwardsSection() {
           </div>
 
           {/* Right Column: Motto, Large Inspirational Quote & Controls */}
-          <div className="lg:col-span-4 xl:col-span-4 flex flex-col justify-between h-full pt-0 lg:pt-1 lg:pl-4">
-            {/* Top Motto: PEOPLE PERSPECTIVE PROGRESS (Hidden on mobile to eliminate stranded text) */}
-            <div className="hidden lg:flex items-start justify-end">
-              <div className="flex items-center gap-2.5 sm:gap-3 text-left">
-                <span className="w-6 sm:w-8 h-[1.5px] bg-[#B88E44]" />
-                <div className="flex flex-col text-[9px] sm:text-[10px] font-bold tracking-[0.24em] uppercase font-dm leading-[1.35]">
-                  <span className="text-[#8C6D37]">PEOPLE</span>
-                  <span className="text-[#9E9080]">PERSPECTIVE</span>
-                  <span className="text-[#B5A898]">PROGRESS</span>
-                </div>
-              </div>
-            </div>
-
+          <div className="lg:col-span-4 xl:col-span-4 flex flex-col justify-center h-full pt-0 lg:pt-1 lg:pl-4">
             {/* Middle Quote Content / Styled Card on Mobile */}
             <div className="bg-[#F6F0E6]/60 lg:bg-transparent border border-[#E8DFCFC5] lg:border-0 rounded-2xl p-5 sm:p-6 lg:p-0 shadow-2xs lg:shadow-none mt-0.5 mb-2 sm:my-4 lg:my-8">
               {/* Mobile Milestone Badge */}
@@ -234,14 +207,6 @@ export default function AwardsSection() {
                 >
                   {activeMilestone.quote}
                 </blockquote>
-              </div>
-
-              {/* Horizontal Divider Line */}
-              <div className="w-8 h-[1.5px] bg-[#B88E44] my-3.5 sm:my-4" />
-
-              {/* Spaced Sub-motto */}
-              <div className="text-[10px] sm:text-[11px] font-bold tracking-[0.22em] text-[#8C847B] uppercase font-dm">
-                PEOPLE · PERSPECTIVE · PROGRESS
               </div>
 
               {/* Slider Controls (< > and 04 / 05 indicator) */}
@@ -282,46 +247,6 @@ export default function AwardsSection() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Bottom Section Bar: Chamber Title + Horizontal Timeline Pills + Slogan (Hidden on Phone Mode) */}
-        <div className="hidden sm:flex mt-10 sm:mt-16 pt-5 border-t border-[#E8E1D5] flex-col md:flex-row items-center justify-between gap-4 text-[10px] sm:text-[11px] font-dm tracking-[0.16em] sm:tracking-[0.2em] text-[#8C847B] uppercase">
-          {/* Left Chamber Title with Dash */}
-          <div className="flex items-center gap-2.5">
-            <span className="w-4 sm:w-6 h-[1.5px] bg-[#B88E44]" />
-            <span>TRINETRA LAW CHAMBERS</span>
-          </div>
-
-          {/* Center Horizontal Timeline Pills */}
-          <div className="flex items-center gap-1.5 sm:gap-3 overflow-x-auto no-scrollbar py-1 max-w-full">
-            {milestones.map((item, idx) => {
-              const isActive = idx === activeIndex;
-              return (
-                <div key={item.year} className="flex items-center gap-1.5 sm:gap-3 shrink-0">
-                  <button
-                    type="button"
-                    onClick={() => setActiveIndex(idx)}
-                    className={`cursor-pointer transition-all duration-200 font-heading text-[11px] sm:text-[12.5px] font-bold px-3 sm:px-3.5 py-1 rounded-full text-center ${
-                      isActive
-                        ? 'bg-[#4A1118] text-white shadow-xs'
-                        : 'text-[#8C847B] hover:text-[#1A1817] hover:bg-[#EFE9DF]/60'
-                    }`}
-                  >
-                    {item.year}
-                  </button>
-                  {idx < milestones.length - 1 && (
-                    <span className="w-2.5 sm:w-5 h-[1px] bg-[#DCD3C5]" />
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Right Slogan with Dash */}
-          <div className="flex items-center gap-2.5">
-            <span>LAW FOR A BRIGHTER TOMORROW</span>
-            <span className="w-4 sm:w-6 h-[1.5px] bg-[#B88E44]" />
           </div>
         </div>
       </div>

@@ -139,20 +139,39 @@ export default function Navbar() {
               })}
             </div>
 
-            {/* Right: Desktop Consultation Button */}
-            <div className="hidden lg:flex items-center">
+            {/* Right: Desktop Direct Call & Consultation Button */}
+            <div className="hidden lg:flex items-center gap-3">
+              <a
+                href="tel:+919999953430"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#4A1118] hover:bg-[#380C12] text-[#D8B478] hover:text-[#FAF8F5] border border-[#8C6D37]/40 rounded transition-all duration-200 shadow-sm group font-dm font-bold text-xs xl:text-[13px] tracking-wide"
+                title="Direct Call to Chambers: +91 99999 53430"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#D8B478] group-hover:scale-110 transition-transform" />
+                <span>+91 99999 53430</span>
+              </a>
+
               <button
                 type="button"
                 data-open-enquiry="true"
-                className="group inline-flex items-center gap-2.5 px-6 py-3 bg-[#4A1118] hover:bg-[#380C12] text-white text-xs font-bold tracking-wider uppercase rounded transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-[#4A1118]/20 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#4A1118] focus:ring-offset-2 focus:ring-offset-[#FAF8F5] cursor-pointer"
+                className="group inline-flex items-center gap-2.5 px-5 py-2.5 bg-[#1A1817] hover:bg-[#4A1118] text-white text-xs font-bold tracking-wider uppercase rounded transition-all duration-200 shadow-sm hover:shadow-md active:scale-[0.98] cursor-pointer"
               >
                 <span>CONSULTATION</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 text-white" />
+                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1 text-[#D8B478]" />
               </button>
             </div>
 
-            {/* Mobile Menu Toggle Button with Smooth Icon Morphing */}
-            <div className="flex lg:hidden items-center">
+            {/* Mobile Header Right Actions: Quick Call Button + Menu Toggle */}
+            <div className="flex lg:hidden items-center gap-2">
+              <a
+                href="tel:+919999953430"
+                className="flex items-center gap-1.5 px-2.5 py-2 rounded-lg bg-[#4A1118] text-[#D8B478] border border-[#8C6D37]/40 font-dm font-bold text-xs shadow-sm active:scale-95 transition-transform"
+                aria-label="Direct Call to Chambers"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#D8B478]" />
+                <span className="hidden sm:inline font-semibold">+91 99999 53430</span>
+                <span className="sm:hidden font-semibold">Call</span>
+              </a>
+
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

@@ -21,13 +21,6 @@ function AdvocatePortraitCard() {
             className="object-cover object-top hover:scale-[1.02] transition-transform duration-500"
             priority
           />
-
-          {/* Top Right Inset Quote Placard */}
-          <div className="absolute top-2.5 right-2.5 max-w-[125px] p-2 bg-[#FAF8F5]/95 backdrop-blur-sm border border-[#C4A053]/50 shadow-md text-right pointer-events-none">
-            <p className="text-[8px] sm:text-[8.5px] font-serif tracking-[0.16em] text-[#3D352F] uppercase leading-tight font-bold">
-              A JUST SOCIETY BUILDS A STRONGER NATION
-            </p>
-          </div>
         </div>
       </div>
 
@@ -64,20 +57,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main Full-Width Content Container */}
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-4 sm:pt-6 lg:pt-7 pb-8 sm:pb-10 lg:pb-12">
-        {/* Top Taglines Bar (Edge-to-Edge on desktop, clean balanced 2-tier on mobile) */}
-        <div className="w-full flex flex-col sm:flex-row items-center sm:justify-between justify-center gap-1.5 sm:gap-4 border-b border-[#E8E1D5] pb-2.5 sm:pb-3 mb-5 sm:mb-8 text-center sm:text-left">
-          <span className="text-[10px] sm:text-[11.5px] font-medium tracking-[0.16em] sm:tracking-[0.24em] text-[#78716A] uppercase font-dm">
-            ADVOCACY FOR A STRONGER TOMORROW
-          </span>
-          <div className="flex items-center gap-2 text-[9.5px] sm:text-[11.5px] font-medium tracking-[0.18em] sm:tracking-[0.24em] text-[#8C847B] sm:text-[#78716A] uppercase font-dm">
-            <span>ADVOCACY</span>
-            <span className="text-[#B88E44]/70 font-normal">|</span>
-            <span>STRATEGY</span>
-            <span className="text-[#B88E44]/70 font-normal">|</span>
-            <span>JUSTICE</span>
-          </div>
-        </div>
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 pt-6 sm:pt-8 lg:pt-10 pb-8 sm:pb-10 lg:pb-12">
 
         {/* 2-Column Hero Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
@@ -131,26 +111,6 @@ export default function HeroSection() {
               >
                 <span>DISCUSS YOUR MATTER</span>
               </button>
-            </div>
-
-            {/* Lower Credential Strip */}
-            <div className="mt-8 sm:mt-10 pt-4 border-t border-[#E8E1D5] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div className="flex items-center whitespace-nowrap gap-1.5 sm:gap-2 text-[8.5px] min-[360px]:text-[9.5px] min-[400px]:text-[10.5px] sm:text-[11.5px] font-semibold tracking-[0.11em] min-[360px]:tracking-[0.14em] sm:tracking-[0.2em] text-[#554E46] uppercase font-dm">
-                <span>SUPREME COURT OF INDIA</span>
-                <span className="text-[#B88E44]">•</span>
-                <span>HIGH COURTS</span>
-                <span className="text-[#B88E44]">•</span>
-                <span>DELHI</span>
-                <span className="text-[#B88E44]">•</span>
-                <span>NOIDA</span>
-              </div>
-
-              {/* Vertical Motto Pillar */}
-              <div className="text-[9.5px] font-medium tracking-[0.24em] text-[#8C847B] uppercase leading-tight font-serif hidden md:block">
-                <div>YOUR CONCERNS.</div>
-                <div>YOUR RIGHTS.</div>
-                <div>YOUR REPRESENTATION.</div>
-              </div>
             </div>
           </div>
 

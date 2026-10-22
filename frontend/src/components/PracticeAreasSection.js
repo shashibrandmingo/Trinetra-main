@@ -202,19 +202,6 @@ export default function PracticeAreasSection() {
                   </button>
                 </div>
               </div>
-
-              {/* Bottom Motto Logo / Tagline */}
-              <div className="mt-8 sm:mt-10 flex items-center gap-3.5 pt-5 border-t border-[#E8E1D5]/80">
-                <div className="border-l-2 border-[#B88E44] pl-2.5 text-[10px] sm:text-[11px] font-bold tracking-[0.24em] text-[#8C6D37] uppercase font-dm leading-tight">
-                  <div>LAW</div>
-                  <div className="text-[#A89B8C]">PEOPLE</div>
-                  <div className="text-[#C2B7A8]">PURPOSE</div>
-                </div>
-                <div className="text-[10px] sm:text-[11px] font-medium tracking-[0.18em] text-[#78716A] uppercase font-dm leading-relaxed">
-                  <div>CONSTITUTIONAL VALUES.</div>
-                  <div>PRACTICAL SOLUTIONS.</div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -427,25 +414,6 @@ export default function PracticeAreasSection() {
                   <span>SCHEDULE CONSULTATION</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
-
-              {/* Mobile Bottom Motto Logo / Tagline */}
-              <div className="mt-5 p-3.5 rounded-xl bg-white/75 border border-[#E4DACB] flex items-center gap-3.5 shadow-2xs">
-                {/* Left: 3-tier creed */}
-                <div className="border-l-2 border-[#B88E44] pl-2.5 text-[10px] font-bold tracking-[0.22em] uppercase font-dm leading-[1.25] flex flex-col justify-center">
-                  <span className="text-[#8C6D37]">LAW</span>
-                  <span className="text-[#A89B8C]">PEOPLE</span>
-                  <span className="text-[#C2B7A8]">PURPOSE</span>
-                </div>
-
-                {/* Subtle Vertical Divider */}
-                <div className="w-px h-8 bg-[#E8E0D2]" />
-
-                {/* Right: Constitutional statement */}
-                <div className="text-[10.5px] font-medium tracking-[0.16em] uppercase font-dm leading-snug flex-1">
-                  <div className="font-bold text-[#2B2724]">CONSTITUTIONAL VALUES.</div>
-                  <div className="text-[#8C6D37] font-semibold mt-0.5">PRACTICAL SOLUTIONS.</div>
-                </div>
               </div>
             </div>
           </div>

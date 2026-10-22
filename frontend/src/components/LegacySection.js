@@ -9,61 +9,35 @@ export default function LegacySection() {
     <section className="w-full bg-[#FAF8F5] border-b border-[#E8E1D5]">
       {/* 1. TOP METRICS & STATS BAR (Compact & Sleek) */}
       <div className="w-full border-b border-[#E8E1D5]">
-        <div className="max-w-[1440px] mx-auto grid grid-cols-2 lg:grid-cols-4">
-          {/* Stat 1: 18+ Years */}
-          <div className="p-3.5 sm:p-4 lg:px-6 xl:px-8 lg:py-4.5 flex flex-col justify-center border-r border-b lg:border-b-0 border-[#E8E1D5]">
-            <span className="font-heading font-extrabold text-xl sm:text-2xl lg:text-[28px] text-[#1A1817] tracking-tight leading-none">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-3">
+          {/* Stat 1: 9+ Years */}
+          <div className="py-3 sm:py-3.5 px-4 sm:px-6 xl:px-8 flex items-center gap-2.5 sm:gap-3 border-b sm:border-b-0 sm:border-r border-[#E8E1D5]">
+            <span className="font-heading font-extrabold text-xl sm:text-2xl lg:text-[26px] text-[#4A1118] tracking-tight leading-none">
               9+
             </span>
-            <span className="text-[9px] sm:text-[10px] lg:text-[10.5px] font-bold tracking-[0.16em] text-[#2B2724] uppercase mt-1">
-              YEARS
+            <span className="font-heading font-bold text-[12px] sm:text-[13px] xl:text-[14px] text-[#1A1817] leading-tight">
+              Years Litigation Experience
             </span>
-            <p className="text-[10px] sm:text-[11px] text-[#6B635B] font-dm mt-0.5 leading-snug line-clamp-2">
-              Litigation Experience
-            </p>
           </div>
 
-          {/* Stat 2: 500+ Matters */}
-          <div className="p-3.5 sm:p-4 lg:px-6 xl:px-8 lg:py-4.5 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-[#E8E1D5]">
-            <span className="font-heading font-extrabold text-xl sm:text-2xl lg:text-[28px] text-[#1A1817] tracking-tight leading-none">
-              250+
-            </span>
-            <span className="text-[9px] sm:text-[10px] lg:text-[10.5px] font-bold tracking-[0.16em] text-[#2B2724] uppercase mt-1">
-              MATTERS
-            </span>
-            <p className="text-[10px] sm:text-[11px] text-[#6B635B] font-dm mt-0.5 leading-snug line-clamp-2">
-              Across varied legal proceedings
-            </p>
-          </div>
-
-          {/* Stat 3: Supreme Court & High Courts */}
-          <div className="p-3.5 sm:p-4 lg:px-6 xl:px-8 lg:py-4.5 flex items-center gap-2.5 sm:gap-3 border-r border-[#E8E1D5]">
+          {/* Stat 2: Supreme Court & High Courts */}
+          <div className="py-3 sm:py-3.5 px-4 sm:px-6 xl:px-8 flex items-center gap-2.5 sm:gap-3 border-b sm:border-b-0 sm:border-r border-[#E8E1D5]">
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-md bg-[#EFE9DF] border border-[#D9CFC1] flex items-center justify-center flex-shrink-0 text-[#8C6D37]">
               <Landmark className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </div>
-            <div className="flex flex-col min-w-0">
-              <h3 className="font-heading font-bold text-[11.5px] sm:text-[13px] xl:text-[14px] text-[#1A1817] leading-tight">
-                Supreme Court &amp; 5 Years of High Courts
-              </h3>
-              <p className="text-[9.5px] sm:text-[11px] text-[#6B635B] font-dm mt-0.5 leading-snug line-clamp-2">
-                Regularly appearing before the highest courts in India
-              </p>
-            </div>
+            <h3 className="font-heading font-bold text-[12px] sm:text-[13px] xl:text-[14px] text-[#1A1817] leading-tight">
+              Supreme Court &amp; High Courts
+            </h3>
           </div>
 
-          {/* Stat 4: Strategic Litigation */}
-          <div className="p-3.5 sm:p-4 lg:px-6 xl:px-8 lg:py-4.5 flex items-center gap-2.5 sm:gap-3">
+          {/* Stat 3: Academic Qualifications */}
+          <div className="py-3 sm:py-3.5 px-4 sm:px-6 xl:px-8 flex items-center gap-2.5 sm:gap-3">
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-md bg-[#EFE9DF] border border-[#D9CFC1] flex items-center justify-center flex-shrink-0 text-[#8C6D37]">
               <FileText className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </div>
-            <div className="flex flex-col min-w-0">
-              <h3 className="font-heading font-bold text-[11.5px] sm:text-[13px] xl:text-[14px] text-[#1A1817] leading-tight">
-                 &bull;LL.M &bull;Ph.D
-              </h3>
-              <p className="text-[9.5px] sm:text-[11px] text-[#6B635B] font-dm mt-0.5 leading-snug line-clamp-2">
-                Advanced academic foundation in Law.
-              </p>
-            </div>
+            <h3 className="font-heading font-bold text-[12px] sm:text-[13px] xl:text-[14px] text-[#1A1817] leading-tight">
+              LL.M. &bull; Ph.D. in Law
+            </h3>
           </div>
         </div>
       </div>
@@ -103,19 +77,6 @@ export default function LegacySection() {
                   sizes="(max-width: 1024px) 100vw, 480px"
                   className="object-cover object-center hover:scale-[1.02] transition-transform duration-700"
                 />
-
-                {/* Subtle soft gradient at very bottom so plaque is readable without obscuring faces */}
-                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
-
-                {/* Overlaid Bottom Plaque / Motto (Bottom Left) */}
-                <div className="absolute bottom-3 left-3 border-l-2 border-[#B88E44] pl-2.5 pointer-events-none">
-                  <p className="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase leading-tight font-dm drop-shadow-md">
-                    BUILT ON PRINCIPLES.
-                  </p>
-                  <p className="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-[#C49A45] uppercase leading-tight font-dm drop-shadow-md mt-0.5">
-                    DRIVEN BY PURPOSE.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -145,93 +106,7 @@ export default function LegacySection() {
             <p className="mt-3.5 sm:mt-4 text-[#554E46] text-xs sm:text-sm lg:text-base leading-relaxed font-dm max-w-2xl">
               Monika Anand is a Law Graduate, LL.M. and Ph.D. in Law with 9+ years of experience in litigation, with exposure to criminal, constitutional, civil, matrimonial, service, tax and other legal proceedings.
 For the past five years, her practice has included work in and around the Supreme Court of India, with experience in legal research, case preparation, court procedure and higher-court litigation.
-
             </p>
-
-            {/* Bar Accreditations Strip (Clean stacked bullets on mobile, horizontal row on desktop) */}
-            <div className="mt-5 pt-3.5 border-t border-[#E8E1D5] flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-x-3.5 sm:gap-y-1.5 text-[10px] sm:text-[11px] font-semibold tracking-[0.14em] sm:tracking-[0.16em] text-[#554E46] uppercase font-dm">
-              <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B88E44] shrink-0" />
-                <span>LAW GRADUATE • LL.M. • Ph.D. IN LAW</span>
-              </span>
-              <span className="text-[#C4B7A5] hidden sm:inline">|</span>
-              <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B88E44] shrink-0" />
-                <span>9+ YEARS OF LITIGATION EXPERIENCE</span>
-              </span>
-              <span className="text-[#C4B7A5] hidden sm:inline">|</span>
-              <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#B88E44] shrink-0" />
-                <span> SUPREME COURT OF INDIA & HIGH COURTS</span>
-              </span>
-            </div>
-
-            {/* 4-Column Statistics (Card boxes on mobile, streamlined row on desktop) */}
-            <div className="mt-5 sm:mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 lg:gap-5 py-2 sm:py-5 border-y-0 sm:border-y sm:border-[#E8E1D5]">
-              {/* Stat 1 */}
-              <div className="bg-white sm:bg-transparent border border-[#E6DDD0] sm:border-0 rounded-xl sm:rounded-none p-3 sm:p-0 shadow-2xs sm:shadow-none flex flex-col justify-between">
-                <div>
-                  <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#1A1817] leading-none">
-                    9+
-                  </span>
-                  <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#2B2724] uppercase mt-1.5 leading-tight">
-                     YEARS OF EXPERIENCE
-                  </span>
-                </div>
-                <span className="block text-[10px] sm:text-[10.5px] text-[#78716A] font-dm mt-1 leading-snug">
-                  Litigation Experience
-                </span>
-              </div>
-
-              {/* Stat 2 */}
-              <div className="bg-white sm:bg-transparent border border-[#E6DDD0] sm:border-0 rounded-xl sm:rounded-none p-3 sm:p-0 shadow-2xs sm:shadow-none flex flex-col justify-between">
-                <div>
-                  <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#1A1817] leading-none">
-                    250 - 300
-                  </span>
-                  <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#2B2724] uppercase mt-1.5 leading-tight">
-                     MATTERS HANDLED
-                  </span>
-                </div>
-                <span className="block text-[10px] sm:text-[10.5px] text-[#78716A] font-dm mt-1 leading-snug">
-                    Across Diverse Legal Proceedings</span>
-              </div>
-
-              {/* Stat 3 */}
-              <div className="bg-white sm:bg-transparent border border-[#E6DDD0] sm:border-0 rounded-xl sm:rounded-none p-3 sm:p-0 shadow-2xs sm:shadow-none flex flex-col justify-between">
-                <div>
-                  <div className="flex items-baseline gap-1">
-                    <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#1A1817] leading-none">
-                      5
-                    </span>
-                    <span className="font-heading font-bold text-xs sm:text-sm text-[#A67C38]">
-                       
-                    </span>
-                  </div>
-                  <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#2B2724] uppercase mt-1.5 leading-tight">
-                     YEARS AROUND THE
-                  </span>
-                </div>
-                <span className="block text-[10px] sm:text-[10.5px] text-[#78716A] font-dm mt-1 leading-snug">
-                   SUPREME COURT OF INDIA
-                </span>
-              </div>
-
-              {/* Stat 4 */}
-              <div className="bg-white sm:bg-transparent border border-[#E6DDD0] sm:border-0 rounded-xl sm:rounded-none p-3 sm:p-0 shadow-2xs sm:shadow-none flex flex-col justify-between">
-                <div>
-                  <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#1A1817] leading-none">
-                    7+
-                  </span>
-                  <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.14em] sm:tracking-[0.16em] text-[#2B2724] uppercase mt-1.5 leading-tight">
-                    AREAS OF PRACTICE
-                  </span>
-                </div>
-                <span className="block text-[10px] sm:text-[10.5px] text-[#78716A] font-dm mt-1 leading-snug">
-                   Criminal • Civil • Tax • Service
-                </span>
-              </div>
-            </div>
 
             {/* Bottom Row: CTA Button & Distinction Tag */}
             <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -242,15 +117,6 @@ For the past five years, her practice has included work in and around the Suprem
                 <span>DISCUSS YOUR MATTER</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
-
-              {/* Distinction Signature Motto */}
-              <div className="flex items-center gap-2.5 text-right">
-                <span className="h-[1.5px] w-6 bg-[#B88E44] rounded-full hidden sm:block" />
-                <div className="text-[10px] sm:text-[10.5px] font-semibold tracking-[0.2em] text-[#78716A] uppercase font-dm">
-                  <div>BUILT ON PREPARATION.</div>
-                  <div className="text-[#A67C38]">DRIVEN BY PURPOSE.</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

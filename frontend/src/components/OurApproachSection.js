@@ -1,36 +1,36 @@
 'use client';
 
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShieldCheck, UserCheck, Scale } from 'lucide-react';
 
 const approachSteps = [
   {
     step: '01',
-    title: 'UNDERSTAND',
+    title: 'FACTS & EVIDENCE',
     image: '/approach-step1-facts.jpg',
     alt: 'Understand the facts and evidence - Case briefs with FACTS stamp and fountain pen',
-    description: 'Understand the facts and the real issues.',
+    description: 'Comprehensive examination of FIRs, contracts, trial records, and evidentiary trail.',
   },
   {
     step: '02',
-    title: 'ANALYSE',
+    title: 'STATUTORY ANALYSIS',
     image: '/approach-step2-law.jpg',
     alt: 'Analyse legal position - Magnifying glass over THE LAW document',
-    description: 'Examine the legal position and possible paths.',
+    description: 'Examining statutory provisions, High Court and Supreme Court binding precedents.',
   },
   {
     step: '03',
-    title: 'PREPARE',
+    title: 'STRATEGY & DRAFTING',
     image: '/approach-step3-strategy.jpg',
     alt: 'Prepare legal strategy - Leather law books STRATEGY, RESEARCH, PRECEDENTS, ARGUMENTS',
-    description: 'Build a strategy with clarity and precision.',
+    description: 'Crafting precision pleadings, interim relief prayers, and clear procedural roadmaps.',
   },
   {
     step: '04',
-    title: 'ADVOCATE',
+    title: 'COURT ADVOCACY',
     image: '/approach-step4-advocate.jpg',
     alt: 'Advocate in court - Bronze Lady Justice holding scales',
-    description: 'Present your case with conviction.',
+    description: 'Vigorous oral arguments and pursuit of effective remedies before judicial benches.',
   },
 ];
 
@@ -39,96 +39,80 @@ export default function OurApproachSection() {
     <section className="relative w-full bg-[#FAF8F5] text-[#2D2926] overflow-hidden border-b border-[#E8E1D5] py-12 sm:py-16 lg:py-20">
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 flex flex-col justify-between">
         
-        {/* ================= TOP GRID: MAIN CONTENT + RIGHT ARCHITECTURAL COLUMN ================= */}
+        {/* ================= TOP GRID: MAIN CONTENT + RIGHT ASSURANCE COLUMN ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-stretch">
           
-          {/* ================= LEFT 8-9 COLS: NARRATIVE HEADER + 4 ARCHED STEP CARDS ================= */}
+          {/* ================= LEFT 8 COLS: NARRATIVE HEADER + 4 STEP CARDS ================= */}
           <div className="lg:col-span-8 xl:col-span-8 flex flex-col justify-between">
             
-            {/* Header: Narrative + Right Mini Tagline */}
-            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-6 pb-8 sm:pb-10 border-b border-[#E8E1D5]/80">
-              
-              {/* Left Headline */}
-              <div className="max-w-xl">
+            {/* Header: Narrative */}
+            <div className="pb-8 sm:pb-10 border-b border-[#E8E1D5]/80">
+              <div className="max-w-2xl">
                 {/* Eyebrow */}
                 <div className="flex items-center gap-3 mb-3 sm:mb-3.5">
-                  <span className="w-8 sm:w-10 h-[1.5px] bg-[#9E6728]" />
-                  <span className="text-[10px] sm:text-[11.5px] font-semibold tracking-[0.24em] text-[#78716A] uppercase font-dm">
-                    OUR APPROACH
+                  <span className="w-8 sm:w-10 h-[1.5px] bg-[#B88E44]" />
+                  <span className="text-[10px] sm:text-[11.5px] font-bold tracking-[0.22em] text-[#8C6D37] uppercase font-dm">
+                    OUR LITIGATION METHODOLOGY
                   </span>
                 </div>
 
                 {/* Main Headline */}
-                <h2 className="font-heading text-[30px] sm:text-4xl lg:text-[46px] xl:text-[50px] font-bold tracking-tight text-[#1A1817] leading-[1.08]">
-                  <span className="block">A Clearer Path</span>
-                  <span className="block mt-0.5 sm:mt-1">
-                    to <span className="gold-gradient-shine">Stronger Outcomes.</span>
+                <h2 className="font-heading text-[28px] sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold tracking-tight text-[#1A1817] leading-[1.12]">
+                  <span>A Structured Approach to</span>
+                  <span className="block gold-gradient-shine mt-0.5 sm:mt-1">
+                    Complex Legal Matters.
                   </span>
                 </h2>
 
-                {/* Subtitle Paragraph */}
-                <p className="mt-3.5 sm:mt-4 text-[#6B635B] text-xs sm:text-sm lg:text-[14.5px] font-dm leading-relaxed max-w-lg">
-                  Every matter begins with understanding the facts, finding the legal
-                  position and building a strategy around what is ultimately at stake.
+                {/* Subtitle */}
+                <p className="mt-3.5 sm:mt-4 text-[#554E46] text-xs sm:text-sm lg:text-[14.5px] font-dm leading-relaxed max-w-xl">
+                  Every legal dispute is handled through meticulous evidentiary analysis, thorough statutory research, and strategic courtroom advocacy designed to protect your interests.
                 </p>
               </div>
-
-              {/* Right Mini Tagline (PEOPLE | LAW | A FAIRER TOMORROW - Desktop & Tablet only) */}
-              <div className="hidden sm:flex items-start gap-3.5 sm:self-start pt-1">
-                <div className="w-[1.5px] h-12 bg-[#9E6728] rounded-full self-stretch" />
-                <div className="flex flex-col gap-0.5 text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.22em] text-[#78716A] uppercase font-dm leading-tight">
-                  <span>PEOPLE</span>
-                  <span>LAW</span>
-                  <span>A FAIRER</span>
-                  <span>TOMORROW</span>
-                  <span className="text-[#9E6728] font-bold">—</span>
-                </div>
-              </div>
-
             </div>
 
-            {/* 4 Arched Pill Cards Row (2x2 Grid on Mobile, 4 Cols on Desktop) */}
+            {/* 4 Step Cards Row */}
             <div className="mt-6 sm:mt-10 lg:mt-12">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 xs:gap-3.5 sm:gap-4 lg:gap-3 xl:gap-4 relative items-stretch">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-3 xl:gap-4 relative items-stretch">
                 
                 {approachSteps.map((item, idx) => (
                   <div key={item.step} className="relative flex items-center">
                     
-                    {/* Arched Pill Card */}
-                    <div className="group relative w-full bg-[#FAF8F5] border border-[#EADBCC] rounded-t-[48px] xs:rounded-t-[56px] sm:rounded-t-[80px] rounded-b-xl sm:rounded-b-2xl p-2.5 xs:p-3 sm:p-3.5 xl:p-4 flex flex-col items-center text-center transition-all duration-300 hover:bg-white hover:border-[#9E6728]/50 hover:shadow-md hover:-translate-y-1">
+                    {/* Arched Step Card */}
+                    <div className="group relative w-full bg-white border border-[#E8E1D5] rounded-t-[48px] sm:rounded-t-[60px] rounded-b-xl p-3 sm:p-4 flex flex-col items-center text-center transition-all duration-300 hover:border-[#B88E44]/60 hover:shadow-md hover:-translate-y-1">
                       
-                      {/* Step Number in Serif */}
-                      <span className="font-serif text-xl xs:text-2xl sm:text-3xl lg:text-[32px] text-[#9E6728] font-normal pt-1.5 xs:pt-2 sm:pt-4 select-none">
+                      {/* Step Number */}
+                      <span className="font-serif text-xl sm:text-2xl lg:text-3xl text-[#4A1118] font-bold pt-2 sm:pt-3 select-none">
                         {item.step}
                       </span>
 
                       {/* Step Title */}
-                      <span className="text-[9px] xs:text-[10px] sm:text-[11px] font-bold tracking-[0.18em] sm:tracking-[0.22em] text-[#1A1817] uppercase font-dm mt-0.5 mb-2 sm:mb-3">
+                      <span className="text-[9.5px] sm:text-[10.5px] font-bold tracking-[0.16em] text-[#1A1817] uppercase font-dm mt-1 mb-2.5 sm:mb-3">
                         {item.title}
                       </span>
 
                       {/* Circular Thumbnail Frame */}
-                      <div className="relative w-16 h-16 xs:w-18 xs:h-18 sm:w-26 sm:h-26 lg:w-28 lg:h-28 xl:w-30 xl:h-30 rounded-full overflow-hidden border border-[#D9CEBF] bg-[#EAE4D9] shadow-sm my-1 group-hover:scale-105 transition-transform duration-300">
+                      <div className="relative w-16 h-16 sm:w-22 sm:h-22 lg:w-24 lg:h-24 rounded-full overflow-hidden border border-[#D9CEBF] bg-[#EAE4D9] shadow-sm my-1 group-hover:scale-105 transition-transform duration-300">
                         <Image
                           src={item.image}
                           alt={item.alt}
                           fill
-                          sizes="(max-width: 640px) 75px, (max-width: 1024px) 120px, 130px"
+                          sizes="(max-width: 640px) 70px, 100px"
                           className="object-cover object-center"
                         />
                       </div>
 
-                      {/* Small Ochre Divider Accent */}
-                      <span className="w-4 sm:w-6 h-[1.5px] bg-[#9E6728] my-2 sm:my-3" />
+                      {/* Ochre Divider */}
+                      <span className="w-5 h-[1.5px] bg-[#B88E44] my-2.5 sm:my-3" />
 
                       {/* Step Description */}
-                      <p className="text-[10px] xs:text-[11px] sm:text-xs text-[#5C544D] font-dm leading-snug sm:leading-relaxed max-w-[170px] pb-2 sm:pb-4">
+                      <p className="text-[10.5px] sm:text-xs text-[#5C544D] font-dm leading-relaxed pb-2 sm:pb-3">
                         {item.description}
                       </p>
 
                     </div>
 
-                    {/* Right-Pointing Connector Arrow (Visible between cards on desktop) */}
+                    {/* Connector Arrow on Desktop */}
                     {idx < approachSteps.length - 1 && (
                       <div className="hidden lg:flex absolute -right-2.5 xl:-right-3 z-10 text-[#B88E44] pointer-events-none">
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -141,53 +125,87 @@ export default function OurApproachSection() {
               </div>
             </div>
 
-            {/* Bottom Brand Stamp (Desktop only) */}
-            <div className="hidden sm:flex mt-8 sm:mt-10 pt-4 border-t border-[#E8E1D5]/60 items-center justify-between">
-              <span className="text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.24em] text-[#78716A] uppercase font-dm">
-                TRINETRA LAW CHAMBERS
-              </span>
-            </div>
-
           </div>
 
-          {/* ================= RIGHT 4 COLS: MONUMENTAL ARCHITECTURAL COLONNADE + INSPIRATIONAL QUOTE ================= */}
-          <div className="lg:col-span-4 xl:col-span-4 relative min-h-[380px] sm:min-h-[460px] lg:min-h-full rounded-sm overflow-hidden border border-[#E8E1D5] bg-[#2A2420] flex flex-col justify-end shadow-sm">
+          {/* ================= RIGHT 4 COLS: CLIENT SAFEGUARDS & PROTOCOL ================= */}
+          <div className="lg:col-span-4 xl:col-span-4 relative rounded-xl overflow-hidden border border-[#E8E1D5] bg-[#1F1413] text-white p-6 sm:p-8 flex flex-col justify-between shadow-sm">
             
-            {/* Background Courthouse Architectural Image */}
+            {/* Subtle background courthouse image */}
             <Image
               src="/pratice-area-4.png"
-              alt="Courthouse Sandstone Classical Columns and Architecture"
+              alt="Courthouse Sandstone Classical Columns"
               fill
               sizes="(max-width: 1024px) 100vw, 33vw"
-              className="object-cover object-center select-none pointer-events-none"
+              className="object-cover object-center opacity-15 select-none pointer-events-none"
             />
 
-            {/* Soft dark vignette gradient overlay for pristine quote legibility */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 via-40% to-black/10 pointer-events-none" />
-
-            {/* Bottom Quote & Motto Overlay */}
-            <div className="relative z-10 p-6 sm:p-8 text-white">
-              
-              {/* Bronze Quotation Mark */}
-              <div className="text-[#B88E44] text-4xl sm:text-5xl font-serif leading-none select-none mb-1">
-                “
+            <div className="relative z-10">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#B88E44]/20 border border-[#B88E44]/40 text-[#D8B478] text-[9.5px] sm:text-[10px] font-bold tracking-[0.18em] uppercase font-dm mb-5">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#B88E44]" />
+                <span>CHAMBERS COMMITMENT</span>
               </div>
 
-              {/* Quote Headline */}
-              <div className="text-xs sm:text-[13px] font-bold tracking-[0.2em] text-[#FAF8F5] uppercase font-dm leading-relaxed">
-                <div>PREPARATION</div>
-                <div>TURNS COMPLEXITY</div>
-                <div>INTO CLARITY.</div>
+              {/* Title */}
+              <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FAF8F5] leading-snug">
+                Transparent Advisory &amp; Ethical Advocacy.
+              </h3>
+
+              <p className="text-xs text-[#C5BCB3] font-dm leading-relaxed mt-2.5 mb-6">
+                Litigation requires objective evaluation of facts and law, without unrealistic promises or ambiguity.
+              </p>
+
+              {/* 3 Core Authentic Principles */}
+              <div className="space-y-4 pt-4 border-t border-[#3D2C2B]">
+                <div className="flex items-start gap-3">
+                  <div className="p-1.5 rounded bg-[#4A1118] border border-[#8C6D37]/40 text-[#D8B478] shrink-0 mt-0.5">
+                    <ShieldCheck className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-white font-dm">Statutory Confidentiality</h4>
+                    <p className="text-[11px] text-[#A89E95] font-dm leading-relaxed mt-0.5">
+                      Strict attorney-client privilege under Section 126 of the Indian Evidence Act.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="p-1.5 rounded bg-[#4A1118] border border-[#8C6D37]/40 text-[#D8B478] shrink-0 mt-0.5">
+                    <UserCheck className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-white font-dm">Direct Lead Counsel Access</h4>
+                    <p className="text-[11px] text-[#A89E95] font-dm leading-relaxed mt-0.5">
+                      Substantive case strategy and drafting personally supervised by Dr. Monika Anand.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="p-1.5 rounded bg-[#4A1118] border border-[#8C6D37]/40 text-[#D8B478] shrink-0 mt-0.5">
+                    <Scale className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-bold text-white font-dm">Objective Legal Merits</h4>
+                    <p className="text-[11px] text-[#A89E95] font-dm leading-relaxed mt-0.5">
+                      Clear assessment of legal risk, procedural timelines, and potential remedies.
+                    </p>
+                  </div>
+                </div>
               </div>
+            </div>
 
-              {/* Gold Accent Divider */}
-              <div className="w-8 sm:w-10 h-[1.5px] bg-[#B88E44] mt-3 sm:mt-4 mb-3" />
-
-              {/* Judicial Motto */}
-              <div className="text-[9px] sm:text-[10px] font-semibold tracking-[0.24em] text-[#CBBDB1] uppercase font-dm">
-                JUSTICE THROUGH PRINCIPLE
-              </div>
-
+            {/* Bottom Action Button */}
+            <div className="relative z-10 pt-6 mt-6 border-t border-[#3D2C2B]">
+              <button
+                type="button"
+                data-open-enquiry="true"
+                data-note="Initiated from Our Approach Section"
+                className="w-full flex items-center justify-center gap-2.5 py-3 px-4 bg-[#B88E44] hover:bg-[#8C6D37] text-white font-dm font-bold text-xs tracking-wider uppercase rounded transition-colors shadow-sm cursor-pointer"
+              >
+                <span>CONSULT CHAMBERS</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
             </div>
 
           </div>

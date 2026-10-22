@@ -181,6 +181,175 @@ When state agencies alter tender conditions retrospectively or disregard settled
 With recent amendments to the Competition Act, cross-border acquisitions where the target has substantial business operations in India now require prior notification to the Competition Commission of India (CCI), even if traditional asset or turnover thresholds are not triggered.
     `,
   },
+  {
+    _id: 'blog-7',
+    title: 'Revisiting Constitutional Morality in Modern Times',
+    slug: 'revisiting-constitutional-morality-modern-times',
+    category: 'Constitutional Law',
+    excerpt:
+      'Exploring how constitutional values continue to guide India’s evolving democracy and judicial review under Articles 32 and 226.',
+    banner: {
+      url: '/blog-constitutional.jpg',
+      publicId: 'blog-constitutional',
+    },
+    author: 'Advocate Monika Anand — Lead Counsel',
+    publishedAt: '2024-08-12',
+    readTime: '7 min read',
+    tags: ['Constitutional Law', 'Fundamental Rights', 'Supreme Court', 'Judicial Review'],
+    views: 1840,
+    status: 'published',
+    content: `
+## Constitutional Morality as an Interpretive Compass
+
+Constitutional morality is not a nebulous ideological preference; it is the institutional discipline that elevates constitutional principles above transient political majoritarianism and administrative expediency.
+
+First articulated in modern Indian jurisprudence through landmark constitutional bench rulings, the doctrine requires every organ of state—the legislature, executive, and judiciary—to operate strictly within the structural limits defined by the Constitution.
+
+---
+
+### Key Pillars in High-Court and Apex-Court Litigation
+
+1. **Commitment to Substantive Equality (Article 14)**: Moving beyond formalistic classifications toward substantive non-arbitrariness and proportionality.
+2. **Primacy of Individual Liberty (Article 21)**: Safeguarding personal liberty, privacy, and due process against overbroad statutory encroachments.
+3. **Institutional Accountability**: Ensuring regulatory tribunals and state agencies exercise discretionary power with transparency and natural justice (*audi alteram partem*).
+
+> "Constitutional morality is not a natural sentiment. It has to be cultivated. We must realize that our people have yet to learn it." — Dr. B.R. Ambedkar
+    `,
+  },
+  {
+    _id: 'blog-8',
+    title: 'The Growing Relevance of Mediation in India',
+    slug: 'growing-relevance-mediation-india',
+    category: 'Dispute Resolution',
+    excerpt:
+      'How alternative dispute resolution, the Mediation Act 2023, and court-annexed mediation are reshaping access to justice.',
+    banner: {
+      url: '/blog-dispute.jpg',
+      publicId: 'blog-dispute',
+    },
+    author: 'Commercial & ADR Practice Division',
+    publishedAt: '2024-07-28',
+    readTime: '6 min read',
+    tags: ['Mediation', 'ADR', 'Mediation Act 2023', 'Commercial Disputes', 'Settlement'],
+    views: 1320,
+    status: 'published',
+    content: `
+## Paradigm Shift: The Mediation Act 2023
+
+With the enactment of the Mediation Act 2023, India has codified an institutional framework that transforms mediation from a voluntary suggestion into an enforceable statutory process.
+
+Mediated settlement agreements now carry the enforceability of a court decree, providing commercial parties and families with binding, confidential, and cost-effective finality.
+
+---
+
+### Strategic Advantages in Commercial & Matrimonial Matters
+
+- **Confidentiality & Brand Preservation**: Unlike public courtroom proceedings, sensitive financial and personal disclosures remain strictly confidential.
+- **Preservation of Business Relationships**: Enabling cooperative settlements that allow commercial partnerships and joint ventures to survive.
+- **Expedited Finality**: Eliminating multi-tiered appellate delays through mutually agreed settlement terms.
+    `,
+  },
+  {
+    _id: 'blog-9',
+    title: 'Policy Reforms for a Stronger Tomorrow',
+    slug: 'policy-reforms-stronger-tomorrow',
+    category: 'Public Policy',
+    excerpt:
+      'Key legislative amendments, regulatory oversight, and procedural reforms in India’s statutory landscape.',
+    banner: {
+      url: '/blog-policy.jpg',
+      publicId: 'blog-policy',
+    },
+    author: 'Regulatory & Public Policy Cell',
+    publishedAt: '2024-06-15',
+    readTime: '5 min read',
+    tags: ['Public Policy', 'Regulatory Reforms', 'Statutory Compliance', 'Legal Governance'],
+    views: 1100,
+    status: 'published',
+    content: `
+## Evolving Legislative & Regulatory Frameworks
+
+Modern regulatory law demands seamless alignment between statutory mandates and commercial operations. From data protection compliance to statutory environmental clearances, proactive legal advisory is essential to mitigate regulatory exposure.
+
+Courts in judicial review increasingly evaluate whether administrative guidelines and delegated legislation pass the twin tests of legislative competence and proportionality.
+    `,
+  },
+  {
+    _id: 'blog-10',
+    title: 'Precision in Appellate Documentation & Decrees',
+    slug: 'precision-appellate-documentation-decrees',
+    category: 'Appellate Practice',
+    excerpt:
+      'Strategic analysis of trial court records, framing questions of law under Section 100 CPC, and Special Leave Petitions under Article 136.',
+    banner: {
+      url: '/chamber-legacy.jpg',
+      publicId: 'chamber-legacy',
+    },
+    author: 'Senior Appellate Briefing Cell',
+    publishedAt: '2024-05-02',
+    readTime: '8 min read',
+    tags: ['Appellate Law', 'Section 100 CPC', 'Article 136 SLP', 'Decrees', 'Civil Procedure'],
+    views: 1560,
+    status: 'published',
+    content: `
+## The Appellate Battlefield: The Trial Record
+
+Appeals are won or lost in the meticulous examination of the original trial court record. At higher appellate levels—before High Courts in Second Appeals (Section 100 CPC) or before the Supreme Court under Article 136 (Special Leave Petitions)—courts do not re-appreciate factual evidence unless there is perverse findings of fact or manifest miscarriage of justice.
+
+The key to appellate success lies in framing precise, substantial questions of law anchored in statutory misconstruction or violation of evidentiary rules.
+    `,
+  },
+  {
+    _id: 'blog-11',
+    title: 'Navigating Cross-Border Shareholder Deadlocks',
+    slug: 'navigating-cross-border-shareholder-deadlocks',
+    category: 'Commercial Law',
+    excerpt:
+      'Resolving corporate governance conflicts, oppression and mismanagement under Section 241/242, and international arbitration.',
+    banner: {
+      url: '/practice-constitutional.jpg',
+      publicId: 'practice-constitutional',
+    },
+    author: 'Corporate Litigation Practice',
+    publishedAt: '2024-04-18',
+    readTime: '7 min read',
+    tags: ['Corporate Law', 'Shareholder Disputes', 'Section 241', 'NCLT', 'Arbitration'],
+    views: 1470,
+    status: 'published',
+    content: `
+## Breaking the Stalemate: Legal Remedies in 50:50 Deadlocks
+
+In joint ventures and closely held corporate entities, a breakdown in board consensus can paralyze business operations. Litigators must navigate dual pathways:
+
+1. **Company Law Remedies**: Petitions before the NCLT under Sections 241 and 242 of the Companies Act 2013 for oppression and mismanagement or seeking exit valuations.
+2. **Contractual & Arbitral Remedies**: Invoking arbitration clauses, Russian Roulette / Texas Shootout mechanisms, and interim injunctions under Section 9 of the Arbitration Act.
+    `,
+  },
+  {
+    _id: 'blog-12',
+    title: 'Statutory Mastery in High-Stakes Litigation',
+    slug: 'statutory-mastery-high-stakes-litigation',
+    category: 'Judicial Reforms',
+    excerpt:
+      'The imperative of courtroom scholarship, rigorous statutory interpretation, and precedent mastery in high-stakes appellate defense.',
+    banner: {
+      url: '/court-supreme-facade.jpg',
+      publicId: 'court-supreme-facade',
+    },
+    author: 'Advocate Monika Anand — Lead Counsel',
+    publishedAt: '2024-03-09',
+    readTime: '9 min read',
+    tags: ['Litigation Strategy', 'Supreme Court', 'Statutory Interpretation', 'Advocacy'],
+    views: 2200,
+    status: 'published',
+    content: `
+## Courtroom Scholarship: The Pillar of Trial & Appellate Advocacy
+
+In high-stakes litigation before constitutional benches and commercial courts, passionate oratory is no substitute for rigorous statutory mastery. 
+
+The most persuasive advocates are those who dissect statutory provisions down to their legislative intent (*mischief rule*), trace statutory amendments through parliamentary debates, and identify subtle factual distinctions that render opposing precedents inapplicable.
+    `,
+  },
 ];
 
 export const blogCategories = [
@@ -191,4 +360,9 @@ export const blogCategories = [
   'Corporate Insolvency',
   'Administrative Law',
   'Antitrust & Regulatory',
+  'Dispute Resolution',
+  'Public Policy',
+  'Appellate Practice',
+  'Commercial Law',
+  'Judicial Reforms',
 ];
