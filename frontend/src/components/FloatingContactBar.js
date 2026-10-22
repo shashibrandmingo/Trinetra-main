@@ -2,7 +2,7 @@
 
 import { Phone } from 'lucide-react';
 
-function WhatsAppIcon({ className = 'w-4 h-4' }) {
+function WhatsAppIcon({ className = 'w-5 h-5' }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -53,53 +53,44 @@ export default function FloatingContactBar() {
       </div>
 
       {/* ========================================================================= */}
-      {/* 2. DESKTOP FLOATING PILLS (Bottom-Left: Call, Bottom-Right: WhatsApp)       */}
+      {/* 2. DESKTOP FLOATING ICONS (Bottom-Right: Call & WhatsApp ONLY ICONS)       */}
       {/* ========================================================================= */}
-      
-      {/* Bottom-Left Floating Call Pill */}
-      <div className="hidden lg:block fixed bottom-6 left-6 z-40">
-        <a
-          href="tel:+919999953430"
-          className="group flex items-center gap-3 px-4 py-3 bg-[#4A1118] hover:bg-[#380C12] text-[#D8B478] hover:text-[#FAF8F5] border border-[#B88E44]/50 rounded-full shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_28px_rgba(74,17,24,0.45)] hover:scale-105 transition-all duration-300 font-dm cursor-pointer"
-          aria-label="Call Trinetra Law Chambers"
-          title="Direct Chambers Line: +91 99999 53430"
-        >
-          <div className="w-9 h-9 rounded-full bg-[#B88E44]/20 border border-[#B88E44]/40 flex items-center justify-center text-[#D8B478] group-hover:bg-[#B88E44] group-hover:text-[#4A1118] transition-colors shrink-0">
-            <Phone className="w-4 h-4" />
+      <div className="hidden lg:flex fixed bottom-6 right-6 z-40 flex-col items-center gap-3">
+        
+        {/* Direct Call Circular Icon with Tooltip */}
+        <div className="relative group flex items-center">
+          <div className="absolute right-full mr-3 px-3 py-1.5 bg-[#1F1413] text-[#D8B478] border border-[#8C6D37]/40 text-xs font-dm font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-200 pointer-events-none">
+            Call: +91 99999 53430
           </div>
-          <div className="flex flex-col text-left pr-2">
-            <span className="text-[9px] uppercase tracking-[0.2em] text-[#C5B4A0] font-semibold leading-none">
-              DIRECT CALL
-            </span>
-            <span className="text-[13px] text-[#D8B478] font-extrabold mt-1 leading-none tracking-wide">
-              +91 99999 53430
-            </span>
-          </div>
-        </a>
-      </div>
 
-      {/* Bottom-Right Floating WhatsApp Pill */}
-      <div className="hidden lg:block fixed bottom-6 right-6 z-40">
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex items-center gap-3 px-4 py-3 bg-[#075E54] hover:bg-[#128C7E] text-white border border-[#25D366]/40 rounded-full shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_28px_rgba(18,140,126,0.45)] hover:scale-105 transition-all duration-300 font-dm cursor-pointer"
-          aria-label="Chat on WhatsApp"
-          title="Chat with Chambers on WhatsApp"
-        >
-          <div className="flex flex-col text-right pl-2">
-            <span className="text-[9px] uppercase tracking-[0.2em] text-[#C5E8D8] font-semibold leading-none">
-              QUICK ADVISORY
-            </span>
-            <span className="text-[13px] text-white font-extrabold mt-1 leading-none tracking-wide">
-              WhatsApp Chambers
-            </span>
+          <a
+            href="tel:+919999953430"
+            className="w-12 h-12 rounded-full bg-[#4A1118] hover:bg-[#340B10] text-[#D8B478] border-2 border-[#B88E44]/60 flex items-center justify-center shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_28px_rgba(74,17,24,0.45)] hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer"
+            aria-label="Direct Call: +91 99999 53430"
+            title="Direct Call: +91 99999 53430"
+          >
+            <Phone className="w-5 h-5 text-[#D8B478]" />
+          </a>
+        </div>
+
+        {/* WhatsApp Circular Icon with Tooltip */}
+        <div className="relative group flex items-center">
+          <div className="absolute right-full mr-3 px-3 py-1.5 bg-[#1F1413] text-white border border-[#25D366]/40 text-xs font-dm font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-200 pointer-events-none">
+            Chat on WhatsApp
           </div>
-          <div className="w-9 h-9 rounded-full bg-white/20 border border-white/30 flex items-center justify-center text-white group-hover:bg-[#25D366] transition-colors shrink-0">
-            <WhatsAppIcon className="w-4.5 h-4.5 text-white" />
-          </div>
-        </a>
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white border-2 border-white/50 flex items-center justify-center shadow-[0_6px_20px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_28px_rgba(37,211,102,0.45)] hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer"
+            aria-label="Chat on WhatsApp"
+            title="Chat on WhatsApp"
+          >
+            <WhatsAppIcon className="w-6 h-6 text-white" />
+          </a>
+        </div>
+
       </div>
     </>
   );
